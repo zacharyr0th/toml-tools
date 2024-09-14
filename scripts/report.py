@@ -50,7 +50,6 @@ def extract_repo_info(content):
 
 def organize_toml_content(content):
     """Organize TOML content by sorting sections and their contents."""
-    # Parse TOML content manually
     sections = {}
     current_section = None
     for line in content.split('\n'):
@@ -61,10 +60,8 @@ def organize_toml_content(content):
         elif current_section and '=' in line:
             sections[current_section].append(line)
 
-    # Sort sections and their contents
     organized_data = {k: sorted(v, key=lambda x: x.lower()) for k, v in sorted(sections.items())}
 
-    # Convert back to TOML format
     organized_content = []
     for section, lines in organized_data.items():
         organized_content.append(f'[{section}]')
@@ -133,7 +130,6 @@ def generate_master_report(toml_files: List[str], output_file: str) -> None:
         sub_ecosystem_repos = categorize_repos(repos, categories)
         total_repos = len(repos) + missing_repos
 
-        # Calculate counts and percentages for each category
         category_stats = {
             cat: {
                 'count': len(repos),
@@ -153,22 +149,18 @@ def generate_master_report(toml_files: List[str], output_file: str) -> None:
             'categories': category_stats
         })  
 
-    # Sort ecosystem_data by total_repos in descending order
     ecosystem_data.sort(key=lambda x: x['total_repos'], reverse=True)
 
     with open(output_file, 'w', encoding='utf-8') as master_file:
-        # Write overall summary
         total_repos = sum(eco['total_repos'] for eco in ecosystem_data)
         total_github_accounts = sum(eco['github_accounts'] for eco in ecosystem_data)
         master_file.write("# Ecosystem Analysis Report\n\n")
         master_file.write(f"- Total Repositories Across Top Ecosystems: {total_repos:,}\n")
         master_file.write(f"- Gross Count of Users Across Top Ecosystems: {total_github_accounts:,}\n\n")
 
-        # Write summary table header
         master_file.write("| Ecosystem | Total Repos | Valid Repos | Missing Repos | GitHub Accounts | Individual Accounts | Org/Team Accounts | DeFi | Gaming | Social | Infrastructure | NFTs | Uncategorized |\n")
         master_file.write("|-----------|-------------|-------------|---------------|-----------------|---------------------|-------------------|------|--------|--------|----------------|------|---------------|\n")
         
-        # Add summary table rows
         for ecosystem in ecosystem_data:
             master_file.write(f"| {ecosystem['name']} | ")
             master_file.write(f"{ecosystem['total_repos']:,} | ")
@@ -181,12 +173,15 @@ def generate_master_report(toml_files: List[str], output_file: str) -> None:
                 master_file.write(f"{ecosystem['categories'].get(category, {'percentage': '0.00%'})['percentage']} | ")
             master_file.write("\n")
 
-        # Add detailed category breakdown for each ecosystem
-        master_file.write("\n## Detailed Category Breakdown\n\n")
+        master_file.write("\n## All Ecosystems\n\n")
         for ecosystem in ecosystem_data:
             master_file.write(f"### {ecosystem['name']}\n\n")
-            master_file.write(f"- Total Repositories in {ecosystem['name']}: {ecosystem['total_repos']:,}\n")
-            master_file.write(f"- Affiliated GitHub Accounts: {ecosystem['github_accounts']:,}\n\n")
+            master_file.write(f"- Total Repositories: {ecosystem['total_repos']:,}\n")
+            master_file.write(f"- Valid Repositories: {ecosystem['valid_repos']:,}\n")
+            master_file.write(f"- Missing Repositories: {ecosystem['missing_repos']:,}\n")
+            master_file.write(f"- Affiliated GitHub Accounts: {ecosystem['github_accounts']:,}\n")
+            master_file.write(f"- Individual Accounts: {ecosystem['individual_accounts']:,}\n")
+            master_file.write(f"- Organization/Team Accounts: {ecosystem['org_accounts']:,}\n\n")
             master_file.write("| Category | Count | Percentage |\n")
             master_file.write("|----------|-------|------------|\n")
             for category in ['DeFi', 'Gaming', 'Social', 'Infrastructure', 'NFTs', 'Uncategorized']:
