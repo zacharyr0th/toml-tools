@@ -98,16 +98,6 @@ Generates a comprehensive master report from multiple TOML repository files.
 
 You can modify the category definitions and regex patterns in each script to customize the analysis according to your needs. Look for the `categories` dictionary in each script.
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 ## Acknowledgments
 
 - [Electric Capital](https://github.com/electric-capital/crypto-ecosystems) for providing the crypto-ecosystems data.
