@@ -57,21 +57,6 @@ Generates a comprehensive master report from multiple TOML repository files.
 - Categorizes repositories into: DeFi, Gaming, Social, Infrastructure, NFTs, and Uncategorized
 - Generates a single `report-<date>.md` file for all processed TOML files
 
-## Installation
-
-1. Ensure you have Python 3.7+ installed on your system.
-
-2. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/ecosystem-analysis-tools.git
-   cd ecosystem-analysis-tools
-   ```
-
-3. Install required dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-
 ## Usage
 
 1. Place your TOML files in the `input` directory.
