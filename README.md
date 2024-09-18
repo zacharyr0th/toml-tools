@@ -42,7 +42,9 @@ Sorts and deduplicates repository sections in TOML files based on Electric Capit
 
 ### 3. report.py
 
-Generates a comprehensive master report from multiple TOML repository files.
+Generates a comprehensive report from all the TOML files in the `input` directory.
+
+[Here's](https://github.com/zacharyr0th/TOML-tools/blob/main/output/report-09-13-24.md) the report generated on 09/13/24.
 
 **Key features:**
 - Generates a detailed master report with the following information:
