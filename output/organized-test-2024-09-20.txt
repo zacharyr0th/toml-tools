@@ -1,0 +1,223 @@
+# Repositories
+[[repo]]
+url = "https://github.com/0xBoji/aptos-ai"
+
+[[repo]]
+url = "https://github.com/0xBoji/shaker-game"
+
+[[repo]]
+url = "https://github.com/0xBoji/aptos-bounty"
+
+[[repo]]
+url = "https://github.com/0xBoji/examples-aptos-dao"
+
+[[repo]]
+url = "https://github.com/0xLSTx/multi_pool"
+
+[[repo]]
+url = "https://github.com/alfredalfie123/move_multisender"
+
+[[repo]]
+url = "https://github.com/Aptos-NFT-Lending/nft-lending-sc"
+
+[[repo]]
+url = "https://github.com/ayushagarwal27/aptos_pokemon_vault"
+
+[[repo]]
+url = "https://github.com/buinhien5/aptos-token-staking"
+
+[[repo]]
+url = "https://github.com/chithien25/demo-project-nft-marketplace"
+
+[[repo]]
+url = "https://github.com/chithiendo/AptosQuantum-fungible-asset-voting"
+
+[[repo]]
+url = "https://github.com/cuongpham42334/AptosNexus-telegram-boilerplate-template-with-mizu-core"
+
+[[repo]]
+url = "https://github.com/dotham654/apts-project-test-hello-aptos-telegram-click-game"
+
+[[repo]]
+url = "https://github.com/duynencute11/AptosNova-billboard"
+
+[[repo]]
+url = "https://github.com/eragon-gg/eragon"
+
+[[repo]]
+url = "https://github.com/FromSunNews/staking-aptos-contract"
+
+[[repo]]
+url = "https://github.com/FromSunNews/sui-interface-demo"
+
+[[repo]]
+url = "https://github.com/hiephtdev/module_marketplace"
+
+[[repo]]
+url = "https://github.com/hoangduc19867/apts-project-aptos-token-staking"
+
+[[repo]]
+url = "https://github.com/hoanglananh111/project-test-hello-taxed-fungible-asset"
+
+[[repo]]
+url = "https://github.com/hoangminhcong001/aptos-project-test-telegram-boilerplate-template"
+
+[[repo]]
+url = "https://github.com/hoangnam1123g/apts-project-multidex-router"
+
+[[repo]]
+url = "https://github.com/hoangnam34243/aptos-project-dutch-auction"
+
+[[repo]]
+url = "https://github.com/hoangquyet112/AptosStellar-hello_blockchain"
+
+[[repo]]
+url = "https://github.com/hoangtien47/actionx-nft-minting"
+
+[[repo]]
+url = "https://github.com/hocptit/AI-Trading-aptos"
+
+[[repo]]
+url = "https://github.com/honganh1253/AptosNova-surf-for-type-safety"
+
+[[repo]]
+url = "https://github.com/honghien123/aptos-surf-for-type-safety"
+
+[[repo]]
+url = "https://github.com/hungnguyen3424/project-test-telegram-boilerplate-template-with-mizu-core"
+
+[[repo]]
+url = "https://github.com/huyle32423/demo-project-test-aptos-token-mint"
+
+[[repo]]
+url = "https://github.com/khanhphuong32234/new-project-test-hello-v1-aptos-token-staking"
+
+[[repo]]
+url = "https://github.com/linhanhnguyenn/demo-project-test-fungible-asset-voting"
+
+[[repo]]
+url = "https://github.com/linhlinh00/demo-project-test-v1-aptos-boilerplate"
+
+[[repo]]
+url = "https://github.com/linhlinhtran/AptosMirage-aptos-token-mint"
+
+[[repo]]
+url = "https://github.com/linhphuongtran/demo-project-test-nft-launchpad"
+
+[[repo]]
+url = "https://github.com/lochoang174/Aptous-smart-contract"
+
+[[repo]]
+url = "https://github.com/maianhhbao1234/new-project-test-hello-aptos-telegram-click-game"
+
+[[repo]]
+url = "https://github.com/maianhtra/AptosQuantum-taxed-fungible-asset"
+
+[[repo]]
+url = "https://github.com/mainamanh11/aptos-project-test-hello-billboard"
+
+[[repo]]
+url = "https://github.com/mainguyen85/in-game-coin-swap-v2"
+
+[[repo]]
+url = "https://github.com/minhanhnguyenn/AptosElysium-aptos-token-staking"
+
+[[repo]]
+url = "https://github.com/minhlinhdo/apt-aptos-token-mint"
+
+[[repo]]
+url = "https://github.com/namnguyen000/project-test-hello-v1-todo"
+
+[[repo]]
+url = "https://github.com/namnguyen321265/new-project-test-hello-v1-taxed-fungible-asset"
+
+[[repo]]
+url = "https://github.com/nguyenninh12/AptosNexus-aptos-token-staking"
+
+[[repo]]
+url = "https://github.com/phapdev/randomness-game"
+
+[[repo]]
+url = "https://github.com/phuonglinhdo/AptosCelestial-fungible-asset-voting"
+
+[[repo]]
+url = "https://github.com/phuongthaodo12/AptosCelestial-taxed-fungible-asset"
+
+[[repo]]
+url = "https://github.com/phuongthaodoo/aptos-project-test-fungible-asset-voting"
+
+[[repo]]
+url = "https://github.com/phuquiivo03/meme-throwing.git"
+
+[[repo]]
+url = "https://github.com/quanganhtran11/aptos-billboard"
+
+[[repo]]
+url = "https://github.com/quynhmaido/new-project-test-hello-todo"
+
+[[repo]]
+url = "https://github.com/quynhnam13/new-project-test-hello-v1-hello_blockchain"
+
+[[repo]]
+url = "https://github.com/thamdo2k/demo-project-test-fungible-asset-launchpad"
+
+[[repo]]
+url = "https://github.com/thaothao23423/project-aptos-token-mint"
+
+[[repo]]
+url = "https://github.com/tiepbeo222/project-test-surf-for-type-safety"
+
+[[repo]]
+url = "https://github.com/tiepbeo3211/new-project-test-hello-v1-aptos-telegram-click-game"
+
+[[repo]]
+url = "https://github.com/tiepbeo999/project-test-surf-for-type-safety"
+
+[[repo]]
+url = "https://github.com/tiepbeobro/AptosStellar-aptos-token-mint"
+
+[[repo]]
+url = "https://github.com/tiepnghien2213/apts-project-test-fungible-asset-launchpad"
+
+[[repo]]
+url = "https://github.com/tuantu19/aptos-taxed-fungible-asset"
+
+[[repo]]
+url = "https://github.com/tungbeo2225/aptos-project-todo"
+
+[[repo]]
+url = "https://github.com/tungbeo6789/apts-project-aptos-token-staking"
+
+[[repo]]
+url = "https://github.com/tungbeooii21/project-test-hello-v1-aptos-token-mint"
+
+[[repo]]
+url = "https://github.com/tungbeoooo23/AptosQuantum-todo"
+
+[[repo]]
+url = "https://github.com/tungbeoooo232/aptos-aptos-token-staking"
+
+[[repo]]
+url = "https://github.com/tungboio234/project-test-hello-v1-telegram-boilerplate-template-with-mizu-core"
+
+[[repo]]
+url = "https://github.com/tungngu345/new-project-test-hello-v1-dutch-auction"
+
+[[repo]]
+url = "https://github.com/tuvuanh27/aptos-move-voting"
+
+[[repo]]
+url = "https://github.com/wavefy/decentralized-llm-inference-runner"
+
+[[repo]]
+url = "https://github.com/Weminal-labs/ActionX-Extension"
+
+[[repo]]
+url = "https://github.com/Weminal-labs/actionx-nft-minting"
+
+[[repo]]
+url = "https://github.com/Weminal-labs/ActionsX-BE"
+
+[[repo]]
+url = "https://github.com/weminal-labs/weball-contract"
+

@@ -30,21 +30,29 @@ Generates detailed statistics from individual TOML repository files.
 
 ### 2. organize.py
 
-Sorts and deduplicates repository sections in TOML files based on Electric Capital's framework.
+Processes TOML files to create standardized **# Repository** sections. 
 
 **Key features:**
-- Re-organizes repository sections in TOML files
-  - Extracts [[repo]] sections
-  - Deduplicates based on URL (case-insensitive)
-  - Sorts unique sections alphabetically
-  - Reconstructs content with original header and sorted sections
-- Generates `<input_filename>-organized-<date>.txt` for each TOML file
+- Extracts and normalizes GitHub repository URLs
+- Deduplicates and sorts URLs (case-insensitive)
+- Formats output in Electric Capital's TOML structure
+- Generates `<input>-organized-<date>.toml` for each file
+
+**Usage:**
+```
+python3 organize/organize.py <file-name>
+```
+Example:
+```
+python3 organize/organize.py test
+```
+Note: Omit the `.toml` extension when specifying the file name.
 
 ### 3. report.py
 
 Generates a comprehensive report from all the TOML files in the `input` directory.
 
-[Here's](https://github.com/zacharyr0th/TOML-tools/blob/main/output/report-09-13-24.md) the report generated on 09/13/24.
+[Here's](./output/report-09-13-24.md) the report generated on 09/13/24.
 
 **Key features:**
 - Generates a detailed master report with the following information:
