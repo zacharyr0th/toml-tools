@@ -4,6 +4,8 @@
 
 A few Python scripts for analyzing, categorizing, and organizing TOML files from Electric Capital's [crypto-ecosystems](https://github.com/electric-capital/crypto-ecosystems) directory.
 
+PSA - There is a strong need to fix the categorization filtering in stats.py. The filtering is currently insufficient so the category results in the reports should be taken with a grain of salt. 
+
 ## Features
 
 ### 1. stats.py
