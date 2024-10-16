@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A few Python scripts for analyzing, categorizing, and organizing TOML files from Electric Capital's [crypto-ecosystems](https://github.com/electric-capital/crypto-ecosystems) directory.
+A suite of Python scripts for analyzing, categorizing, and organizing TOML files from Electric Capital's [crypto-ecosystems](https://github.com/electric-capital/crypto-ecosystems) directory.
 
 ## Features
 
@@ -11,92 +11,68 @@ A few Python scripts for analyzing, categorizing, and organizing TOML files from
 Generates detailed statistics from individual TOML repository files.
 
 **Key features:**
-- Generates a detailed report with the following information:
-  - Overview
-    - Total repositories
-    - Valid repositories
-    - Missing repositories
-    - Unique GitHub accounts
-    - Estimated individual accounts
-    - Estimated organization/team accounts
-  - Ecosystem Analysis
-    - Estimated number of repositories in each category
-    - Categories: DeFi, Gaming, Social, Infrastructure and Tools, Marketplaces, Unrelated
-  - Account Analysis
-    - List of repositories by accounts with > 5 contributions
-  - Category Analysis
-    - Detailed breakdown of repositories in each category
-- Generates `<input_filename>-stats-<date>.txt` for each TOML file
+- Comprehensive report generation including:
+  - Overview (total repositories, valid/missing repositories, unique GitHub accounts)
+  - Ecosystem Analysis (estimated repositories per category)
+  - Account Analysis (repositories by accounts with > 5 contributions)
+  - Category Analysis (detailed breakdown per category)
+- Output: `<input_filename>-stats-<date>.txt`
 
 ### 2. organize.py
 
-Processes TOML files to create standardized **# Repository** sections. 
+Processes TOML files to create standardized **# Repository** sections.
 
 **Key features:**
-- Extracts and normalizes GitHub repository URLs
-- Deduplicates and sorts URLs (case-insensitive)
-- Formats output in Electric Capital's TOML structure
-- Generates `<input>-organized-<date>.toml` for each file
+- GitHub repository URL extraction and normalization
+- URL deduplication and case-insensitive sorting
+- Electric Capital TOML structure formatting
+- Output: `<input>-organized-<date>.toml`
 
 **Usage:**
-```
+```bash
 python3 organize/organize.py <file-name>
 ```
-Example:
-```
-python3 organize/organize.py test
-```
-Note: Omit the `.toml` extension when specifying the file name.
 
 ### 3. report.py
 
-Generates a comprehensive report from all the TOML files in the `input` directory.
-
-[Here's](./output/report-09-13-24.md) the report generated on 09/13/24.
+Generates a comprehensive report from all TOML files in the `input` directory.
 
 **Key features:**
-- Generates a detailed master report with the following information:
-  - Overall summary across all ecosystems
-    - Total repositories
-    - Total unique GitHub accounts
-  - Summary table for each ecosystem
-    - Total, valid, and missing repositories
-    - GitHub accounts (total, individual, and organization)
-    - Percentage breakdown of repositories by category
-  - Detailed category breakdown for each ecosystem
-- Categorizes repositories into: DeFi, Gaming, Social, Infrastructure, NFTs, and Uncategorized
-- Generates a single `report-<date>.md` file for all processed TOML files
+- Overall ecosystem summary (total repositories, unique GitHub accounts)
+- Per-ecosystem summary table (repositories, GitHub accounts, category breakdown)
+- Comparative table for all ecosystems
+- Repository categorization (DeFi, Gaming, Social, Infrastructure, NFTs, Uncategorized)
+- Output: `report-<date>.md`
+
+**Sample Output:**
+
+![Ecosystem Analysis Report](archive/public/report-example.webp)
 
 ## Usage
 
-1. Place your TOML files in the `input` directory.
+1. Place TOML files in the `input` directory.
 
 2. Run the desired script:
 
-   - Generate statistics for a specific file:
-     ```
-     python scripts/stats.py <filename>
-     ```
-     Replace `<filename>` with the name of the TOML file (without extension).
+   ```bash
+   # Generate statistics for a specific file
+   python3 scripts/stats.py <filename>
 
-   - Organize TOML files:
-     ```
-     python scripts/organize.py
-     ```
+   # Organize TOML files
+   python3 scripts/organize.py
 
-   - Generate a master report:
-     ```
-     python scripts/report.py
-     ```
+   # Generate a master report
+   python3 -m report.main
+   ```
 
-## Edit the Categories
+## Customization
 
-You can modify the category definitions and regex patterns in each script to customize the analysis according to your needs. Look for the `categories` dictionary in each script.
+Modify the `categories` dictionary in each script to customize category definitions and regex patterns for your analysis needs.
 
 ## Acknowledgments
 
-- [Electric Capital](https://github.com/electric-capital/crypto-ecosystems) for providing the crypto-ecosystems data.
-- All future contributors who will help to improve and maintain this project.
+- [Electric Capital](https://github.com/electric-capital/crypto-ecosystems) for the crypto-ecosystems data.
+- Future contributors to this project.
 
 ## License
 
