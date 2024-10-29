@@ -4,9 +4,14 @@
 
 A suite of Python scripts for analyzing, categorizing, and organizing TOML files from Electric Capital's [crypto-ecosystems](https://github.com/electric-capital/crypto-ecosystems) directory.
 
-**Important Note:** The categorization defined in `constants.py` requires improvement. Currently, the filtering mechanism is not robust, which leads to imprecise category results in the generated reports. Users should interpret the category-specific data with caution until this issue is remedied.
+## Organization
 
-## Features
+- archive - previously generated files & input data 
+- scripts
+  - merge - tools for merging repository lists
+  - report - generates ecosystem analysis reports
+  - organize.py - deduplicates and standardizes repository entries
+  - stats.py - generates detailed  for individual TOML files
 
 ### 1. stats.py
 
@@ -30,11 +35,6 @@ Processes TOML files to create standardized **# Repository** sections.
 - Electric Capital TOML structure formatting
 - Output: `<input>-organized-<date>.toml`
 
-**Usage:**
-```bash
-python3 organize/organize.py <file-name>
-```
-
 ### 3. report.py
 
 Generates a comprehensive report from all TOML files in the `input` directory.
@@ -46,30 +46,14 @@ Generates a comprehensive report from all TOML files in the `input` directory.
 - Repository categorization (DeFi, Gaming, Social, Infrastructure, NFTs, Uncategorized)
 - Output: `report-<date>.md`
 
-**Sample Output:**
-
 ![Ecosystem Analysis Report](archive/public/report-example.webp)
 
-## Usage
+### 4. merge
 
-1. Place TOML files in the `input` directory.
-
-2. Run the desired script:
-
-   ```bash
-   # Generate statistics for a specific file
-   python3 scripts/stats.py <filename>
-
-   # Organize TOML files
-   python3 scripts/organize.py
-
-   # Generate a master report
-   python3 -m report.main
-   ```
-
-## Customization
-
-Modify the `categories` dictionary in each script to customize category definitions and regex patterns for your analysis needs.
+Tools for merging repository lists:
+- Supports merging new repository URLs from .txt files into existing TOML files
+- Handles duplicate detection and standardization
+- Maintains Electric Capital's TOML format
 
 ## Acknowledgments
 
