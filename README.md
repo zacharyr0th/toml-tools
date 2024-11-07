@@ -18,7 +18,7 @@ Core analysis and management scripts:
 
 #### Analysis Tools
 - [`stats.py`](/scripts/stats.py): Generates repository statistics and ecosystem metrics
-- [`report.py`](/scripts/report.py): Creates detailed ecosystem analysis reports like [this](/public/report-example.webp).
+- [`report.py`](/scripts/report.py): Creates detailed ecosystem analysis reports like [this](/public/report-example.webp)
 
 #### Repo Management
 - [`organize.py`](/scripts/organize.py): Standardizes new TOML entries
