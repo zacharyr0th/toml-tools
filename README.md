@@ -20,7 +20,7 @@ Core analysis and management scripts:
 - [`stats.py`](/scripts/stats.py): Generates repository statistics and ecosystem metrics
 - [`report.py`](/scripts/report.py): Creates detailed ecosystem analysis reports like [this](/public/report-example.webp).
 
-#### Repository Management
+#### Repo Management
 - [`organize.py`](/scripts/organize.py): Standardizes new TOML entries
 - [`rm-sui-solana.py`](/scripts/rm-sui-solana.py): Removes Sui/Solana specific entries
 - [`check-repos`](/scripts/check-repos): Checks if repos in a .txt file are in a .toml
