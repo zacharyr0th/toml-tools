@@ -255,26 +255,30 @@ def generate_stats(input_file: str, output_file: str) -> None:
 def main() -> None:
     """Parse command-line arguments and generate statistics from TOML files."""
     parser = argparse.ArgumentParser(description="Generate statistics from TOML repository files.")
-    parser.add_argument("toml_file", help="Path to the TOML file (relative to scripts directory)")
+    parser.add_argument("toml_file", help="Name of the TOML file to process (e.g. sui.toml, aptos.toml)")
     args = parser.parse_args()
 
     current_date = datetime.now().strftime("%m-%d-%y")
-    os.makedirs('output', exist_ok=True)
+    
+    # Use existing directories in toml-tools
+    toml_tools_root = os.path.dirname(os.path.dirname(__file__))
+    input_dir = os.path.join(toml_tools_root, 'input')
+    output_dir = os.path.join(toml_tools_root, 'output')
 
-    # Modified to handle full path
-    input_path = os.path.join(os.path.dirname(__file__), args.toml_file)
+    # Look for specified TOML file in input directory
+    input_path = os.path.join(input_dir, args.toml_file)
     if not os.path.exists(input_path):
-        logging.error("File %s not found.", input_path)
+        logging.error("File %s not found in input directory.", args.toml_file)
         sys.exit(1)
 
     # Get just the filename without extension for the output
-    base_name = os.path.splitext(os.path.basename(args.toml_file))[0]
+    base_name = os.path.splitext(os.path.basename(input_path))[0]
     output_filename = f"{base_name}-stats-{current_date}.txt"
-    output_path = os.path.join('output', output_filename)
+    output_path = os.path.join(output_dir, output_filename)
     generate_stats(input_path, output_path)
-    logging.info("Generated stats for %s -> %s", args.toml_file, output_filename)
+    logging.info("Generated stats for %s -> %s", input_path, output_filename)
 
-    logging.info("Statistics have been generated and saved in the 'output' folder.")
+    logging.info("Statistics have been generated and saved in the 'toml-tools/output' folder.")
 
 if __name__ == "__main__":
     main()

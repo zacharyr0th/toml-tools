@@ -1,30 +1,26 @@
+"""Module for merging GitHub repository URLs from different sources into a TOML file."""
 import re
 import logging
 from urllib.parse import urlparse, urlunparse
+import os
 
 def clean_url(url: str) -> str:
     """Clean and normalize GitHub repository URLs."""
     # Remove trailing quotes and slashes
     url = url.strip('"').rstrip('/')
-    
     # Remove trailing slashes and ensure https
     url = ensure_https(url)
-    
     # Parse the URL
     parsed = urlparse(url)
-    
     # Extract path components
     path_parts = parsed.path.strip('/').split('/')
-    
     # Keep only the first two path components (username/repo)
     if len(path_parts) >= 2:
         clean_path = '/'.join(path_parts[:2])
     else:
         return ''  # Invalid URL
-    
     # Reconstruct the URL
     cleaned = urlunparse(('https', 'github.com', f'/{clean_path}', '', '', ''))
-    
     return cleaned
 
 def ensure_https(url: str) -> str:
@@ -59,21 +55,25 @@ def generate_toml(urls: list[str]) -> str:
     return toml_content
 
 def merge_repos():
+    """Merge GitHub repository URLs from new-repos.txt into aptos.toml and save to 
+    new-aptos.toml."""
+    # Get the script's directory
+    script_dir = os.path.dirname(os.path.abspath(__file__))
     # Read the existing aptos.toml file
-    with open('aptos.toml', 'r', encoding='utf-8') as f:
+    with open(os.path.join(script_dir, 'aptos.toml'), 'r', encoding='utf-8') as f:
         existing_content = f.read()
 
     # Extract existing repos
     existing_repos = extract_urls(existing_content)
 
-    # Read the new repos from new-repos.txt
-    with open('new-repos.txt', 'r', encoding='utf-8') as f:
+    # Read the new repos from new-repos.txt (updated path)
+    with open(os.path.join(script_dir, 'new-repos.txt'), 'r', encoding='utf-8') as f:
         new_content = f.read()
 
     # Extract new repos
     new_repos = extract_urls(new_content)
 
-    # Merge repos
+    # Merge repos (using a set to automatically handle duplicates)
     all_repos = existing_repos.union(new_repos)
 
     # Remove empty strings (invalid URLs)
@@ -83,18 +83,27 @@ def merge_repos():
     new_repo_section = generate_toml(list(all_repos))
 
     # Replace the existing repo section with the new one
-    repo_section_pattern = r'# Repositories\n((?:\[\[repo\]\][\s\S]*?\n\n)*)'
-    updated_content = re.sub(repo_section_pattern, f'# Repositories\n{new_repo_section}', existing_content)
-
-    # Write the updated content to new-aptos.toml
-    with open('new-aptos.toml', 'w', encoding='utf-8') as f:
+    repo_section_pattern = (
+        r'# Repositories\n'
+        r'((?:\[\[repo\]\][\s\S]*?\n\n)*)'
+    )
+    updated_content = re.sub(
+        repo_section_pattern,
+        f'# Repositories\n{new_repo_section}',
+        existing_content
+    )
+    # Write the updated content to new-aptos.toml (updated path)
+    with open(os.path.join(script_dir, 'new-aptos.toml'), 'w', encoding='utf-8') as f:
         f.write(updated_content)
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO,
-                        format='%(asctime)s - %(levelname)s - %(message)s',
-                        datefmt='%Y-%m-%d %H:%M:%S')
-    
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        datefmt='%Y-%m-%d %H:%M:%S'
+    )
+
     merge_repos()
-    logging.info("Merge complete. New repos have been added to new-aptos.toml.")
-    
+    logging.info(
+        "Merge complete. New repos have been added to new-aptos.toml."
+    )

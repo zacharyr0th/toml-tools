@@ -5,14 +5,14 @@ import os
 
 def scrape_github_dependents():
     repo = "aptos-labs/aptos-core"
-    package_id = "UGFja2FnZS0zODAxNTY1NTky"  # specific package ID for @aptos-labs/aptos-client
+    package_id = "UGFja2FnZS0zMDYzNDc5NjM0"  # specific package ID for 'aptos'
     url = f'https://github.com/{repo}/network/dependents?package_id={package_id}'
     repos = []
     page_num = 1
     start_time = time.time()
 
-    print(f"Starting to scrape dependents for {repo} (@aptos-labs/aptos-client)")
-    print(f"Expected total: ~2,696 repositories and 2,149 packages (based on GitHub UI)")
+    print(f"Starting to scrape dependents for {repo} (aptos)")
+    print(f"Expected total: ~6,448 repositories and 431 packages (based on GitHub UI)")
 
     while True:
         print(f"\rScraping page {page_num}... Found {len(repos)} repos (Time elapsed: {int(time.time() - start_time)}s)", end="")
