@@ -2,64 +2,39 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A suite of Python scripts for analyzing, categorizing, and organizing TOML files from Electric Capital's [crypto-ecosystems](https://github.com/electric-capital/crypto-ecosystems) directory.
+Python tools for analyzing TOML files from Electric Capital's crypto-ecosystems.
 
-## Organization
+## Directory Structure
 
-- archive - previously generated files & input data 
-- scripts
-  - merge - tools for merging repository lists
-  - report - generates ecosystem analysis reports
-  - organize.py - deduplicates and standardizes repository entries
-  - stats.py - generates detailed  for individual TOML files
+### /scrape
+Repository scraping and dependency analysis tools:
+- [`aptos-sui.py`](/scrape/aptos-sui.py): Categorizes scraped Move repos
+- [`dependents.py`](/scrape/dependents.py): Analyzes dependencies on specific packages
+- [`github_scraper.py`](/scrape/github_scraper.py): Scrapes Move language repos on GitHub
+- [`scrape_names.py`](/scrape/scrape_names.py): Extracts repository names
 
-### 1. stats.py
+### /scripts
+Core analysis and management scripts:
 
-Generates detailed statistics from individual TOML repository files.
+#### Analysis Tools
+- [`stats.py`](/scripts/stats.py): Generates repository statistics and ecosystem metrics
+- [`report.py`](/scripts/report.py): Creates detailed ecosystem analysis reports like [this](/public/report-example.webp).
 
-**Key features:**
-- Comprehensive report generation including:
-  - Overview (total repositories, valid/missing repositories, unique GitHub accounts)
-  - Ecosystem Analysis (estimated repositories per category)
-  - Account Analysis (repositories by accounts with > 5 contributions)
-  - Category Analysis (detailed breakdown per category)
-- Output: `<input_filename>-stats-<date>.txt`
+#### Repository Management
+- [`organize.py`](/scripts/organize.py): Standardizes new TOML entries
+- [`rm-sui-solana.py`](/scripts/rm-sui-solana.py): Removes Sui/Solana specific entries
+- [`check-repos`](/scripts/check-repos): Checks if repos in a .txt file are in a .toml
+- [`merge`](/scripts/merge): Merges new .toml file with the associated Electric Capital .toml file
+- [`remove-duplicates`](/scripts/remove-duplicates): Cleans up duplicate entries
 
-### 2. organize.py
+### /output
+Generated output directory
 
-Processes TOML files to create standardized **# Repository** sections.
+### /input
+A collection of the top .toml files used in Electric Capital's calculations
 
-**Key features:**
-- GitHub repository URL extraction and normalization
-- URL deduplication and case-insensitive sorting
-- Electric Capital TOML structure formatting
-- Output: `<input>-organized-<date>.toml`
-
-### 3. report.py
-
-Generates a comprehensive report from all TOML files in the `input` directory.
-
-**Key features:**
-- Overall ecosystem summary (total repositories, unique GitHub accounts)
-- Per-ecosystem summary table (repositories, GitHub accounts, category breakdown)
-- Comparative table for all ecosystems
-- Repository categorization (DeFi, Gaming, Social, Infrastructure, NFTs, Uncategorized)
-- Output: `report-<date>.md`
-
-![Ecosystem Analysis Report](archive/public/report-example.webp)
-
-### 4. merge
-
-Tools for merging repository lists:
-- Supports merging new repository URLs from .txt files into existing TOML files
-- Handles duplicate detection and standardization
-- Maintains Electric Capital's TOML format
-
-## Acknowledgments
-
-- [Electric Capital](https://github.com/electric-capital/crypto-ecosystems) for the crypto-ecosystems data.
-- Future contributors to this project.
+## Usage
+Run each script independently from the command line. See individual script headers for specific usage instructions.
 
 ## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
