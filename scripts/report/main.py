@@ -10,18 +10,23 @@ from report.report_generator import generate_master_report
 def main() -> None:
     """Generate a single report for all TOML files in the input folder."""
     current_date = datetime.now().strftime("%m-%d-%y")
-    os.makedirs('output', exist_ok=True)
-
-    input_folder = 'input'
     
-    if not os.path.exists(input_folder):
-        logging.error("Input folder '%s' does not exist.", input_folder)
+    # Get the project root directory (two levels up from this script)
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+    input_dir = os.path.join(project_root, 'input')
+    output_dir = os.path.join(project_root, 'output')
+    
+    # Create output directory if it doesn't exist
+    os.makedirs(output_dir, exist_ok=True)
+    
+    if not os.path.exists(input_dir):
+        logging.error("Input folder '%s' does not exist.", input_dir)
         logging.info("Current working directory: %s", os.getcwd())
         logging.info("Please make sure you're running the script from the correct directory.")
         sys.exit(1)
 
     try:
-        toml_files = [os.path.join(input_folder, f) for f in os.listdir(input_folder) if f.endswith('.toml')]
+        toml_files = [os.path.join(input_dir, f) for f in os.listdir(input_dir) if f.endswith('.toml')]
     except OSError as e:
         logging.error("Error accessing the input folder: %s", e)
         sys.exit(1)
@@ -31,7 +36,7 @@ def main() -> None:
         sys.exit(1)
 
     output_filename = f"report-{current_date}.md"
-    output_path = os.path.join('output', output_filename)
+    output_path = os.path.join(output_dir, output_filename)
     
     generate_master_report(toml_files, output_path)
     logging.info("Generated report for all TOML files -> %s", output_filename)
