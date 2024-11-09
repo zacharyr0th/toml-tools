@@ -129,7 +129,7 @@ def save_progress_markdown(repos: List[str], stats: dict, config: ScraperConfig)
         
         f.write("\n## Dependent Repositories\n\n")
         for repo in repos:
-            f.write(f"- {repo}\n")
+            f.write(f"- https://github.com/{repo}\n")
 
 def scrape_github_dependents(config: ScraperConfig, log_file) -> List[str]:
     """Scrape GitHub dependent repositories for a given repository or package."""
@@ -178,13 +178,16 @@ def save_results(repos: List[str], config: ScraperConfig):
     print(f"\nSaving results to: {config.output_file}")
     with open(config.output_file, 'w', encoding='utf-8') as f:
         if config.output_format == 'txt':
-            f.write('\n'.join(repos))
+            f.write('\n'.join(f"https://github.com/{repo}" for repo in repos))
         elif config.output_format == 'json':
-            json.dump({"repositories": repos, "count": len(repos)}, f, indent=2)
+            json.dump({
+                "repositories": [f"https://github.com/{repo}" for repo in repos],
+                "count": len(repos)
+            }, f, indent=2)
         elif config.output_format == 'csv':
             writer = csv.writer(f)
             writer.writerow(["repository"])  # Add header
-            writer.writerows([[url] for url in repos])
+            writer.writerows([[f"https://github.com/{url}"] for url in repos])
 
 def get_full_repo_name(repo_name: str) -> str:
     """Convert a repository name to its full form.
@@ -382,7 +385,7 @@ def search_package_dependents_chain(config: ScraperConfig) -> Dict[str, List[str
         repos_txt_file = os.path.join(output_dir, f"{config.repo.replace('/', '_')}_repos.txt")
         with open(repos_txt_file, 'w', encoding='utf-8') as f:
             for repo in sorted(all_repos):
-                f.write(f"{repo}\n")
+                f.write(f"https://github.com/{repo}\n")
         
         msg = f"\n✓ Results saved to output/{repo_name}/"
         print(msg)
