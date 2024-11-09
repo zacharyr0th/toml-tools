@@ -111,7 +111,7 @@ def save_progress_markdown(repos: List[str], stats: dict, config: ScraperConfig)
         stats (dict): Statistics about the scraping process
         config (ScraperConfig): Configuration object containing output parameters
     """
-    output_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "output")
+    output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "output")
     os.makedirs(output_dir, exist_ok=True)
     
     md_file = os.path.join(output_dir, f"scraping_results_{config.repo.replace('/', '_')}.md")
@@ -169,7 +169,7 @@ def scrape_github_dependents(config: ScraperConfig, log_file) -> List[str]:
 
 def save_results(repos: List[str], config: ScraperConfig):
     """Save the scraped repository URLs to a file."""
-    output_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "output")
+    output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "output")
     os.makedirs(output_dir, exist_ok=True)
     
     if not config.output_file:
@@ -281,7 +281,7 @@ def create_repo_output_dir(config: ScraperConfig) -> str:
         str: Path to the repository-specific output directory
     """
     # Create base output directory
-    base_output_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "output")
+    base_output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "output")
     os.makedirs(base_output_dir, exist_ok=True)
     
     # Create repository-specific directory
@@ -300,7 +300,7 @@ def save_packages_markdown(packages: Dict[str, str], config: ScraperConfig):
     """
     # Create single output directory for the repository
     repo_name = config.repo.split('/')[-1]
-    output_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "output", repo_name)
+    output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "output", repo_name)
     os.makedirs(output_dir, exist_ok=True)
     
     output_file = os.path.join(output_dir, "packages.md")
@@ -316,7 +316,7 @@ def save_packages_markdown(packages: Dict[str, str], config: ScraperConfig):
 def search_package_dependents_chain(config: ScraperConfig) -> Dict[str, List[str]]:
     """Search for all packages in a repo and their dependent repositories."""
     repo_name = config.repo.split('/')[-1]
-    output_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "output", repo_name)
+    output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "output", repo_name)
     os.makedirs(output_dir, exist_ok=True)
     
     cli_log_file = os.path.join(output_dir, f"{config.repo.replace('/', '_')}_cli.txt")
