@@ -1,3 +1,5 @@
+"""GitHub dependency scraper for repositories, supporting multiple output formats."""
+
 import requests
 from bs4 import BeautifulSoup
 import time
@@ -147,63 +149,40 @@ def list_package_ids(config: ScraperConfig) -> Dict[str, str]:
     print(f"Fetching packages from: {base_url}")
     
     headers = {
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.5",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Connection": "keep-alive",
-        "Upgrade-Insecure-Requests": "1",
-        "Sec-Fetch-Dest": "document",
-        "Sec-Fetch-Mode": "navigate",
-        "Sec-Fetch-Site": "none",
-        "Sec-Fetch-User": "?1",
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/115.0",
+        "Accept": "text/html",
         "Authorization": config.headers.get("Authorization", "")
     }
     
     try:
-        print("Sending request with headers:", json.dumps(headers, indent=2))
-        response = requests.get(base_url, headers=headers, timeout=10)
+        response = requests.get(base_url, headers=headers)
         response.raise_for_status()
         
-        print(f"\nResponse Status Code: {response.status_code}")
-        print(f"Response Headers: {json.dumps(dict(response.headers), indent=2)}")
+        soup = BeautifulSoup(response.content, "html.parser")
+        packages = {}
+
+        # Find all select-menu-item links
+        menu_items = soup.find_all("a", class_="select-menu-item")
         
-        if response.status_code == 200:
-            soup = BeautifulSoup(response.content, "html.parser")
+        for item in menu_items:
+            # Get the package ID from the href
+            href = item.get("href", "")
+            package_id = href.split("package_id=")[-1] if "package_id=" in href else None
             
-            # Debug: Save the full HTML response
-            with open("debug_response.html", "w", encoding="utf-8") as f:
-                f.write(soup.prettify())
-            print("\nSaved full HTML response to debug_response.html")
+            # Get the package name from the text content
+            name_elem = item.find("span", class_="select-menu-item-text")
+            if name_elem and package_id:
+                package_name = name_elem.get_text(strip=True)
+                packages[package_name] = package_id
+                print(f"Found package: {package_name}")
+
+        if not packages:
+            print("No packages found in the response")
             
-            packages = {}
-            dropdown = soup.find("select", {"name": "package_id"})
-            
-            if dropdown:
-                for option in dropdown.find_all("option"):
-                    if option.get("value"):
-                        package_name = option.text.strip()
-                        package_id = option.get("value")
-                        packages[package_name] = package_id
-                        print(f"Package: {package_name}")
-                        print(f"ID: {package_id}")
-                        print("-" * 50)
-            
-            if not packages:
-                print("\nNo packages found. Checking page content:")
-                print("Title:", soup.title.string if soup.title else "No title found")
-                print("Is there a login form?", "Yes" if soup.find("form", {"action": "/login"}) else "No")
-                print("Is there an error message?", "Yes" if soup.find(class_="flash-error") else "No")
-        
         return packages
         
     except requests.RequestException as e:
-        print(f"\nError fetching packages: {str(e)}")
-        if hasattr(e, 'response') and e.response is not None:
-            print(f"Response Status Code: {e.response.status_code}")
-            print(f"Response Headers: {json.dumps(dict(e.response.headers), indent=2)}")
-            print("\nResponse Content Preview:")
-            print(e.response.text[:1000])
+        print(f"Error fetching packages: {str(e)}")
         return {}
 
 def main():
