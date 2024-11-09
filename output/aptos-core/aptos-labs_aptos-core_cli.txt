@@ -1,0 +1,1530 @@
+CLI Output Log for aptos-labs/aptos-core
+Generated on: 2024-11-09 10:49:47
+
+Step 1: Finding all packages in aptos-labs/aptos-core...
+
+Found 100 packages
+
+Step 2: Searching for repositories dependent on each package...
+
+Searching dependents for @aptos-labs/aptos-client
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 60 repos (Time elapsed: 3s) - Page 2
+Found 90 repos (Time elapsed: 5s) - Page 3
+Found 120 repos (Time elapsed: 7s) - Page 4
+Found 150 repos (Time elapsed: 10s) - Page 5
+Found 180 repos (Time elapsed: 12s) - Page 6
+Found 209 repos (Time elapsed: 14s) - Page 7
+Found 239 repos (Time elapsed: 15s) - Page 8
+Found 268 repos (Time elapsed: 17s) - Page 9
+Found 298 repos (Time elapsed: 20s) - Page 10
+Found 328 repos (Time elapsed: 22s) - Page 11
+Found 358 repos (Time elapsed: 25s) - Page 12
+Found 388 repos (Time elapsed: 27s) - Page 13
+Found 418 repos (Time elapsed: 29s) - Page 14
+Found 448 repos (Time elapsed: 32s) - Page 15
+Found 478 repos (Time elapsed: 34s) - Page 16
+Found 508 repos (Time elapsed: 36s) - Page 17
+Found 538 repos (Time elapsed: 39s) - Page 18
+Found 568 repos (Time elapsed: 41s) - Page 19
+Found 598 repos (Time elapsed: 43s) - Page 20
+Found 628 repos (Time elapsed: 45s) - Page 21
+Found 658 repos (Time elapsed: 47s) - Page 22
+Found 688 repos (Time elapsed: 50s) - Page 23
+Found 718 repos (Time elapsed: 52s) - Page 24
+Found 748 repos (Time elapsed: 55s) - Page 25
+Found 777 repos (Time elapsed: 57s) - Page 26
+Found 806 repos (Time elapsed: 59s) - Page 27
+Found 836 repos (Time elapsed: 62s) - Page 28
+Found 866 repos (Time elapsed: 63s) - Page 29
+Found 896 repos (Time elapsed: 66s) - Page 30
+Found 926 repos (Time elapsed: 67s) - Page 31
+Found 956 repos (Time elapsed: 70s) - Page 32
+Found 986 repos (Time elapsed: 72s) - Page 33
+Found 1016 repos (Time elapsed: 74s) - Page 34
+Found 1046 repos (Time elapsed: 77s) - Page 35
+Found 1076 repos (Time elapsed: 79s) - Page 36
+Found 1106 repos (Time elapsed: 82s) - Page 37
+Found 1136 repos (Time elapsed: 84s) - Page 38
+Found 1166 repos (Time elapsed: 86s) - Page 39
+Found 1196 repos (Time elapsed: 88s) - Page 40
+Found 1225 repos (Time elapsed: 90s) - Page 41
+Found 1254 repos (Time elapsed: 92s) - Page 42
+Found 1284 repos (Time elapsed: 95s) - Page 43
+Found 1314 repos (Time elapsed: 97s) - Page 44
+Found 1344 repos (Time elapsed: 100s) - Page 45
+Found 1374 repos (Time elapsed: 102s) - Page 46
+Found 1404 repos (Time elapsed: 105s) - Page 47
+Found 1432 repos (Time elapsed: 107s) - Page 48
+Found 1462 repos (Time elapsed: 109s) - Page 49
+Found 1492 repos (Time elapsed: 111s) - Page 50
+Found 1522 repos (Time elapsed: 113s) - Page 51
+Found 1551 repos (Time elapsed: 115s) - Page 52
+Found 1581 repos (Time elapsed: 117s) - Page 53
+Found 1607 repos (Time elapsed: 119s) - Page 54
+Found 1637 repos (Time elapsed: 121s) - Page 55
+Found 1667 repos (Time elapsed: 123s) - Page 56
+Found 1697 repos (Time elapsed: 125s) - Page 57
+Found 1727 repos (Time elapsed: 127s) - Page 58
+Found 1755 repos (Time elapsed: 130s) - Page 59
+Found 1785 repos (Time elapsed: 132s) - Page 60
+Found 1815 repos (Time elapsed: 134s) - Page 61
+Found 1845 repos (Time elapsed: 136s) - Page 62
+Found 1875 repos (Time elapsed: 138s) - Page 63
+Found 1901 repos (Time elapsed: 140s) - Page 64
+Found 1931 repos (Time elapsed: 142s) - Page 65
+Found 1961 repos (Time elapsed: 145s) - Page 66
+Found 1991 repos (Time elapsed: 147s) - Page 67
+Found 2021 repos (Time elapsed: 150s) - Page 68
+Found 2050 repos (Time elapsed: 152s) - Page 69
+Found 2080 repos (Time elapsed: 154s) - Page 70
+Found 2110 repos (Time elapsed: 157s) - Page 71
+Found 2140 repos (Time elapsed: 159s) - Page 72
+Found 2170 repos (Time elapsed: 161s) - Page 73
+Found 2200 repos (Time elapsed: 163s) - Page 74
+Found 2230 repos (Time elapsed: 165s) - Page 75
+Found 2260 repos (Time elapsed: 168s) - Page 76
+Found 2274 repos (Time elapsed: 170s) - Page 77
+Done! Scraped 2274 repositories in 171 seconds (Total pages: 77)
+Found 2274 repositories for @aptos-labs/aptos-client
+
+Searching dependents for @aptos-labs/aptos-faucet-client
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 36 repos (Time elapsed: 2s) - Page 2
+Done! Scraped 36 repositories in 4 seconds (Total pages: 2)
+Found 36 repositories for @aptos-labs/aptos-faucet-client
+
+Searching dependents for @chiron-tgbot/aptos-client
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 0 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 0 repositories in 2 seconds (Total pages: 1)
+Found 0 repositories for @chiron-tgbot/aptos-client
+
+Searching dependents for @fewcha/aptos
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 4 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 4 repositories in 1 seconds (Total pages: 1)
+Found 4 repositories for @fewcha/aptos
+
+Searching dependents for @sentio/aptos
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 0 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 0 repositories in 2 seconds (Total pages: 1)
+Found 0 repositories for @sentio/aptos
+
+Searching dependents for @wgb5445/aptos-dynamic-transaction-composer
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 0 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 0 repositories in 1 seconds (Total pages: 1)
+Found 0 repositories for @wgb5445/aptos-dynamic-transaction-composer
+
+Searching dependents for @wgb5445/aptos-intent
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 0 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 0 repositories in 2 seconds (Total pages: 1)
+Found 0 repositories for @wgb5445/aptos-intent
+
+Searching dependents for @wgb5445/aptos-intent-npm
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 6 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 6 repositories in 1 seconds (Total pages: 1)
+Found 6 repositories for @wgb5445/aptos-intent-npm
+
+Searching dependents for af-cli
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 27 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 2s) - Page 2
+Found 79 repos (Time elapsed: 4s) - Page 3
+Found 104 repos (Time elapsed: 7s) - Page 4
+Found 131 repos (Time elapsed: 9s) - Page 5
+Found 160 repos (Time elapsed: 11s) - Page 6
+Found 190 repos (Time elapsed: 14s) - Page 7
+Found 219 repos (Time elapsed: 16s) - Page 8
+Found 249 repos (Time elapsed: 18s) - Page 9
+Found 260 repos (Time elapsed: 20s) - Page 10
+Done! Scraped 260 repositories in 22 seconds (Total pages: 10)
+Found 260 repositories for af-cli
+
+Searching dependents for aptos- NPM
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 60 repos (Time elapsed: 3s) - Page 2
+Found 90 repos (Time elapsed: 5s) - Page 3
+Found 119 repos (Time elapsed: 7s) - Page 4
+Found 149 repos (Time elapsed: 10s) - Page 5
+Found 179 repos (Time elapsed: 12s) - Page 6
+Found 209 repos (Time elapsed: 15s) - Page 7
+Found 238 repos (Time elapsed: 17s) - Page 8
+Found 267 repos (Time elapsed: 19s) - Page 9
+Found 297 repos (Time elapsed: 21s) - Page 10
+Found 327 repos (Time elapsed: 23s) - Page 11
+Found 357 repos (Time elapsed: 26s) - Page 12
+Found 387 repos (Time elapsed: 28s) - Page 13
+Found 417 repos (Time elapsed: 30s) - Page 14
+Found 447 repos (Time elapsed: 32s) - Page 15
+Found 477 repos (Time elapsed: 35s) - Page 16
+Found 505 repos (Time elapsed: 37s) - Page 17
+Found 534 repos (Time elapsed: 39s) - Page 18
+Found 564 repos (Time elapsed: 42s) - Page 19
+Found 593 repos (Time elapsed: 44s) - Page 20
+Found 623 repos (Time elapsed: 46s) - Page 21
+Found 653 repos (Time elapsed: 48s) - Page 22
+Found 683 repos (Time elapsed: 50s) - Page 23
+Found 713 repos (Time elapsed: 52s) - Page 24
+Found 743 repos (Time elapsed: 54s) - Page 25
+Found 773 repos (Time elapsed: 56s) - Page 26
+Found 803 repos (Time elapsed: 58s) - Page 27
+Found 833 repos (Time elapsed: 60s) - Page 28
+Found 862 repos (Time elapsed: 63s) - Page 29
+Found 892 repos (Time elapsed: 65s) - Page 30
+Found 919 repos (Time elapsed: 68s) - Page 31
+Found 949 repos (Time elapsed: 70s) - Page 32
+Found 979 repos (Time elapsed: 73s) - Page 33
+Found 1009 repos (Time elapsed: 75s) - Page 34
+Found 1038 repos (Time elapsed: 77s) - Page 35
+Found 1067 repos (Time elapsed: 80s) - Page 36
+Found 1097 repos (Time elapsed: 82s) - Page 37
+Found 1126 repos (Time elapsed: 84s) - Page 38
+Found 1155 repos (Time elapsed: 86s) - Page 39
+Found 1185 repos (Time elapsed: 88s) - Page 40
+Found 1215 repos (Time elapsed: 90s) - Page 41
+Found 1244 repos (Time elapsed: 92s) - Page 42
+Found 1274 repos (Time elapsed: 94s) - Page 43
+Found 1304 repos (Time elapsed: 96s) - Page 44
+Found 1334 repos (Time elapsed: 98s) - Page 45
+Found 1364 repos (Time elapsed: 100s) - Page 46
+Found 1394 repos (Time elapsed: 102s) - Page 47
+Found 1424 repos (Time elapsed: 104s) - Page 48
+Found 1454 repos (Time elapsed: 107s) - Page 49
+Found 1484 repos (Time elapsed: 109s) - Page 50
+Found 1514 repos (Time elapsed: 112s) - Page 51
+Found 1544 repos (Time elapsed: 113s) - Page 52
+Found 1571 repos (Time elapsed: 116s) - Page 53
+Found 1601 repos (Time elapsed: 117s) - Page 54
+Found 1630 repos (Time elapsed: 120s) - Page 55
+Found 1660 repos (Time elapsed: 122s) - Page 56
+Found 1689 repos (Time elapsed: 124s) - Page 57
+Found 1718 repos (Time elapsed: 126s) - Page 58
+Found 1748 repos (Time elapsed: 129s) - Page 59
+Found 1778 repos (Time elapsed: 131s) - Page 60
+Found 1808 repos (Time elapsed: 133s) - Page 61
+Found 1838 repos (Time elapsed: 135s) - Page 62
+Found 1867 repos (Time elapsed: 137s) - Page 63
+Found 1894 repos (Time elapsed: 139s) - Page 64
+Found 1924 repos (Time elapsed: 141s) - Page 65
+Found 1953 repos (Time elapsed: 144s) - Page 66
+Found 1982 repos (Time elapsed: 146s) - Page 67
+Found 2012 repos (Time elapsed: 148s) - Page 68
+Found 2041 repos (Time elapsed: 150s) - Page 69
+Found 2071 repos (Time elapsed: 152s) - Page 70
+Found 2100 repos (Time elapsed: 154s) - Page 71
+Found 2129 repos (Time elapsed: 156s) - Page 72
+Found 2159 repos (Time elapsed: 158s) - Page 73
+Found 2186 repos (Time elapsed: 161s) - Page 74
+Found 2215 repos (Time elapsed: 163s) - Page 75
+Found 2243 repos (Time elapsed: 165s) - Page 76
+Found 2273 repos (Time elapsed: 168s) - Page 77
+Found 2303 repos (Time elapsed: 170s) - Page 78
+Found 2333 repos (Time elapsed: 172s) - Page 79
+Found 2363 repos (Time elapsed: 174s) - Page 80
+Found 2392 repos (Time elapsed: 176s) - Page 81
+Found 2422 repos (Time elapsed: 178s) - Page 82
+Found 2451 repos (Time elapsed: 181s) - Page 83
+Found 2481 repos (Time elapsed: 183s) - Page 84
+Found 2509 repos (Time elapsed: 185s) - Page 85
+Found 2537 repos (Time elapsed: 187s) - Page 86
+Found 2567 repos (Time elapsed: 190s) - Page 87
+Found 2596 repos (Time elapsed: 192s) - Page 88
+Found 2626 repos (Time elapsed: 195s) - Page 89
+Found 2655 repos (Time elapsed: 197s) - Page 90
+Found 2685 repos (Time elapsed: 200s) - Page 91
+Found 2714 repos (Time elapsed: 202s) - Page 92
+Found 2744 repos (Time elapsed: 204s) - Page 93
+Found 2770 repos (Time elapsed: 207s) - Page 94
+Found 2800 repos (Time elapsed: 209s) - Page 95
+Found 2830 repos (Time elapsed: 212s) - Page 96
+Found 2858 repos (Time elapsed: 214s) - Page 97
+Found 2887 repos (Time elapsed: 216s) - Page 98
+Found 2917 repos (Time elapsed: 218s) - Page 99
+Found 2945 repos (Time elapsed: 221s) - Page 100
+Found 2975 repos (Time elapsed: 223s) - Page 101
+Found 3001 repos (Time elapsed: 226s) - Page 102
+Found 3030 repos (Time elapsed: 228s) - Page 103
+Found 3060 repos (Time elapsed: 231s) - Page 104
+Found 3090 repos (Time elapsed: 233s) - Page 105
+Found 3120 repos (Time elapsed: 235s) - Page 106
+Found 3149 repos (Time elapsed: 238s) - Page 107
+Found 3179 repos (Time elapsed: 240s) - Page 108
+Found 3209 repos (Time elapsed: 242s) - Page 109
+Found 3238 repos (Time elapsed: 244s) - Page 110
+Found 3267 repos (Time elapsed: 246s) - Page 111
+Found 3295 repos (Time elapsed: 248s) - Page 112
+Found 3323 repos (Time elapsed: 251s) - Page 113
+Found 3352 repos (Time elapsed: 253s) - Page 114
+Found 3382 repos (Time elapsed: 256s) - Page 115
+Found 3412 repos (Time elapsed: 257s) - Page 116
+Found 3441 repos (Time elapsed: 259s) - Page 117
+Found 3467 repos (Time elapsed: 261s) - Page 118
+Found 3496 repos (Time elapsed: 264s) - Page 119
+Found 3523 repos (Time elapsed: 266s) - Page 120
+Found 3550 repos (Time elapsed: 267s) - Page 121
+Found 3577 repos (Time elapsed: 269s) - Page 122
+Found 3602 repos (Time elapsed: 271s) - Page 123
+Found 3632 repos (Time elapsed: 273s) - Page 124
+Found 3662 repos (Time elapsed: 276s) - Page 125
+Found 3690 repos (Time elapsed: 278s) - Page 126
+Found 3719 repos (Time elapsed: 281s) - Page 127
+Found 3748 repos (Time elapsed: 283s) - Page 128
+Found 3778 repos (Time elapsed: 286s) - Page 129
+Found 3808 repos (Time elapsed: 288s) - Page 130
+Found 3836 repos (Time elapsed: 290s) - Page 131
+Found 3866 repos (Time elapsed: 292s) - Page 132
+Found 3896 repos (Time elapsed: 294s) - Page 133
+Found 3926 repos (Time elapsed: 297s) - Page 134
+Found 3955 repos (Time elapsed: 299s) - Page 135
+Found 3984 repos (Time elapsed: 301s) - Page 136
+Found 4014 repos (Time elapsed: 302s) - Page 137
+Found 4043 repos (Time elapsed: 304s) - Page 138
+Found 4073 repos (Time elapsed: 307s) - Page 139
+Found 4103 repos (Time elapsed: 310s) - Page 140
+Found 4133 repos (Time elapsed: 312s) - Page 141
+Found 4163 repos (Time elapsed: 314s) - Page 142
+Found 4192 repos (Time elapsed: 317s) - Page 143
+Found 4222 repos (Time elapsed: 319s) - Page 144
+Found 4251 repos (Time elapsed: 322s) - Page 145
+Found 4279 repos (Time elapsed: 324s) - Page 146
+Found 4287 repos (Time elapsed: 326s) - Page 147
+Found 4316 repos (Time elapsed: 328s) - Page 148
+Found 4345 repos (Time elapsed: 330s) - Page 149
+Found 4375 repos (Time elapsed: 332s) - Page 150
+Found 4404 repos (Time elapsed: 335s) - Page 151
+Found 4428 repos (Time elapsed: 337s) - Page 152
+Found 4457 repos (Time elapsed: 339s) - Page 153
+Found 4486 repos (Time elapsed: 341s) - Page 154
+Found 4513 repos (Time elapsed: 344s) - Page 155
+Found 4543 repos (Time elapsed: 346s) - Page 156
+Found 4573 repos (Time elapsed: 348s) - Page 157
+Found 4602 repos (Time elapsed: 351s) - Page 158
+Found 4632 repos (Time elapsed: 352s) - Page 159
+Found 4662 repos (Time elapsed: 355s) - Page 160
+Found 4692 repos (Time elapsed: 356s) - Page 161
+Found 4705 repos (Time elapsed: 358s) - Page 162
+Done! Scraped 4705 repositories in 360 seconds (Total pages: 162)
+Found 4705 repositories for aptos- NPM
+
+Searching dependents for aptos- Rust
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 28 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 3s) - Page 2
+Found 81 repos (Time elapsed: 5s) - Page 3
+Found 110 repos (Time elapsed: 7s) - Page 4
+Found 132 repos (Time elapsed: 10s) - Page 5
+Found 157 repos (Time elapsed: 12s) - Page 6
+Found 187 repos (Time elapsed: 14s) - Page 7
+Found 216 repos (Time elapsed: 16s) - Page 8
+Found 246 repos (Time elapsed: 19s) - Page 9
+Found 275 repos (Time elapsed: 21s) - Page 10
+Found 305 repos (Time elapsed: 23s) - Page 11
+Found 335 repos (Time elapsed: 25s) - Page 12
+Found 336 repos (Time elapsed: 27s) - Page 13
+Done! Scraped 336 repositories in 29 seconds (Total pages: 13)
+Found 336 repositories for aptos- Rust
+
+Searching dependents for aptos-accumulator
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 29 repos (Time elapsed: 0s) - Page 1
+Found 34 repos (Time elapsed: 2s) - Page 2
+Done! Scraped 34 repositories in 3 seconds (Total pages: 2)
+Found 34 repositories for aptos-accumulator
+
+Searching dependents for aptos-api
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 28 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 3s) - Page 2
+Found 81 repos (Time elapsed: 5s) - Page 3
+Found 111 repos (Time elapsed: 7s) - Page 4
+Found 133 repos (Time elapsed: 9s) - Page 5
+Found 157 repos (Time elapsed: 11s) - Page 6
+Found 187 repos (Time elapsed: 13s) - Page 7
+Found 216 repos (Time elapsed: 16s) - Page 8
+Found 246 repos (Time elapsed: 18s) - Page 9
+Found 275 repos (Time elapsed: 20s) - Page 10
+Found 305 repos (Time elapsed: 22s) - Page 11
+Found 335 repos (Time elapsed: 24s) - Page 12
+Found 364 repos (Time elapsed: 27s) - Page 13
+Found 382 repos (Time elapsed: 29s) - Page 14
+Done! Scraped 382 repositories in 31 seconds (Total pages: 14)
+Found 382 repositories for aptos-api
+
+Searching dependents for aptos-api-types
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 2s) - Page 2
+Found 88 repos (Time elapsed: 4s) - Page 3
+Found 114 repos (Time elapsed: 6s) - Page 4
+Found 141 repos (Time elapsed: 8s) - Page 5
+Found 171 repos (Time elapsed: 10s) - Page 6
+Found 193 repos (Time elapsed: 12s) - Page 7
+Found 217 repos (Time elapsed: 14s) - Page 8
+Found 247 repos (Time elapsed: 16s) - Page 9
+Found 276 repos (Time elapsed: 18s) - Page 10
+Found 306 repos (Time elapsed: 20s) - Page 11
+Found 335 repos (Time elapsed: 23s) - Page 12
+Found 365 repos (Time elapsed: 25s) - Page 13
+Found 395 repos (Time elapsed: 27s) - Page 14
+Found 424 repos (Time elapsed: 29s) - Page 15
+Found 445 repos (Time elapsed: 31s) - Page 16
+Done! Scraped 445 repositories in 33 seconds (Total pages: 16)
+Found 445 repositories for aptos-api-types
+
+Searching dependents for aptos-bitvec
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 3s) - Page 2
+Found 88 repos (Time elapsed: 5s) - Page 3
+Found 113 repos (Time elapsed: 7s) - Page 4
+Found 143 repos (Time elapsed: 10s) - Page 5
+Found 170 repos (Time elapsed: 12s) - Page 6
+Found 194 repos (Time elapsed: 14s) - Page 7
+Found 217 repos (Time elapsed: 16s) - Page 8
+Found 246 repos (Time elapsed: 19s) - Page 9
+Found 275 repos (Time elapsed: 21s) - Page 10
+Found 305 repos (Time elapsed: 23s) - Page 11
+Found 334 repos (Time elapsed: 26s) - Page 12
+Found 364 repos (Time elapsed: 28s) - Page 13
+Found 394 repos (Time elapsed: 30s) - Page 14
+Found 424 repos (Time elapsed: 32s) - Page 15
+Found 451 repos (Time elapsed: 34s) - Page 16
+Done! Scraped 451 repositories in 35 seconds (Total pages: 16)
+Found 451 repositories for aptos-bitvec
+
+Searching dependents for aptos-channel
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 0 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 0 repositories in 2 seconds (Total pages: 1)
+Found 0 repositories for aptos-channel
+
+Searching dependents for aptos-compression
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 28 repos (Time elapsed: 0s) - Page 1
+Found 40 repos (Time elapsed: 2s) - Page 2
+Done! Scraped 40 repositories in 4 seconds (Total pages: 2)
+Found 40 repositories for aptos-compression
+
+Searching dependents for aptos-config
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 3s) - Page 2
+Found 88 repos (Time elapsed: 4s) - Page 3
+Found 114 repos (Time elapsed: 7s) - Page 4
+Found 141 repos (Time elapsed: 10s) - Page 5
+Found 171 repos (Time elapsed: 12s) - Page 6
+Found 193 repos (Time elapsed: 14s) - Page 7
+Found 217 repos (Time elapsed: 16s) - Page 8
+Found 247 repos (Time elapsed: 19s) - Page 9
+Found 276 repos (Time elapsed: 20s) - Page 10
+Found 306 repos (Time elapsed: 22s) - Page 11
+Found 335 repos (Time elapsed: 25s) - Page 12
+Found 365 repos (Time elapsed: 27s) - Page 13
+Found 395 repos (Time elapsed: 29s) - Page 14
+Found 424 repos (Time elapsed: 31s) - Page 15
+Found 444 repos (Time elapsed: 33s) - Page 16
+Done! Scraped 444 repositories in 34 seconds (Total pages: 16)
+Found 444 repositories for aptos-config
+
+Searching dependents for aptos-consensus
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 27 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 27 repositories in 1 seconds (Total pages: 1)
+Found 27 repositories for aptos-consensus
+
+Searching dependents for aptos-crypto
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 3s) - Page 2
+Found 88 repos (Time elapsed: 5s) - Page 3
+Found 114 repos (Time elapsed: 7s) - Page 4
+Found 143 repos (Time elapsed: 9s) - Page 5
+Found 170 repos (Time elapsed: 12s) - Page 6
+Found 194 repos (Time elapsed: 14s) - Page 7
+Found 218 repos (Time elapsed: 17s) - Page 8
+Found 246 repos (Time elapsed: 19s) - Page 9
+Found 275 repos (Time elapsed: 22s) - Page 10
+Found 305 repos (Time elapsed: 23s) - Page 11
+Found 334 repos (Time elapsed: 25s) - Page 12
+Found 364 repos (Time elapsed: 27s) - Page 13
+Found 394 repos (Time elapsed: 29s) - Page 14
+Found 424 repos (Time elapsed: 31s) - Page 15
+Found 452 repos (Time elapsed: 34s) - Page 16
+Found 458 repos (Time elapsed: 36s) - Page 17
+Done! Scraped 458 repositories in 37 seconds (Total pages: 17)
+Found 458 repositories for aptos-crypto
+
+Searching dependents for aptos-crypto-derive
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 3s) - Page 2
+Found 88 repos (Time elapsed: 5s) - Page 3
+Found 116 repos (Time elapsed: 7s) - Page 4
+Found 143 repos (Time elapsed: 9s) - Page 5
+Found 170 repos (Time elapsed: 11s) - Page 6
+Found 194 repos (Time elapsed: 14s) - Page 7
+Found 219 repos (Time elapsed: 16s) - Page 8
+Found 246 repos (Time elapsed: 18s) - Page 9
+Found 275 repos (Time elapsed: 20s) - Page 10
+Found 305 repos (Time elapsed: 22s) - Page 11
+Found 334 repos (Time elapsed: 24s) - Page 12
+Found 364 repos (Time elapsed: 26s) - Page 13
+Found 394 repos (Time elapsed: 28s) - Page 14
+Found 424 repos (Time elapsed: 30s) - Page 15
+Found 453 repos (Time elapsed: 32s) - Page 16
+Found 462 repos (Time elapsed: 34s) - Page 17
+Done! Scraped 462 repositories in 36 seconds (Total pages: 17)
+Found 462 repositories for aptos-crypto-derive
+
+Searching dependents for aptos-crypto-derive-link
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 0 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 0 repositories in 2 seconds (Total pages: 1)
+Found 0 repositories for aptos-crypto-derive-link
+
+Searching dependents for aptos-crypto-link
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 0 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 0 repositories in 2 seconds (Total pages: 1)
+Found 0 repositories for aptos-crypto-link
+
+Searching dependents for aptos-data-client
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 28 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 2s) - Page 2
+Found 81 repos (Time elapsed: 4s) - Page 3
+Found 111 repos (Time elapsed: 6s) - Page 4
+Found 133 repos (Time elapsed: 8s) - Page 5
+Found 157 repos (Time elapsed: 10s) - Page 6
+Found 187 repos (Time elapsed: 13s) - Page 7
+Found 216 repos (Time elapsed: 15s) - Page 8
+Found 246 repos (Time elapsed: 17s) - Page 9
+Found 275 repos (Time elapsed: 19s) - Page 10
+Found 305 repos (Time elapsed: 22s) - Page 11
+Found 335 repos (Time elapsed: 24s) - Page 12
+Found 364 repos (Time elapsed: 26s) - Page 13
+Found 381 repos (Time elapsed: 28s) - Page 14
+Done! Scraped 381 repositories in 30 seconds (Total pages: 14)
+Found 381 repositories for aptos-data-client
+
+Searching dependents for aptos-executor
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 29 repos (Time elapsed: 0s) - Page 1
+Found 34 repos (Time elapsed: 2s) - Page 2
+Done! Scraped 34 repositories in 3 seconds (Total pages: 2)
+Found 34 repositories for aptos-executor
+
+Searching dependents for aptos-fallible
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 27 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 27 repositories in 2 seconds (Total pages: 1)
+Found 27 repositories for aptos-fallible
+
+Searching dependents for aptos-faucet
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 25 repos (Time elapsed: 0s) - Page 1
+Found 55 repos (Time elapsed: 2s) - Page 2
+Found 82 repos (Time elapsed: 4s) - Page 3
+Found 106 repos (Time elapsed: 7s) - Page 4
+Found 130 repos (Time elapsed: 10s) - Page 5
+Found 158 repos (Time elapsed: 11s) - Page 6
+Found 187 repos (Time elapsed: 13s) - Page 7
+Found 217 repos (Time elapsed: 16s) - Page 8
+Found 246 repos (Time elapsed: 18s) - Page 9
+Found 276 repos (Time elapsed: 20s) - Page 10
+Found 306 repos (Time elapsed: 22s) - Page 11
+Found 336 repos (Time elapsed: 25s) - Page 12
+Found 364 repos (Time elapsed: 27s) - Page 13
+Done! Scraped 364 repositories in 29 seconds (Total pages: 13)
+Found 364 repositories for aptos-faucet
+
+Searching dependents for aptos-faucet-cli
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 27 repos (Time elapsed: 0s) - Page 1
+Found 28 repos (Time elapsed: 2s) - Page 2
+Done! Scraped 28 repositories in 3 seconds (Total pages: 2)
+Found 28 repositories for aptos-faucet-cli
+
+Searching dependents for aptos-forge
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 18 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 18 repositories in 2 seconds (Total pages: 1)
+Found 18 repositories for aptos-forge
+
+Searching dependents for aptos-framework
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 3s) - Page 2
+Found 77 repos (Time elapsed: 5s) - Page 3
+Done! Scraped 77 repositories in 7 seconds (Total pages: 3)
+Found 77 repositories for aptos-framework
+
+Searching dependents for aptos-fuzz
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 27 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 3s) - Page 2
+Found 81 repos (Time elapsed: 5s) - Page 3
+Found 105 repos (Time elapsed: 7s) - Page 4
+Found 130 repos (Time elapsed: 9s) - Page 5
+Found 157 repos (Time elapsed: 12s) - Page 6
+Found 186 repos (Time elapsed: 14s) - Page 7
+Found 216 repos (Time elapsed: 16s) - Page 8
+Found 245 repos (Time elapsed: 18s) - Page 9
+Found 275 repos (Time elapsed: 20s) - Page 10
+Found 305 repos (Time elapsed: 22s) - Page 11
+Found 335 repos (Time elapsed: 24s) - Page 12
+Found 364 repos (Time elapsed: 26s) - Page 13
+Found 370 repos (Time elapsed: 28s) - Page 14
+Done! Scraped 370 repositories in 29 seconds (Total pages: 14)
+Found 370 repositories for aptos-fuzz
+
+Searching dependents for aptos-fuzzer
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 27 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 2s) - Page 2
+Found 81 repos (Time elapsed: 4s) - Page 3
+Found 105 repos (Time elapsed: 6s) - Page 4
+Found 130 repos (Time elapsed: 9s) - Page 5
+Found 157 repos (Time elapsed: 11s) - Page 6
+Found 186 repos (Time elapsed: 14s) - Page 7
+Found 216 repos (Time elapsed: 16s) - Page 8
+Found 245 repos (Time elapsed: 18s) - Page 9
+Found 275 repos (Time elapsed: 20s) - Page 10
+Found 305 repos (Time elapsed: 23s) - Page 11
+Found 335 repos (Time elapsed: 24s) - Page 12
+Found 364 repos (Time elapsed: 26s) - Page 13
+Found 370 repos (Time elapsed: 29s) - Page 14
+Done! Scraped 370 repositories in 30 seconds (Total pages: 14)
+Found 370 repositories for aptos-fuzzer
+
+Searching dependents for aptos-gas
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 29 repos (Time elapsed: 0s) - Page 1
+Found 56 repos (Time elapsed: 2s) - Page 2
+Found 65 repos (Time elapsed: 5s) - Page 3
+Done! Scraped 65 repositories in 6 seconds (Total pages: 3)
+Found 65 repositories for aptos-gas
+
+Searching dependents for aptos-genesis
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 29 repos (Time elapsed: 0s) - Page 1
+Found 43 repos (Time elapsed: 3s) - Page 2
+Done! Scraped 43 repositories in 4 seconds (Total pages: 2)
+Found 43 repositories for aptos-genesis
+
+Searching dependents for aptos-genesis-tool
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 27 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 2s) - Page 2
+Found 78 repos (Time elapsed: 5s) - Page 3
+Found 103 repos (Time elapsed: 7s) - Page 4
+Found 130 repos (Time elapsed: 10s) - Page 5
+Found 159 repos (Time elapsed: 12s) - Page 6
+Found 189 repos (Time elapsed: 13s) - Page 7
+Found 218 repos (Time elapsed: 16s) - Page 8
+Found 248 repos (Time elapsed: 18s) - Page 9
+Found 278 repos (Time elapsed: 20s) - Page 10
+Found 308 repos (Time elapsed: 22s) - Page 11
+Found 337 repos (Time elapsed: 24s) - Page 12
+Found 342 repos (Time elapsed: 26s) - Page 13
+Done! Scraped 342 repositories in 28 seconds (Total pages: 13)
+Found 342 repositories for aptos-genesis-tool
+
+Searching dependents for aptos-github-client
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 29 repos (Time elapsed: 0s) - Page 1
+Found 57 repos (Time elapsed: 3s) - Page 2
+Found 84 repos (Time elapsed: 5s) - Page 3
+Found 111 repos (Time elapsed: 7s) - Page 4
+Found 141 repos (Time elapsed: 10s) - Page 5
+Found 163 repos (Time elapsed: 12s) - Page 6
+Found 187 repos (Time elapsed: 14s) - Page 7
+Found 217 repos (Time elapsed: 17s) - Page 8
+Found 246 repos (Time elapsed: 19s) - Page 9
+Found 276 repos (Time elapsed: 21s) - Page 10
+Found 305 repos (Time elapsed: 23s) - Page 11
+Found 335 repos (Time elapsed: 25s) - Page 12
+Found 365 repos (Time elapsed: 27s) - Page 13
+Found 394 repos (Time elapsed: 29s) - Page 14
+Found 411 repos (Time elapsed: 31s) - Page 15
+Done! Scraped 411 repositories in 32 seconds (Total pages: 15)
+Found 411 repositories for aptos-github-client
+
+Searching dependents for aptos-global-constants
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 2s) - Page 2
+Found 88 repos (Time elapsed: 4s) - Page 3
+Found 114 repos (Time elapsed: 7s) - Page 4
+Found 141 repos (Time elapsed: 9s) - Page 5
+Found 171 repos (Time elapsed: 11s) - Page 6
+Found 194 repos (Time elapsed: 14s) - Page 7
+Found 217 repos (Time elapsed: 16s) - Page 8
+Found 247 repos (Time elapsed: 18s) - Page 9
+Found 276 repos (Time elapsed: 21s) - Page 10
+Found 306 repos (Time elapsed: 23s) - Page 11
+Found 335 repos (Time elapsed: 25s) - Page 12
+Found 365 repos (Time elapsed: 27s) - Page 13
+Found 395 repos (Time elapsed: 29s) - Page 14
+Found 424 repos (Time elapsed: 30s) - Page 15
+Found 445 repos (Time elapsed: 33s) - Page 16
+Done! Scraped 445 repositories in 34 seconds (Total pages: 16)
+Found 445 repositories for aptos-global-constants
+
+Searching dependents for aptos-global-constants-link
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 0 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 0 repositories in 1 seconds (Total pages: 1)
+Found 0 repositories for aptos-global-constants-link
+
+Searching dependents for aptos-id-generator
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 28 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 2s) - Page 2
+Found 81 repos (Time elapsed: 5s) - Page 3
+Found 111 repos (Time elapsed: 7s) - Page 4
+Found 133 repos (Time elapsed: 9s) - Page 5
+Found 157 repos (Time elapsed: 12s) - Page 6
+Found 187 repos (Time elapsed: 14s) - Page 7
+Found 216 repos (Time elapsed: 16s) - Page 8
+Found 246 repos (Time elapsed: 18s) - Page 9
+Found 275 repos (Time elapsed: 21s) - Page 10
+Found 305 repos (Time elapsed: 23s) - Page 11
+Found 335 repos (Time elapsed: 25s) - Page 12
+Found 364 repos (Time elapsed: 27s) - Page 13
+Found 382 repos (Time elapsed: 29s) - Page 14
+Done! Scraped 382 repositories in 31 seconds (Total pages: 14)
+Found 382 repositories for aptos-id-generator
+
+Searching dependents for aptos-indexer
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 27 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 3s) - Page 2
+Found 81 repos (Time elapsed: 5s) - Page 3
+Found 107 repos (Time elapsed: 7s) - Page 4
+Found 133 repos (Time elapsed: 10s) - Page 5
+Found 159 repos (Time elapsed: 12s) - Page 6
+Found 188 repos (Time elapsed: 15s) - Page 7
+Found 218 repos (Time elapsed: 17s) - Page 8
+Found 247 repos (Time elapsed: 19s) - Page 9
+Found 260 repos (Time elapsed: 21s) - Page 10
+Done! Scraped 260 repositories in 22 seconds (Total pages: 10)
+Found 260 repositories for aptos-indexer
+
+Searching dependents for aptos-infallible
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 2s) - Page 2
+Found 88 repos (Time elapsed: 5s) - Page 3
+Found 113 repos (Time elapsed: 7s) - Page 4
+Found 143 repos (Time elapsed: 9s) - Page 5
+Found 170 repos (Time elapsed: 12s) - Page 6
+Found 194 repos (Time elapsed: 15s) - Page 7
+Found 217 repos (Time elapsed: 17s) - Page 8
+Found 246 repos (Time elapsed: 19s) - Page 9
+Found 275 repos (Time elapsed: 21s) - Page 10
+Found 305 repos (Time elapsed: 23s) - Page 11
+Found 334 repos (Time elapsed: 25s) - Page 12
+Found 364 repos (Time elapsed: 28s) - Page 13
+Found 394 repos (Time elapsed: 30s) - Page 14
+Found 424 repos (Time elapsed: 31s) - Page 15
+Found 451 repos (Time elapsed: 33s) - Page 16
+Done! Scraped 451 repositories in 35 seconds (Total pages: 16)
+Found 451 repositories for aptos-infallible
+
+Searching dependents for aptos-infallible-link
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 0 repos (Time elapsed: 1s) - Page 1
+Done! Scraped 0 repositories in 3 seconds (Total pages: 1)
+Found 0 repositories for aptos-infallible-link
+
+Searching dependents for aptos-intent
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 0 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 0 repositories in 1 seconds (Total pages: 1)
+Found 0 repositories for aptos-intent
+
+Searching dependents for aptos-jellyfish-merkle
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 29 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 2s) - Page 2
+Found 83 repos (Time elapsed: 4s) - Page 3
+Found 111 repos (Time elapsed: 6s) - Page 4
+Found 135 repos (Time elapsed: 8s) - Page 5
+Found 158 repos (Time elapsed: 10s) - Page 6
+Found 187 repos (Time elapsed: 12s) - Page 7
+Found 216 repos (Time elapsed: 15s) - Page 8
+Found 246 repos (Time elapsed: 17s) - Page 9
+Found 275 repos (Time elapsed: 20s) - Page 10
+Found 305 repos (Time elapsed: 22s) - Page 11
+Found 335 repos (Time elapsed: 24s) - Page 12
+Found 365 repos (Time elapsed: 27s) - Page 13
+Found 389 repos (Time elapsed: 29s) - Page 14
+Done! Scraped 389 repositories in 30 seconds (Total pages: 14)
+Found 389 repositories for aptos-jellyfish-merkle
+
+Searching dependents for aptos-keygen
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 29 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 3s) - Page 2
+Found 84 repos (Time elapsed: 5s) - Page 3
+Found 111 repos (Time elapsed: 7s) - Page 4
+Found 135 repos (Time elapsed: 10s) - Page 5
+Found 158 repos (Time elapsed: 12s) - Page 6
+Found 187 repos (Time elapsed: 13s) - Page 7
+Found 216 repos (Time elapsed: 15s) - Page 8
+Found 246 repos (Time elapsed: 18s) - Page 9
+Found 275 repos (Time elapsed: 20s) - Page 10
+Found 305 repos (Time elapsed: 22s) - Page 11
+Found 335 repos (Time elapsed: 24s) - Page 12
+Found 365 repos (Time elapsed: 27s) - Page 13
+Found 393 repos (Time elapsed: 29s) - Page 14
+Done! Scraped 393 repositories in 30 seconds (Total pages: 14)
+Found 393 repositories for aptos-keygen
+
+Searching dependents for aptos-labs/aptos-core/.github/actions/buildx-setup
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 14 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 14 repositories in 2 seconds (Total pages: 1)
+Found 14 repositories for aptos-labs/aptos-core/.github/actions/buildx-setup
+
+Searching dependents for aptos-labs/aptos-core/.github/actions/check-aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 24 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 24 repositories in 2 seconds (Total pages: 1)
+Found 24 repositories for aptos-labs/aptos-core/.github/actions/check-aptos-core
+
+Searching dependents for aptos-labs/aptos-core/.github/actions/determine-or-use-target-branch-and-get-last-released-image
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 3 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 3 repositories in 2 seconds (Total pages: 1)
+Found 3 repositories for aptos-labs/aptos-core/.github/actions/determine-or-use-target-branch-and-get-last-released-image
+
+Searching dependents for aptos-labs/aptos-core/.github/actions/docker-setup
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 25 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 25 repositories in 1 seconds (Total pages: 1)
+Found 25 repositories for aptos-labs/aptos-core/.github/actions/docker-setup
+
+Searching dependents for aptos-labs/aptos-core/.github/actions/get-latest-cli
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 1 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 1 repositories in 2 seconds (Total pages: 1)
+Found 1 repositories for aptos-labs/aptos-core/.github/actions/get-latest-cli
+
+Searching dependents for aptos-labs/aptos-core/.github/actions/get-latest-docker-image-tag
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 15 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 15 repositories in 1 seconds (Total pages: 1)
+Found 15 repositories for aptos-labs/aptos-core/.github/actions/get-latest-docker-image-tag
+
+Searching dependents for aptos-labs/aptos-core/.github/actions/install-grpcurl
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 19 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 19 repositories in 1 seconds (Total pages: 1)
+Found 19 repositories for aptos-labs/aptos-core/.github/actions/install-grpcurl
+
+Searching dependents for aptos-labs/aptos-core/.github/actions/release-aptos-node
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 19 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 19 repositories in 1 seconds (Total pages: 1)
+Found 19 repositories for aptos-labs/aptos-core/.github/actions/release-aptos-node
+
+Searching dependents for aptos-labs/aptos-core/.github/actions/rust-setup
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 25 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 25 repositories in 2 seconds (Total pages: 1)
+Found 25 repositories for aptos-labs/aptos-core/.github/actions/rust-setup
+
+Searching dependents for aptos-labs/aptos-core/.github/workflows/cli-e2e-tests.yaml
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 15 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 15 repositories in 2 seconds (Total pages: 1)
+Found 15 repositories for aptos-labs/aptos-core/.github/workflows/cli-e2e-tests.yaml
+
+Searching dependents for aptos-labs/aptos-core/.github/workflows/docker-indexer-grpc-test.yaml
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 13 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 13 repositories in 2 seconds (Total pages: 1)
+Found 13 repositories for aptos-labs/aptos-core/.github/workflows/docker-indexer-grpc-test.yaml
+
+Searching dependents for aptos-labs/aptos-core/.github/workflows/sdk-release.yaml
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 5 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 5 repositories in 1 seconds (Total pages: 1)
+Found 5 repositories for aptos-labs/aptos-core/.github/workflows/sdk-release.yaml
+
+Searching dependents for aptos-labs/aptos-core/.github/workflows/workflow-run-docker-rust-build.yaml
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 22 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 22 repositories in 2 seconds (Total pages: 1)
+Found 22 repositories for aptos-labs/aptos-core/.github/workflows/workflow-run-docker-rust-build.yaml
+
+Searching dependents for aptos-labs/aptos-core/.github/workflows/workflow-run-execution-performance.yaml
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 8 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 8 repositories in 2 seconds (Total pages: 1)
+Found 8 repositories for aptos-labs/aptos-core/.github/workflows/workflow-run-execution-performance.yaml
+
+Searching dependents for aptos-labs/aptos-core/.github/workflows/workflow-run-forge.yaml
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 24 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 24 repositories in 1 seconds (Total pages: 1)
+Found 24 repositories for aptos-labs/aptos-core/.github/workflows/workflow-run-forge.yaml
+
+Searching dependents for aptos-labs/aptos-core/.github/workflows/workflow-run-module-verify.yaml
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 24 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 24 repositories in 1 seconds (Total pages: 1)
+Found 24 repositories for aptos-labs/aptos-core/.github/workflows/workflow-run-module-verify.yaml
+
+Searching dependents for aptos-labs/aptos-core/.github/workflows/workflow-run-replay-verify.yaml
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 13 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 13 repositories in 1 seconds (Total pages: 1)
+Found 13 repositories for aptos-labs/aptos-core/.github/workflows/workflow-run-replay-verify.yaml
+
+Searching dependents for aptos-ledger
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 29 repos (Time elapsed: 0s) - Page 1
+Found 30 repos (Time elapsed: 3s) - Page 2
+Done! Scraped 30 repositories in 4 seconds (Total pages: 2)
+Found 30 repositories for aptos-ledger
+
+Searching dependents for aptos-log-derive
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 2s) - Page 2
+Found 88 repos (Time elapsed: 4s) - Page 3
+Found 113 repos (Time elapsed: 7s) - Page 4
+Found 142 repos (Time elapsed: 9s) - Page 5
+Found 170 repos (Time elapsed: 11s) - Page 6
+Found 194 repos (Time elapsed: 13s) - Page 7
+Found 217 repos (Time elapsed: 15s) - Page 8
+Found 246 repos (Time elapsed: 17s) - Page 9
+Found 275 repos (Time elapsed: 19s) - Page 10
+Found 305 repos (Time elapsed: 21s) - Page 11
+Found 334 repos (Time elapsed: 24s) - Page 12
+Found 364 repos (Time elapsed: 26s) - Page 13
+Found 394 repos (Time elapsed: 28s) - Page 14
+Found 424 repos (Time elapsed: 31s) - Page 15
+Found 450 repos (Time elapsed: 33s) - Page 16
+Done! Scraped 450 repositories in 34 seconds (Total pages: 16)
+Found 450 repositories for aptos-log-derive
+
+Searching dependents for aptos-log-derive-link
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 0 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 0 repositories in 2 seconds (Total pages: 1)
+Found 0 repositories for aptos-log-derive-link
+
+Searching dependents for aptos-logger
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 3s) - Page 2
+Found 88 repos (Time elapsed: 4s) - Page 3
+Found 113 repos (Time elapsed: 6s) - Page 4
+Found 142 repos (Time elapsed: 8s) - Page 5
+Found 170 repos (Time elapsed: 10s) - Page 6
+Found 194 repos (Time elapsed: 12s) - Page 7
+Found 217 repos (Time elapsed: 14s) - Page 8
+Found 246 repos (Time elapsed: 17s) - Page 9
+Found 275 repos (Time elapsed: 18s) - Page 10
+Found 305 repos (Time elapsed: 21s) - Page 11
+Found 334 repos (Time elapsed: 23s) - Page 12
+Found 364 repos (Time elapsed: 25s) - Page 13
+Found 394 repos (Time elapsed: 26s) - Page 14
+Found 424 repos (Time elapsed: 29s) - Page 15
+Found 450 repos (Time elapsed: 31s) - Page 16
+Done! Scraped 450 repositories in 32 seconds (Total pages: 16)
+Found 450 repositories for aptos-logger
+
+Searching dependents for aptos-logger-link
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 0 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 0 repositories in 2 seconds (Total pages: 1)
+Found 0 repositories for aptos-logger-link
+
+Searching dependents for aptos-management
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 27 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 2s) - Page 2
+Found 78 repos (Time elapsed: 5s) - Page 3
+Found 104 repos (Time elapsed: 7s) - Page 4
+Found 130 repos (Time elapsed: 9s) - Page 5
+Found 159 repos (Time elapsed: 11s) - Page 6
+Found 189 repos (Time elapsed: 13s) - Page 7
+Found 218 repos (Time elapsed: 15s) - Page 8
+Found 248 repos (Time elapsed: 18s) - Page 9
+Found 278 repos (Time elapsed: 19s) - Page 10
+Found 308 repos (Time elapsed: 21s) - Page 11
+Found 337 repos (Time elapsed: 23s) - Page 12
+Found 345 repos (Time elapsed: 25s) - Page 13
+Done! Scraped 345 repositories in 26 seconds (Total pages: 13)
+Found 345 repositories for aptos-management
+
+Searching dependents for aptos-mempool
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 28 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 2s) - Page 2
+Found 81 repos (Time elapsed: 4s) - Page 3
+Found 111 repos (Time elapsed: 6s) - Page 4
+Found 133 repos (Time elapsed: 8s) - Page 5
+Found 157 repos (Time elapsed: 9s) - Page 6
+Found 187 repos (Time elapsed: 12s) - Page 7
+Found 216 repos (Time elapsed: 14s) - Page 8
+Found 246 repos (Time elapsed: 16s) - Page 9
+Found 275 repos (Time elapsed: 18s) - Page 10
+Found 305 repos (Time elapsed: 20s) - Page 11
+Found 335 repos (Time elapsed: 22s) - Page 12
+Found 364 repos (Time elapsed: 24s) - Page 13
+Found 382 repos (Time elapsed: 27s) - Page 14
+Done! Scraped 382 repositories in 28 seconds (Total pages: 14)
+Found 382 repositories for aptos-mempool
+
+Searching dependents for aptos-memsocket
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 28 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 28 repositories in 1 seconds (Total pages: 1)
+Found 28 repositories for aptos-memsocket
+
+Searching dependents for aptos-metrics
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 27 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 2s) - Page 2
+Found 78 repos (Time elapsed: 5s) - Page 3
+Found 103 repos (Time elapsed: 7s) - Page 4
+Found 130 repos (Time elapsed: 9s) - Page 5
+Found 159 repos (Time elapsed: 11s) - Page 6
+Found 189 repos (Time elapsed: 13s) - Page 7
+Found 218 repos (Time elapsed: 15s) - Page 8
+Found 248 repos (Time elapsed: 17s) - Page 9
+Found 278 repos (Time elapsed: 19s) - Page 10
+Found 308 repos (Time elapsed: 21s) - Page 11
+Found 337 repos (Time elapsed: 23s) - Page 12
+Found 344 repos (Time elapsed: 25s) - Page 13
+Done! Scraped 344 repositories in 26 seconds (Total pages: 13)
+Found 344 repositories for aptos-metrics
+
+Searching dependents for aptos-metrics-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 3s) - Page 2
+Found 87 repos (Time elapsed: 5s) - Page 3
+Found 113 repos (Time elapsed: 8s) - Page 4
+Found 142 repos (Time elapsed: 10s) - Page 5
+Found 170 repos (Time elapsed: 12s) - Page 6
+Found 194 repos (Time elapsed: 14s) - Page 7
+Found 216 repos (Time elapsed: 16s) - Page 8
+Found 246 repos (Time elapsed: 18s) - Page 9
+Found 275 repos (Time elapsed: 20s) - Page 10
+Found 305 repos (Time elapsed: 22s) - Page 11
+Found 334 repos (Time elapsed: 24s) - Page 12
+Found 364 repos (Time elapsed: 27s) - Page 13
+Found 394 repos (Time elapsed: 29s) - Page 14
+Found 424 repos (Time elapsed: 31s) - Page 15
+Found 448 repos (Time elapsed: 33s) - Page 16
+Done! Scraped 448 repositories in 34 seconds (Total pages: 16)
+Found 448 repositories for aptos-metrics-core
+
+Searching dependents for aptos-module-verifier
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 27 repos (Time elapsed: 0s) - Page 1
+Found 34 repos (Time elapsed: 3s) - Page 2
+Done! Scraped 34 repositories in 4 seconds (Total pages: 2)
+Found 34 repositories for aptos-module-verifier
+
+Searching dependents for aptos-network
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 28 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 28 repositories in 2 seconds (Total pages: 1)
+Found 28 repositories for aptos-network
+
+Searching dependents for aptos-node
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 28 repos (Time elapsed: 1s) - Page 1
+Found 54 repos (Time elapsed: 3s) - Page 2
+Found 81 repos (Time elapsed: 5s) - Page 3
+Found 111 repos (Time elapsed: 7s) - Page 4
+Found 133 repos (Time elapsed: 9s) - Page 5
+Found 157 repos (Time elapsed: 12s) - Page 6
+Found 187 repos (Time elapsed: 14s) - Page 7
+Found 216 repos (Time elapsed: 16s) - Page 8
+Found 246 repos (Time elapsed: 18s) - Page 9
+Found 275 repos (Time elapsed: 20s) - Page 10
+Found 305 repos (Time elapsed: 22s) - Page 11
+Found 335 repos (Time elapsed: 24s) - Page 12
+Found 364 repos (Time elapsed: 27s) - Page 13
+Found 381 repos (Time elapsed: 29s) - Page 14
+Done! Scraped 381 repositories in 31 seconds (Total pages: 14)
+Found 381 repositories for aptos-node
+
+Searching dependents for aptos-node-checker
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 27 repos (Time elapsed: 0s) - Page 1
+Found 28 repos (Time elapsed: 2s) - Page 2
+Done! Scraped 28 repositories in 3 seconds (Total pages: 2)
+Found 28 repositories for aptos-node-checker
+
+Searching dependents for aptos-node-checker-client
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 14 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 14 repositories in 2 seconds (Total pages: 1)
+Found 14 repositories for aptos-node-checker-client
+
+Searching dependents for aptos-openapi
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 2s) - Page 2
+Found 88 repos (Time elapsed: 4s) - Page 3
+Found 100 repos (Time elapsed: 6s) - Page 4
+Done! Scraped 100 repositories in 8 seconds (Total pages: 4)
+Found 100 repositories for aptos-openapi
+
+Searching dependents for aptos-operational-tool
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 27 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 2s) - Page 2
+Found 78 repos (Time elapsed: 4s) - Page 3
+Found 104 repos (Time elapsed: 6s) - Page 4
+Found 130 repos (Time elapsed: 8s) - Page 5
+Found 159 repos (Time elapsed: 10s) - Page 6
+Found 189 repos (Time elapsed: 13s) - Page 7
+Found 218 repos (Time elapsed: 15s) - Page 8
+Found 248 repos (Time elapsed: 17s) - Page 9
+Found 278 repos (Time elapsed: 19s) - Page 10
+Found 308 repos (Time elapsed: 21s) - Page 11
+Found 337 repos (Time elapsed: 24s) - Page 12
+Found 345 repos (Time elapsed: 25s) - Page 13
+Done! Scraped 345 repositories in 27 seconds (Total pages: 13)
+Found 345 repositories for aptos-operational-tool
+
+Searching dependents for aptos-parallel-executor
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 27 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 2s) - Page 2
+Found 81 repos (Time elapsed: 4s) - Page 3
+Found 105 repos (Time elapsed: 6s) - Page 4
+Found 131 repos (Time elapsed: 8s) - Page 5
+Found 157 repos (Time elapsed: 10s) - Page 6
+Found 186 repos (Time elapsed: 12s) - Page 7
+Found 216 repos (Time elapsed: 14s) - Page 8
+Found 245 repos (Time elapsed: 16s) - Page 9
+Found 275 repos (Time elapsed: 18s) - Page 10
+Found 305 repos (Time elapsed: 20s) - Page 11
+Found 335 repos (Time elapsed: 22s) - Page 12
+Found 364 repos (Time elapsed: 25s) - Page 13
+Found 375 repos (Time elapsed: 27s) - Page 14
+Done! Scraped 375 repositories in 29 seconds (Total pages: 14)
+Found 375 repositories for aptos-parallel-executor
+
+Searching dependents for aptos-proptest-helpers
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 29 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 3s) - Page 2
+Found 82 repos (Time elapsed: 5s) - Page 3
+Found 111 repos (Time elapsed: 8s) - Page 4
+Found 134 repos (Time elapsed: 10s) - Page 5
+Found 157 repos (Time elapsed: 12s) - Page 6
+Found 187 repos (Time elapsed: 14s) - Page 7
+Found 216 repos (Time elapsed: 16s) - Page 8
+Found 246 repos (Time elapsed: 19s) - Page 9
+Found 275 repos (Time elapsed: 21s) - Page 10
+Found 305 repos (Time elapsed: 23s) - Page 11
+Found 335 repos (Time elapsed: 25s) - Page 12
+Found 365 repos (Time elapsed: 26s) - Page 13
+Found 386 repos (Time elapsed: 28s) - Page 14
+Done! Scraped 386 repositories in 29 seconds (Total pages: 14)
+Found 386 repositories for aptos-proptest-helpers
+
+Searching dependents for aptos-protos
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 2s) - Page 2
+Found 87 repos (Time elapsed: 4s) - Page 3
+Found 95 repos (Time elapsed: 6s) - Page 4
+Done! Scraped 95 repositories in 7 seconds (Total pages: 4)
+Found 95 repositories for aptos-protos
+
+Searching dependents for aptos-proxy
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 29 repos (Time elapsed: 0s) - Page 1
+Found 41 repos (Time elapsed: 2s) - Page 2
+Done! Scraped 41 repositories in 4 seconds (Total pages: 2)
+Found 41 repositories for aptos-proxy
+
+Searching dependents for aptos-rate-limiter
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 28 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 3s) - Page 2
+Found 81 repos (Time elapsed: 5s) - Page 3
+Found 110 repos (Time elapsed: 7s) - Page 4
+Found 132 repos (Time elapsed: 10s) - Page 5
+Found 157 repos (Time elapsed: 12s) - Page 6
+Found 187 repos (Time elapsed: 14s) - Page 7
+Found 216 repos (Time elapsed: 16s) - Page 8
+Found 246 repos (Time elapsed: 18s) - Page 9
+Found 275 repos (Time elapsed: 20s) - Page 10
+Found 305 repos (Time elapsed: 22s) - Page 11
+Found 335 repos (Time elapsed: 24s) - Page 12
+Found 364 repos (Time elapsed: 26s) - Page 13
+Found 380 repos (Time elapsed: 29s) - Page 14
+Done! Scraped 380 repositories in 30 seconds (Total pages: 14)
+Found 380 repositories for aptos-rate-limiter
+
+Searching dependents for aptos-resource-viewer
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 57 repos (Time elapsed: 2s) - Page 2
+Found 84 repos (Time elapsed: 5s) - Page 3
+Found 111 repos (Time elapsed: 7s) - Page 4
+Found 135 repos (Time elapsed: 8s) - Page 5
+Found 160 repos (Time elapsed: 10s) - Page 6
+Found 187 repos (Time elapsed: 13s) - Page 7
+Found 216 repos (Time elapsed: 15s) - Page 8
+Found 246 repos (Time elapsed: 17s) - Page 9
+Found 275 repos (Time elapsed: 20s) - Page 10
+Found 305 repos (Time elapsed: 21s) - Page 11
+Found 335 repos (Time elapsed: 24s) - Page 12
+Found 365 repos (Time elapsed: 26s) - Page 13
+Found 394 repos (Time elapsed: 28s) - Page 14
+Found 400 repos (Time elapsed: 29s) - Page 15
+Done! Scraped 400 repositories in 31 seconds (Total pages: 15)
+Found 400 repositories for aptos-resource-viewer
+
+Searching dependents for aptos-rest-client
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 4s) - Page 2
+Found 87 repos (Time elapsed: 6s) - Page 3
+Found 114 repos (Time elapsed: 9s) - Page 4
+Found 141 repos (Time elapsed: 11s) - Page 5
+Found 171 repos (Time elapsed: 14s) - Page 6
+Found 193 repos (Time elapsed: 16s) - Page 7
+Found 217 repos (Time elapsed: 18s) - Page 8
+Found 247 repos (Time elapsed: 21s) - Page 9
+Found 276 repos (Time elapsed: 23s) - Page 10
+Found 306 repos (Time elapsed: 25s) - Page 11
+Found 335 repos (Time elapsed: 27s) - Page 12
+Found 365 repos (Time elapsed: 30s) - Page 13
+Found 395 repos (Time elapsed: 32s) - Page 14
+Found 424 repos (Time elapsed: 35s) - Page 15
+Found 441 repos (Time elapsed: 37s) - Page 16
+Done! Scraped 441 repositories in 38 seconds (Total pages: 16)
+Found 441 repositories for aptos-rest-client
+
+Searching dependents for aptos-retrier
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 28 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 2s) - Page 2
+Found 81 repos (Time elapsed: 4s) - Page 3
+Found 111 repos (Time elapsed: 7s) - Page 4
+Found 133 repos (Time elapsed: 9s) - Page 5
+Found 157 repos (Time elapsed: 12s) - Page 6
+Found 187 repos (Time elapsed: 14s) - Page 7
+Found 216 repos (Time elapsed: 16s) - Page 8
+Found 246 repos (Time elapsed: 18s) - Page 9
+Found 275 repos (Time elapsed: 21s) - Page 10
+Found 305 repos (Time elapsed: 23s) - Page 11
+Found 335 repos (Time elapsed: 26s) - Page 12
+Found 364 repos (Time elapsed: 28s) - Page 13
+Found 383 repos (Time elapsed: 31s) - Page 14
+Done! Scraped 383 repositories in 32 seconds (Total pages: 14)
+Found 383 repositories for aptos-retrier
+
+Searching dependents for aptos-rosetta
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 27 repos (Time elapsed: 0s) - Page 1
+Found 30 repos (Time elapsed: 2s) - Page 2
+Done! Scraped 30 repositories in 4 seconds (Total pages: 2)
+Found 30 repositories for aptos-rosetta
+
+Searching dependents for aptos-rosetta-cli
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 27 repos (Time elapsed: 0s) - Page 1
+Found 28 repos (Time elapsed: 2s) - Page 2
+Done! Scraped 28 repositories in 4 seconds (Total pages: 2)
+Found 28 repositories for aptos-rosetta-cli
+
+Searching dependents for aptos-scratchpad
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 2s) - Page 2
+Found 72 repos (Time elapsed: 4s) - Page 3
+Done! Scraped 72 repositories in 5 seconds (Total pages: 3)
+Found 72 repositories for aptos-scratchpad
+
+Searching dependents for aptos-sdk
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 3s) - Page 2
+Found 87 repos (Time elapsed: 5s) - Page 3
+Found 114 repos (Time elapsed: 7s) - Page 4
+Found 141 repos (Time elapsed: 9s) - Page 5
+Found 171 repos (Time elapsed: 11s) - Page 6
+Found 193 repos (Time elapsed: 13s) - Page 7
+Found 217 repos (Time elapsed: 16s) - Page 8
+Found 247 repos (Time elapsed: 18s) - Page 9
+Found 276 repos (Time elapsed: 20s) - Page 10
+Found 306 repos (Time elapsed: 22s) - Page 11
+Found 335 repos (Time elapsed: 25s) - Page 12
+Found 365 repos (Time elapsed: 27s) - Page 13
+Found 395 repos (Time elapsed: 29s) - Page 14
+Found 424 repos (Time elapsed: 31s) - Page 15
+Found 445 repos (Time elapsed: 33s) - Page 16
+Done! Scraped 445 repositories in 34 seconds (Total pages: 16)
+Found 445 repositories for aptos-sdk
+
+Searching dependents for aptos-sdk-builder
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 2s) - Page 2
+Found 88 repos (Time elapsed: 5s) - Page 3
+Found 104 repos (Time elapsed: 7s) - Page 4
+Done! Scraped 104 repositories in 9 seconds (Total pages: 4)
+Found 104 repositories for aptos-sdk-builder
+
+Searching dependents for aptos-secure-net
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 2s) - Page 2
+Found 88 repos (Time elapsed: 4s) - Page 3
+Found 114 repos (Time elapsed: 6s) - Page 4
+Found 141 repos (Time elapsed: 9s) - Page 5
+Found 171 repos (Time elapsed: 11s) - Page 6
+Found 193 repos (Time elapsed: 13s) - Page 7
+Found 217 repos (Time elapsed: 15s) - Page 8
+Found 247 repos (Time elapsed: 17s) - Page 9
+Found 276 repos (Time elapsed: 19s) - Page 10
+Found 306 repos (Time elapsed: 21s) - Page 11
+Found 335 repos (Time elapsed: 23s) - Page 12
+Found 365 repos (Time elapsed: 26s) - Page 13
+Found 395 repos (Time elapsed: 28s) - Page 14
+Found 424 repos (Time elapsed: 30s) - Page 15
+Found 443 repos (Time elapsed: 32s) - Page 16
+Done! Scraped 443 repositories in 33 seconds (Total pages: 16)
+Found 443 repositories for aptos-secure-net
+
+Searching dependents for aptos-secure-push-metrics
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 27 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 2s) - Page 2
+Found 78 repos (Time elapsed: 4s) - Page 3
+Found 104 repos (Time elapsed: 6s) - Page 4
+Found 130 repos (Time elapsed: 8s) - Page 5
+Found 159 repos (Time elapsed: 10s) - Page 6
+Found 189 repos (Time elapsed: 13s) - Page 7
+Found 218 repos (Time elapsed: 15s) - Page 8
+Found 248 repos (Time elapsed: 17s) - Page 9
+Found 278 repos (Time elapsed: 20s) - Page 10
+Found 308 repos (Time elapsed: 22s) - Page 11
+Found 337 repos (Time elapsed: 24s) - Page 12
+Found 345 repos (Time elapsed: 27s) - Page 13
+Done! Scraped 345 repositories in 29 seconds (Total pages: 13)
+Found 345 repositories for aptos-secure-push-metrics
+
+Searching dependents for aptos-secure-storage
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 3s) - Page 2
+Found 88 repos (Time elapsed: 5s) - Page 3
+Found 114 repos (Time elapsed: 7s) - Page 4
+Found 141 repos (Time elapsed: 9s) - Page 5
+Found 171 repos (Time elapsed: 11s) - Page 6
+Found 193 repos (Time elapsed: 13s) - Page 7
+Found 217 repos (Time elapsed: 15s) - Page 8
+Found 247 repos (Time elapsed: 18s) - Page 9
+Found 276 repos (Time elapsed: 20s) - Page 10
+Found 306 repos (Time elapsed: 22s) - Page 11
+Found 335 repos (Time elapsed: 24s) - Page 12
+Found 365 repos (Time elapsed: 27s) - Page 13
+Found 395 repos (Time elapsed: 29s) - Page 14
+Found 424 repos (Time elapsed: 32s) - Page 15
+Found 444 repos (Time elapsed: 34s) - Page 16
+Done! Scraped 444 repositories in 36 seconds (Total pages: 16)
+Found 444 repositories for aptos-secure-storage
+
+Searching dependents for aptos-sf-stream
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 1 repos (Time elapsed: 0s) - Page 1
+Done! Scraped 1 repositories in 2 seconds (Total pages: 1)
+Found 1 repositories for aptos-sf-stream
+
+Searching dependents for aptos-state-view
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 29 repos (Time elapsed: 1s) - Page 1
+Found 58 repos (Time elapsed: 4s) - Page 2
+Found 83 repos (Time elapsed: 6s) - Page 3
+Found 113 repos (Time elapsed: 8s) - Page 4
+Found 140 repos (Time elapsed: 11s) - Page 5
+Found 164 repos (Time elapsed: 13s) - Page 6
+Found 187 repos (Time elapsed: 15s) - Page 7
+Found 216 repos (Time elapsed: 18s) - Page 8
+Found 245 repos (Time elapsed: 20s) - Page 9
+Found 275 repos (Time elapsed: 23s) - Page 10
+Found 304 repos (Time elapsed: 25s) - Page 11
+Found 334 repos (Time elapsed: 28s) - Page 12
+Found 364 repos (Time elapsed: 30s) - Page 13
+Found 394 repos (Time elapsed: 32s) - Page 14
+Found 422 repos (Time elapsed: 34s) - Page 15
+Done! Scraped 422 repositories in 36 seconds (Total pages: 15)
+Found 422 repositories for aptos-state-view
+
+Searching dependents for aptos-telemetry
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 28 repos (Time elapsed: 0s) - Page 1
+Found 54 repos (Time elapsed: 2s) - Page 2
+Found 81 repos (Time elapsed: 4s) - Page 3
+Found 111 repos (Time elapsed: 6s) - Page 4
+Found 133 repos (Time elapsed: 9s) - Page 5
+Found 159 repos (Time elapsed: 11s) - Page 6
+Found 188 repos (Time elapsed: 13s) - Page 7
+Found 218 repos (Time elapsed: 15s) - Page 8
+Found 248 repos (Time elapsed: 17s) - Page 9
+Found 277 repos (Time elapsed: 19s) - Page 10
+Found 288 repos (Time elapsed: 22s) - Page 11
+Done! Scraped 288 repositories in 24 seconds (Total pages: 11)
+Found 288 repositories for aptos-telemetry
+
+Searching dependents for aptos-telemetry-service
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 28 repos (Time elapsed: 0s) - Page 1
+Found 36 repos (Time elapsed: 2s) - Page 2
+Done! Scraped 36 repositories in 4 seconds (Total pages: 2)
+Found 36 repositories for aptos-telemetry-service
+
+Searching dependents for aptos-temppath
+Starting to scrape dependents for aptos-labs/aptos-core
+Starting to scrape dependents for aptos-labs/aptos-core
+Found 30 repos (Time elapsed: 0s) - Page 1
+Found 59 repos (Time elapsed: 2s) - Page 2
+Found 88 repos (Time elapsed: 4s) - Page 3
+Found 114 repos (Time elapsed: 6s) - Page 4
+Found 141 repos (Time elapsed: 8s) - Page 5
+Found 171 repos (Time elapsed: 11s) - Page 6
+Found 193 repos (Time elapsed: 13s) - Page 7
+Found 217 repos (Time elapsed: 15s) - Page 8
+Found 247 repos (Time elapsed: 17s) - Page 9
+Found 276 repos (Time elapsed: 19s) - Page 10
+Found 306 repos (Time elapsed: 21s) - Page 11
+Found 335 repos (Time elapsed: 23s) - Page 12
+Found 365 repos (Time elapsed: 25s) - Page 13
+Found 395 repos (Time elapsed: 27s) - Page 14
+Found 424 repos (Time elapsed: 30s) - Page 15
+Found 444 repos (Time elapsed: 32s) - Page 16
+Done! Scraped 444 repositories in 33 seconds (Total pages: 16)
+Found 444 repositories for aptos-temppath
+
+
+✓ Results saved to output/aptos-core/
+
+Final Statistics:
+Total unique repositories found: 5602
+Total packages processed: 100
