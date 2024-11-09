@@ -1,15 +1,35 @@
+"""
+GitHub Dependency Scraper
+========================
+
+A Python tool for scraping GitHub repository dependencies and generating comprehensive 
+reports. This tool can analyze repositories to find all dependent packages and 
+repositories that depend on them.
+
+FEATURES
+--------
+* Scrape all repositories that depend on a specific GitHub repository
+* List all available packages in a repository
+* Search for dependents of specific packages
+* Generate detailed reports in multiple formats (TXT, JSON, CSV)
+* Support for authentication using GitHub tokens
+* Rate limiting and retry mechanisms to handle API restrictions
+* Concurrent processing for faster results
+* Detailed logging and progress tracking
+"""
+
+import argparse
+import csv
+import json
+import os
+import random
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from dataclasses import dataclass, field
+from typing import List, Optional, Dict
+
 import requests
 from bs4 import BeautifulSoup
-import time
-import os
-from typing import List, Optional, Dict
-from dataclasses import dataclass, field
-from enum import Enum
-import argparse
-import random
-import json
-import csv
-from concurrent.futures import ThreadPoolExecutor, as_completed
 
 @dataclass
 class ScraperConfig:
@@ -97,7 +117,7 @@ def save_progress_markdown(repos: List[str], stats: dict, config: ScraperConfig)
     md_file = os.path.join(output_dir, f"scraping_results_{config.repo.replace('/', '_')}.md")
     
     with open(md_file, 'w', encoding='utf-8') as f:
-        f.write(f"# GitHub Dependents Scraping Results\n\n")
+        f.write("# GitHub Dependents Scraping Results\n\n")
         f.write(f"## Repository: {config.repo}\n\n")
         
         if config.package_id:
@@ -148,21 +168,23 @@ def scrape_github_dependents(config: ScraperConfig, log_file) -> List[str]:
     return repos
 
 def save_results(repos: List[str], config: ScraperConfig):
-    """Save the scraped repository URLs to a file.
-
-    Args:
-        repos (List[str]): List of repository URLs to save
-        config (ScraperConfig): Configuration object containing output parameters
-    """
-    if config.output_file:
-        with open(config.output_file, 'w', encoding='utf-8') as f:
-            if config.output_format == 'txt':
-                f.write('\n'.join(repos))
-            elif config.output_format == 'json':
-                json.dump(repos, f, indent=2)
-            elif config.output_format == 'csv':
-                writer = csv.writer(f)
-                writer.writerows([[url] for url in repos])
+    """Save the scraped repository URLs to a file."""
+    output_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "output")
+    os.makedirs(output_dir, exist_ok=True)
+    
+    if not config.output_file:
+        config.output_file = os.path.join(output_dir, f"dependents_{config.repo.replace('/', '_')}.{config.output_format}")
+    
+    print(f"\nSaving results to: {config.output_file}")
+    with open(config.output_file, 'w', encoding='utf-8') as f:
+        if config.output_format == 'txt':
+            f.write('\n'.join(repos))
+        elif config.output_format == 'json':
+            json.dump({"repositories": repos, "count": len(repos)}, f, indent=2)
+        elif config.output_format == 'csv':
+            writer = csv.writer(f)
+            writer.writerow(["repository"])  # Add header
+            writer.writerows([[url] for url in repos])
 
 def get_full_repo_name(repo_name: str) -> str:
     """Convert a repository name to its full form.
@@ -191,7 +213,8 @@ def scrape_all_package_dependents(config: ScraperConfig) -> List[str]:
 
     if not packages_dropdown:
         print(f"No packages found for {config.repo}, scraping general dependents...")
-        return scrape_github_dependents(config)
+        with open(f"scraping_log_{config.repo.replace('/', '_')}.txt", 'w', encoding='utf-8') as log_file:
+            return scrape_github_dependents(config, log_file)
 
     all_repos = set()
     with ThreadPoolExecutor(max_workers=5) as executor:
@@ -376,6 +399,22 @@ def search_package_dependents_chain(config: ScraperConfig) -> Dict[str, List[str
     
     return results
 
+def get_package_dependents(config: ScraperConfig, package_name: str) -> List[str]:
+    """Get dependents for a specific package by name."""
+    packages = list_package_ids(config)
+    package_id = next((pid for name, pid in packages.items() if name == package_name), None)
+    
+    if not package_id:
+        print(f"Package '{package_name}' not found")
+        return []
+    
+    # Create log file for this package
+    repo_output_dir = create_repo_output_dir(config)
+    log_path = os.path.join(repo_output_dir, f"{package_name}_log.txt")
+    with open(log_path, 'w', encoding='utf-8') as log_file:
+        config.package_id = package_id
+        return scrape_github_dependents(config, log_file)
+
 def main():
     parser = argparse.ArgumentParser(description='Scrape GitHub repository dependents')
     parser.add_argument('repo', help='Repository name (e.g., mystenlabs/sui)')
@@ -407,8 +446,9 @@ def main():
         save_results(dependents, config)
     elif args.package_id:
         print(f"Scraping dependents for package ID: {args.package_id}")
-        dependents = scrape_github_dependents(config)
-        save_results(dependents, config)
+        with open(f"scraping_log_{args.repo.replace('/', '_')}.txt", 'w', encoding='utf-8') as log_file:
+            dependents = scrape_github_dependents(config, log_file)
+            save_results(dependents, config)
     else:
         print("Please specify an action: --list-repos, --list-packages, --package-name, or --package-id")
 
