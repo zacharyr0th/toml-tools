@@ -1,7 +1,7 @@
 """Module for generating reports from TOML files containing repository information."""
 
 from datetime import datetime
-from typing import List, Dict
+from typing import List
 import os
 import logging
 from report.constants import COMPILED_CATEGORIES
