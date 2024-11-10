@@ -1,0 +1,186 @@
+# solana-labs/solana Packages
+
+Generated on: 2024-11-09 14:56:16
+
+## Available Packages
+
+- btc_spv_bin
+  - ID: `UGFja2FnZS0zMjE5NjUyMTgx`
+- github.com/solana-labs/solana
+  - ID: `UGFja2FnZS0zMDM1NzgyNzU3`
+- hbros-solana-client
+  - ID: `UGFja2FnZS01Mzk1NDM1Njk4`
+- hbros-solana-tpu-client
+  - ID: `UGFja2FnZS01Mzk1NDM1Njg4`
+- safecoin-budget-program
+  - ID: `UGFja2FnZS0zMjI2NTYxNzQ3`
+- safecoin-exchange-program
+  - ID: `UGFja2FnZS0zMjI2NTY0MzI3`
+- safecoin-ledger
+  - ID: `UGFja2FnZS0zMjI2NTY0MjUz`
+- safecoin-merkle-tree
+  - ID: `UGFja2FnZS0zMjI2NTY0Mjcx`
+- safecoin-noop-program
+  - ID: `UGFja2FnZS0zMjI2NTU5MjI3`
+- safecoin-notifier
+  - ID: `UGFja2FnZS0zMjI2NTY0MzU4`
+- safecoin-ownable
+  - ID: `UGFja2FnZS0zMjI2NTY0Mzk0`
+- safecoin-sys-tuner
+  - ID: `UGFja2FnZS0zMjI2NTY0MzYx`
+- safecoin-vest-program
+  - ID: `UGFja2FnZS0zMjI2NTY0MjY2`
+- sealevel-ffi
+  - ID: `UGFja2FnZS0zMjI3OTg2NDY1`
+- short_vec
+  - ID: `UGFja2FnZS0zMjI3NzE4NTI0`
+- solana-accounts-tool
+  - ID: `UGFja2FnZS0zNTExMzgzNzAx`
+- solana-accountsdb-plugin-interface
+  - ID: `UGFja2FnZS0zMjI2NzQ1ODcw`
+- solana-accountsdb-plugin-manager
+  - ID: `UGFja2FnZS0zMjI2NzQ1OTc4`
+- solana-accountsdb-plugin-postgres
+  - ID: `UGFja2FnZS0zMjI2NzQ1ODc1`
+- solana-archiver-lib
+  - ID: `UGFja2FnZS0zMjE5OTI1MjQy`
+- solana-archiver-utils
+  - ID: `UGFja2FnZS0zMjE5OTI1MjI2`
+- solana-bitcoin-spv-program
+  - ID: `UGFja2FnZS0zMjE5NTQxMjk2`
+- solana-bpf-loader-api
+  - ID: `UGFja2FnZS0zMjE5MjYwOTI0`
+- solana-bpfloader
+  - ID: `UGFja2FnZS0zMjE4MzUyNjYx`
+- solana-btc-spv-api
+  - ID: `UGFja2FnZS0zMjE5NTQxMjk1`
+- solana-btc-spv-program
+  - ID: `UGFja2FnZS0zMjE5NzU3NDEz`
+- solana-budget-api
+  - ID: `UGFja2FnZS0zMjE5MDk4MDY3`
+- solana-budget-program
+  - ID: `UGFja2FnZS0zMjE4NDc0NTY3`
+- solana-cargo-registry
+  - ID: `UGFja2FnZS00MDkxODgzNjc0`
+- solana-chacha
+  - ID: `UGFja2FnZS0zMjE5OTI1MjYx`
+- solana-chacha-cuda
+  - ID: `UGFja2FnZS0zMjE5OTI1MjY0`
+- solana-chacha-sys
+  - ID: `UGFja2FnZS0zMjE5MjYwNzMz`
+- solana-client-test
+  - ID: `UGFja2FnZS0zMjI3MDA4Nzg4`
+- solana-config-api
+  - ID: `UGFja2FnZS0zMjE5MTkyMDg3`
+- solana-config-tests
+  - ID: `UGFja2FnZS0zMjE5MzQwNjU0`
+- solana-drone
+  - ID: `UGFja2FnZS0zMjE4NDc0NTU3`
+- solana-ed25519-program
+  - ID: `UGFja2FnZS0zMjI2NzQ1OTA0`
+- solana-exchange-api
+  - ID: `UGFja2FnZS0zMjE5MTkyMTUz`
+- solana-exchange-program
+  - ID: `UGFja2FnZS0zMjE5MTkyMTI1`
+- solana-fixed-buf
+  - ID: `UGFja2FnZS0zMjE5MzUyMDkw`
+- solana-fullnode
+  - ID: `UGFja2FnZS0zMjE4NDc0NTk3`
+- solana-fullnode-config
+  - ID: `UGFja2FnZS0zMjE4NDc0NTY1`
+- solana-genesis-programs
+  - ID: `UGFja2FnZS0zMjE5MzI0NTIx`
+- solana-geyser-plugin-interface
+  - ID: `UGFja2FnZS0zMjI3NDI0NzI5`
+- solana-geyser-plugin-postgres
+  - ID: `UGFja2FnZS0zMjI3NDc1NzY0`
+- solana-install
+  - ID: `UGFja2FnZS0zMjE5MTkyMTE2`
+- solana-kvstore
+  - ID: `UGFja2FnZS0zMjE5MTEyMTIw`
+- solana-ledger-tool
+  - ID: `UGFja2FnZS0zMjE4NDc0NTk2`
+- solana-librapay-api
+  - ID: `UGFja2FnZS0zMjE5MzIzODkx`
+- solana-lualoader
+  - ID: `UGFja2FnZS0zMjE4MzUyNjk1`
+- solana-move-loader-api
+  - ID: `UGFja2FnZS0zMjE5MzIzODM0`
+- solana-move-loader-program
+  - ID: `UGFja2FnZS0zMjE5MzIzODM4`
+- solana-native-loader
+  - ID: `UGFja2FnZS0zMjE4NDc0NTcw`
+- solana-netutil
+  - ID: `UGFja2FnZS0zMjE4NDc0NTc4`
+- solana-noop
+  - ID: `UGFja2FnZS0zMjE4MzUyNjYy`
+- solana-program-ed25519-dalek-bump
+  - ID: `UGFja2FnZS00MDc4NTM5NDcw`
+- solana-program-fork-cleon-00
+  - ID: `UGFja2FnZS01MjM5MjM3MjIy`
+- solana-replica-lib
+  - ID: `UGFja2FnZS0zMjI3MDA4NjYy`
+- solana-replica-node
+  - ID: `UGFja2FnZS0zMjI3MDA4Nzgz`
+- solana-rewards-api
+  - ID: `UGFja2FnZS0zMjE5MDk4MDcx`
+- solana-rewards-program
+  - ID: `UGFja2FnZS0zMjE5MDM1ODY3`
+- solana-rpc-test
+  - ID: `UGFja2FnZS0zMjI3MDA4NzUx`
+- solana-runtime-message
+  - ID: `UGFja2FnZS00NzE4MTIyNjk3`
+- solana-sdk-bpf-test
+  - ID: `UGFja2FnZS0zMjIxMjQyNDYz`
+- solana-sdk-macro-frozen-abi
+  - ID: `UGFja2FnZS0zMjIxNDUxNDYy`
+- solana-stake-api
+  - ID: `UGFja2FnZS0zMjE5MTkyMDgy`
+- solana-stake-monitor
+  - ID: `UGFja2FnZS0zMjIwNjQxNDQx`
+- solana-stake-tests
+  - ID: `UGFja2FnZS0zMjE5MzIzODg3`
+- solana-storage-api
+  - ID: `UGFja2FnZS0zMjE5MDM1Mzcz`
+- solana-storage-program
+  - ID: `UGFja2FnZS0zMjE5MDk4NTkz`
+- solana-sys-tuner
+  - ID: `UGFja2FnZS0zMjE5ODAwOTcy`
+- solana-token-api
+  - ID: `UGFja2FnZS0zMjE5MDk4MDcy`
+- solana-token-program
+  - ID: `UGFja2FnZS0zMjE5MDk4NTc3`
+- solana-upload-perf
+  - ID: `UGFja2FnZS0zMjE5MTkyMDky`
+- solana-validator
+  - ID: `UGFja2FnZS0zMjE5MTkyMTYx`
+- solana-validator-info
+  - ID: `UGFja2FnZS0zMjE5MjY5ODIw`
+- solana-vest-api
+  - ID: `UGFja2FnZS0zMjE5NjU1NzA3`
+- solana-vest-program
+  - ID: `UGFja2FnZS0zMjE5NjUyMjMx`
+- solana-vote-api
+  - ID: `UGFja2FnZS0zMjE5MDI0NTc0`
+- solana-vote-signer
+  - ID: `UGFja2FnZS0zMjE5MDk4NTk1`
+- solana-wallet
+  - ID: `UGFja2FnZS0zMjE4NDc0NTcx`
+- solana-watchtower
+  - ID: `UGFja2FnZS0zMjE5ODAxMDEy`
+- solana-zk-keygen
+  - ID: `UGFja2FnZS0zNzAwNzA4ODMz`
+- solana-zk-token-sdk-experimental
+  - ID: `UGFja2FnZS00Njk0NjgxNDQ3`
+- solomka-remote-wallet
+  - ID: `UGFja2FnZS0zODIyMDI5Njc0`
+- solomka-sdk
+  - ID: `UGFja2FnZS0zNzk2ODM4Mjk3`
+- squads-cli-rs
+  - ID: `UGFja2FnZS00MTA4MDg0ODMy`
+- tiny-sdk
+  - ID: `UGFja2FnZS0zNjI5MjAyNzEx`
+- tiny-transaction-status
+  - ID: `UGFja2FnZS0zNjI5MjA0NTgx`
+- waffles-solana-connection-cache
+  - ID: `UGFja2FnZS0zNTcwMDc2NTY5`
