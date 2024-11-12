@@ -1,8 +1,10 @@
 import re
 import os
+import sys
+from datetime import datetime
 
 def extract_urls_from_toml(filename):
-    """Extract repository URLs from aptos.toml file."""
+    """Extract repository URLs from ecosystem.toml file."""
     urls = set()
     try:
         with open(filename, 'r') as file:
@@ -37,39 +39,55 @@ def load_repos_from_txt(filename):
     print(f"Found {len(urls)} unique repositories out of {total_lines} total lines in {filename}")
     return urls
 
-def write_results_to_file(included, not_included, output_filename):
+def write_results_to_file(included, not_included, output_filename, filename_base):
     """Write comparison results to output file."""
     with open(output_filename, 'w') as f:
-        f.write("Repos already in aptos.toml:\n")
+        # Add timestamp at the top of the file
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        f.write(f"Generated on: {timestamp}\n\n")
+        
+        f.write(f"Repos already in {filename_base}.toml:\n")
         for repo in sorted(included):
             f.write(f"{repo}\n")
         
-        f.write(f"\nRepos not in aptos.toml ({len(not_included)} repos):\n")
+        f.write(f"\nRepos not in {filename_base}.toml ({len(not_included)} repos):\n")
         for repo in sorted(not_included):
             f.write(f"{repo}\n")
-        
-        f.write(f"\nTotal repos already in aptos.toml: {len(included)}\n")
-        f.write(f"Total repos not in aptos.toml: {len(not_included)}\n")
 
 def main():
-    # Get the script's directory
+    # Check if filename argument is provided
+    if len(sys.argv) != 2:
+        print("Usage: python3 check_repos.py <filename>")
+        sys.exit(1)
+    
+    # Get the filename from command line argument (without extension)
+    filename_base = sys.argv[1]
+    
+    # Get current date for filename
+    date_str = datetime.now().strftime("%y-%m-%d")
+    
+    # Get the project root directory (one level up from script_dir)
     script_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(os.path.dirname(script_dir))
+    
+    # Construct file paths
+    toml_file = os.path.join(project_root, 'input', f'{filename_base}.toml')
     
     # Load repositories from both files
-    toml_repos = extract_urls_from_toml(os.path.join(script_dir, 'aptos.toml'))
+    toml_repos = extract_urls_from_toml(toml_file)
     new_repos = load_repos_from_txt(os.path.join(script_dir, 'new-repos.txt'))
     
     # Find intersections and differences
     included = new_repos & toml_repos
     not_included = new_repos - toml_repos
     
-    # Write results
-    output_filename = os.path.join(script_dir, 'repo_check_results.txt')
-    write_results_to_file(included, not_included, output_filename)
+    # Write results with date in filename
+    output_filename = os.path.join(project_root, 'output', f'{filename_base}-check-{date_str}.txt')
+    write_results_to_file(included, not_included, output_filename, filename_base)
     
     print(f"Results have been written to: {output_filename}")
-    print(f"Total repos already in aptos.toml: {len(included)}")
-    print(f"Total repos not in aptos.toml: {len(not_included)}")
+    print(f"Total repos already in {filename_base}.toml: {len(included)}")
+    print(f"Total repos not in {filename_base}.toml: {len(not_included)}")
 
 if __name__ == "__main__":
     main()
