@@ -42,15 +42,31 @@ def load_repos_from_txt(filename):
 def write_results_to_file(included, not_included, output_filename, filename_base):
     """Write comparison results to output file."""
     with open(output_filename, 'w') as f:
-        # Add timestamp at the top of the file
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        f.write(f"Generated on: {timestamp}\n\n")
+        # Calculate statistics
+        total_repos = len(included) + len(not_included)
+        included_percentage = (len(included) / total_repos * 100) if total_repos > 0 else 0
+        not_included_percentage = (len(not_included) / total_repos * 100) if total_repos > 0 else 0
+
+        # Write analysis section
+        f.write(f"Analysis Report\n")
+        f.write(f"==============\n")
+        f.write(f"Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+        
+        f.write(f"Summary Statistics:\n")
+        f.write(f"- Total repositories analyzed: {total_repos}\n")
+        f.write(f"- Already in {filename_base}.toml: {len(included)} ({included_percentage:.1f}%)\n")
+        f.write(f"- Not in {filename_base}.toml: {len(not_included)} ({not_included_percentage:.1f}%)\n\n")
+        
+        f.write(f"Detailed Results:\n")
+        f.write(f"===============\n\n")
         
         f.write(f"Repos already in {filename_base}.toml:\n")
+        f.write(f"--------------------------------\n")
         for repo in sorted(included):
             f.write(f"{repo}\n")
         
-        f.write(f"\nRepos not in {filename_base}.toml ({len(not_included)} repos):\n")
+        f.write(f"\nRepos not in {filename_base}.toml:\n")
+        f.write(f"----------------------------\n")
         for repo in sorted(not_included):
             f.write(f"{repo}\n")
 

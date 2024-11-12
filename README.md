@@ -27,7 +27,7 @@ Core analysis and management scripts:
 | [`rm-sui-solana.py`](/scripts/rm-sui-solana.py) | Removes Sui and Solana specific entries from a .txt file |
 | [`check-repos`](/scripts/check-repos) | Checks if repos in a .txt file are in a .toml |
 | [`merge`](/scripts/merge) | Merges new .toml file with the associated Electric Capital .toml file |
-| [`remove-duplicates`](/scripts/remove-duplicates) | Cleans up duplicate entries |
+| [`dedupe`](/scripts/dedupe) | Cleans up duplicate entries from a .txt file |
 | [`aptos-sui.py`](/scrape/aptos-sui.py) | Categorizes scraped Move repos |
 
 ### /output
