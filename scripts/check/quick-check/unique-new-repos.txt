@@ -10,6 +10,7 @@ https://github.com/0xJayden/paingelz
 https://github.com/0xKrauser/bundlr-action
 https://github.com/0xN1/permaweb-uploader
 https://github.com/0xNeit/quantum-sdk
+https://github.com/0xNoushad/Token-create
 https://github.com/0xPratik/cnft-raffle-ui
 https://github.com/0xTan1319/Wallet-Manager
 https://github.com/0xWildcard/pfst

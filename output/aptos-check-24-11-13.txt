@@ -1,16 +1,152 @@
 Analysis Report
 ==============
-Generated on: 2024-11-13 12:14:03
+Generated on: 2024-11-13 12:17:54
 
 Summary Statistics:
-- Total URLs analyzed: 2946
-- Unique repositories: 2896
-- Duplicates removed: 50
-- Duplicate percentage: 1.7%
+- Total repositories analyzed: 2896
+- Already in aptos.toml: 132 (4.6%)
+- Not in aptos.toml: 2764 (95.4%)
 
-Repository List:
+Detailed Results:
 ===============
 
+Repos already in aptos.toml:
+--------------------------------
+https://github.com/0x6368616e67/aptos-sdk-go
+https://github.com/0xKryptonian/TribeBetApp
+https://github.com/0xhappyboy/japtos
+https://github.com/AgosVenezia/Campus-StackUp
+https://github.com/Akagi201/move-workshop
+https://github.com/AmaanSayyad/APT-Casino
+https://github.com/AmaanSayyad/Move
+https://github.com/Ankr-network/game-unreal-aptos-sdk
+https://github.com/Antake2333/aptos-api-spring-boot-starter
+https://github.com/Aptos-NFT/aptos-contracts
+https://github.com/BuckyFinance/aurita
+https://github.com/COSTRADEFI/front1
+https://github.com/CopperRoger/count-fi
+https://github.com/CrashNosok/aptos-names-v2
+https://github.com/Crypto27dev/animswap
+https://github.com/CrysPay/SmartContracts
+https://github.com/DhruvBhargava007/Aptos-Racer
+https://github.com/FranciscoDanielLh/treasure-hunt-cdmx
+https://github.com/HarshalBhangale/bet-game
+https://github.com/Him7n/Meta-Edu-Aptos
+https://github.com/JiangYongKang/aptos-name-service-robot
+https://github.com/Joseph-DelGiorgio/Aptos-Sky-Trade
+https://github.com/Krishnacore/aptos-py
+https://github.com/Lambda256/Aptos-Tutorials
+https://github.com/Lambda256/aptos-indexer-processors-forked
+https://github.com/Lambda256/nodit-demo-aptos-indexer-api
+https://github.com/LucaWilliams4831/telegrambotpy
+https://github.com/M-ayank2005/Carryaptos
+https://github.com/MakCUkr/aptos-staking-rewards
+https://github.com/Momentum-Safe/CLI-MSafe
+https://github.com/Mudtjn/Aptofy
+https://github.com/NetSepio/gateway
+https://github.com/NonceGeek/aptos_nft_issuer
+https://github.com/OmniBTC/go-hippo-sdk
+https://github.com/PatrickOjiambo/barter
+https://github.com/Rudy996/Minter-Martian-NFT
+https://github.com/SeamMoney/seam-backend
+https://github.com/SebMenozzi/aptos
+https://github.com/SkarioT/aptos_faucet_bot
+https://github.com/ThreeAndTwo/aptclient
+https://github.com/Tlazypanda/aptos-habit-tracker
+https://github.com/adellevo/TxnStash-Backend
+https://github.com/aeither/aptos-next-template
+https://github.com/agdex-io/perpetual-contract
+https://github.com/alejopinto77/aux-exchange
+https://github.com/alfredalfie123/move_multisender
+https://github.com/alpertungax1/aux-exchange
+https://github.com/ameypte/ipo-web3
+https://github.com/ankur12-1610/futures0xC
+https://github.com/anubhavitis/aptos-module-hub
+https://github.com/aptscan-ai/aptos-verify
+https://github.com/arhansuba/eigenlayer-don
+https://github.com/ariesgun/aptos-tokenize-props
+https://github.com/asfman/coin-flip
+https://github.com/aux-exchange/aux-exchange
+https://github.com/bigbubblebtc/aptos-cores
+https://github.com/bitgetwallet/dapp-integration-demos
+https://github.com/corebuilders/Aptoverse
+https://github.com/dalveyxyz/aptos-aio-01.11
+https://github.com/darkcountrygame/AptosDemoWebsite
+https://github.com/devsisingh/code-collision
+https://github.com/drftgyhujiu7hbgy/demo-project-test-fungible-asset-launchpad
+https://github.com/drftgyhuuy6/AptosQuantum-aptos-telegram-click-game
+https://github.com/drftgyhuy6hgy/aptos-project-test-hello-aptos-boilerplate
+https://github.com/drftgyhuy7njhbg/AptosQuantum-aptos-boilerplate
+https://github.com/drftgyhuygt/project-test-hello-aptos-boilerplate
+https://github.com/drftyghuij8/aptos-nft-marketplace
+https://github.com/drftyghuij8/demo-project-test-v1-aptos-full-stack-template
+https://github.com/drftyghus/demo-project-nft-launchpad
+https://github.com/drftyguhi/demo-project-test-aptos-token-mint
+https://github.com/dropaja/aptos-core
+https://github.com/epitomeroo501/TRUSTWALLET-CORE
+https://github.com/erikmacinnis/AptosTodoApp
+https://github.com/evo-wallet/aptos-wallet-adapter
+https://github.com/eyepyon/daocar
+https://github.com/fardream/go-aptos
+https://github.com/fidry/web3_education
+https://github.com/frankmurrey/aptos_helper
+https://github.com/gorilla-moverz-dao/gorilla-moverz-website
+https://github.com/greyireland/aptos-go-sdk
+https://github.com/hamster-shared/aline-engine
+https://github.com/hippospace/aux-exchange
+https://github.com/imbxm/aptos-liquidswap-swap
+https://github.com/jasonhedman/aptosino-client
+https://github.com/jiazhen-lin/LesGoh
+https://github.com/leeqiang250/aptos-sdk-java
+https://github.com/leeqiang250/billion
+https://github.com/lochoang174/wemical-fe
+https://github.com/ltp456/go-aptos-sdk
+https://github.com/lutwidse/dexbot-aptos
+https://github.com/machaohappyii/aptos_go
+https://github.com/maiff/aptos_contract_intereact_raco
+https://github.com/martian-dao/aptos-wallet-adapter
+https://github.com/mason0510/aptos-java-sdk
+https://github.com/mason0510/go-aptos-sdk
+https://github.com/mcxross/kaptos
+https://github.com/merkle-builders/FundMate
+https://github.com/mirage-protocol/sdk
+https://github.com/mkdr4/aptos-sniper
+https://github.com/mokshyaprotocol/aptos-nft-random-mint
+https://github.com/motoko9/aptos-go
+https://github.com/mrlectus/aptos-rocks
+https://github.com/nguyenson2512/aptos-transaction-stream
+https://github.com/nidhi-singh02/link-up
+https://github.com/nightly-labs/aptos-wallet-adapter-nightly
+https://github.com/openos-labs/aptoscan
+https://github.com/pakaplace/aptos-node-sweeper-chron
+https://github.com/pipks/Aptolio
+https://github.com/pontem-network/bytebabbel
+https://github.com/pranayyb/peerwheels
+https://github.com/qtyufwxh/AptosMirage-nft-launchpad-project
+https://github.com/readyio/aptos-public
+https://github.com/s1dor/aptos-quest-2-all-txn
+https://github.com/sanyu1225/aptos-wallet-adapter
+https://github.com/satisfywithmylife/aptos_wallet_mnemonic
+https://github.com/seiji0411/aptos-grpc-stream-golang
+https://github.com/serCJm/aptos
+https://github.com/tangem/tangem-app-ios
+https://github.com/tarunsharma19/betos-fe
+https://github.com/texora/Treasurehunt-frontend
+https://github.com/teyweikiet/rock-paper-scissors-aptos
+https://github.com/true-ebeggar/aptos-quest-2-all-txn
+https://github.com/true-ebeggar/aptos-quests-3
+https://github.com/true-ebeggar/liquidswap_make_volume
+https://github.com/unibitone/aptos-go-sdk
+https://github.com/verichains/revela
+https://github.com/web3engineering/LayerZero-python-aptos
+https://github.com/wpf008/aptos4j
+https://github.com/wubuku/aptos-java-sdk
+https://github.com/xiang-xx/go-aptos-example
+https://github.com/yuhuajing/scanAptosEvent
+https://github.com/zktx-io/aptos-extension
+
+Repos not in aptos.toml:
+----------------------------
 https://github.com/00labs/huma-js
 https://github.com/0LNetworkCommunity/carpe
 https://github.com/0LNetworkCommunity/explorer
@@ -20,7 +156,6 @@ https://github.com/0x-d4/Bet-Forge
 https://github.com/0x0aa0/Mirror721
 https://github.com/0x0netech/solana-trading-bot
 https://github.com/0x3studio/iron-drive-webapp
-https://github.com/0x6368616e67/aptos-sdk-go
 https://github.com/0xClint/arweave-hackathon-backend
 https://github.com/0xClint/arweave-hackathon-frontend
 https://github.com/0xDAEF0F/nft_metadata_monorepo
@@ -33,7 +168,6 @@ https://github.com/0xGutsu/sonar-sdk
 https://github.com/0xIchigo/helius-scripts
 https://github.com/0xJayden/paingelz
 https://github.com/0xKrauser/bundlr-action
-https://github.com/0xKryptonian/TribeBetApp
 https://github.com/0xLPircy/arweavehh
 https://github.com/0xN1/permaweb-uploader
 https://github.com/0xNeit/quantum-sdk
@@ -65,7 +199,6 @@ https://github.com/0xhappyboy/apt-trading-bot
 https://github.com/0xhappyboy/aptos-light-sdk
 https://github.com/0xhappyboy/blockchain-arsenal
 https://github.com/0xhappyboy/blockchain-terminal
-https://github.com/0xhappyboy/japtos
 https://github.com/0xjesus/s6-solana-pay-api
 https://github.com/0xjjpa/dLicense
 https://github.com/0xjusta/solana-raffle
@@ -115,13 +248,11 @@ https://github.com/Aeons-Team/AL-Frontend
 https://github.com/Afoxcute/basearpsrps
 https://github.com/Afoxcute/sworm
 https://github.com/AgoraDex/aga-solana-bridge
-https://github.com/AgosVenezia/Campus-StackUp
 https://github.com/AgroTree-Ledger/console-app
 https://github.com/AhaanSehgal/auth
 https://github.com/AhaanSehgal/demo-app-tria
 https://github.com/AhaanSehgal/next-dapp
 https://github.com/AirdropBooms/token-list
-https://github.com/Akagi201/move-workshop
 https://github.com/AleamZ/DAPP_SOLANA
 https://github.com/AlexSHuk/Bundlr-quest2
 https://github.com/Alexafjiola/kontol-geng
@@ -132,8 +263,6 @@ https://github.com/Allen-Wei-1123/Overwmind
 https://github.com/AlphaR2/Compass-Explorer
 https://github.com/AlterShadow/Wormhole-SOL_EVM-
 https://github.com/AmAzing129/web3-bitcoin-app
-https://github.com/AmaanSayyad/APT-Casino
-https://github.com/AmaanSayyad/Move
 https://github.com/AmanGUPTA435/Panora-DEX-Aggregator
 https://github.com/AmanTrance/Slogger
 https://github.com/AmanUllah2/PancakeSwap-fork
@@ -148,9 +277,7 @@ https://github.com/Andikasndy/rexo-coin
 https://github.com/Andrea8528/Exam_MasterZ_Solana_10.06.24
 https://github.com/AndreaRettaroli/MasterZxSolana-Bootcamp-exam
 https://github.com/AndreiTotoro/solana-developer-program
-https://github.com/Ankr-network/game-unreal-aptos-sdk
 https://github.com/AnotherRusty/whale-tracker
-https://github.com/Antake2333/aptos-api-spring-boot-starter
 https://github.com/AntonioBoksic/esame_masterz_solana_bootcamp
 https://github.com/Anubhav200311/Wallet_Adapter
 https://github.com/AnushaDeviR/overmind-xyz
@@ -158,7 +285,6 @@ https://github.com/Apple-Tree-Tim/Solana_Token
 https://github.com/AptinLabs/lend-config
 https://github.com/AptinLabs/test-coins
 https://github.com/Aptools-XYZ/contracts
-https://github.com/Aptos-NFT/aptos-contracts
 https://github.com/Aries-Markets/aries-tssdk
 https://github.com/Arijit-Char/Faucet-Solana
 https://github.com/Arikia/CTRL-X
@@ -224,7 +350,6 @@ https://github.com/Br2Sin/solana-modern-game-exp
 https://github.com/Br2Sin/solana-token-mgr
 https://github.com/Brianspha/move
 https://github.com/Bucket-Protocol/bucket-analysis-obl
-https://github.com/BuckyFinance/aurita
 https://github.com/Bullrunrun/client
 https://github.com/BustAces/project-echo
 https://github.com/Byzantine-Finance/botzantine
@@ -232,7 +357,6 @@ https://github.com/CA914/AP
 https://github.com/CHAKRADHAR98/Artifex-Gallery
 https://github.com/CHEDDA-Community/chedda-oracle
 https://github.com/CKS-Systems/manifest
-https://github.com/COSTRADEFI/front1
 https://github.com/COSVM-NETWORK/Defi-Token-List
 https://github.com/CVJohansson/mobius-boost-script
 https://github.com/CVLGeneral/Quest
@@ -274,11 +398,9 @@ https://github.com/Codehash001/nft-ticket-app
 https://github.com/Coding-With-Josh/tokenmanager
 https://github.com/Coindev1029/Solana_nft_staking
 https://github.com/CoinmanLabs/block-tech-sharing
-https://github.com/CopperRoger/count-fi
 https://github.com/Cosinusjustafonction/fungiscratch
 https://github.com/Cosinusjustafonction/scratch
 https://github.com/CrackedDevs/street-mint-hackathon-demo
-https://github.com/CrashNosok/aptos-names-v2
 https://github.com/CrazyBlockchainMan/aptos-rust-tutorial2
 https://github.com/CrazyDream000/coolman-airdrop-backend
 https://github.com/Creatow/creatow-frontend
@@ -287,14 +409,12 @@ https://github.com/Criztiandev/ARWEAVE-FREEDOMWALL-FRONTEND
 https://github.com/Cross-chain-Meme-Token-Creator/evm-contracts
 https://github.com/Cross-chain-Meme-Token-Creator/evm_contracts
 https://github.com/Cross-chain-Meme-Token-Creator/frontend
-https://github.com/Crypto27dev/animswap
 https://github.com/Crypto400600/solana_token_2022
 https://github.com/CryptoSnowPrince/bitcoinland-frontend
 https://github.com/CryptoWizardTeam/elden-fi-frontend
 https://github.com/CryptoWizardTeam/ggtoro-defi-frontend
 https://github.com/Cryptodev0124/Defswap
 https://github.com/Cryptodev0124/Ghosty-Multichain
-https://github.com/CrysPay/SmartContracts
 https://github.com/CyberVerse2/glitch-my-pfp
 https://github.com/DARQtech/Blockverse
 https://github.com/DEEPML1818/ComplianceLink
@@ -331,7 +451,6 @@ https://github.com/DevLucky461/tokio-bridge-wormhole
 https://github.com/DevZibah/WeaveNft_Marketplace
 https://github.com/DevonJames/oip-arweave-indexer
 https://github.com/Dhruv-2003/arweave-bundler-app
-https://github.com/DhruvBhargava007/Aptos-Racer
 https://github.com/Dickyvio44/dapp-publishing
 https://github.com/DigiTrust369/dgt_app_services
 https://github.com/Digtyarenk0/dynamic-v3
@@ -404,7 +523,6 @@ https://github.com/First-Romanian-Solana-Developer-Program/C2_Comets_Oprea_Stefa
 https://github.com/FlexiWay/raydium-market-platform
 https://github.com/Flowlinter/Flowlinter
 https://github.com/ForeverAI-AR/ForeverAI
-https://github.com/FranciscoDanielLh/treasure-hunt-cdmx
 https://github.com/FrankLi123/Vibez-NFT
 https://github.com/Freakycoder/crypto-wallet
 https://github.com/FreeSolDev/swap
@@ -458,7 +576,6 @@ https://github.com/Harsh2220/StreamPay
 https://github.com/Harsh2220/launchbox
 https://github.com/Harsh2220/superRaise
 https://github.com/Harsh8196/w3Ads
-https://github.com/HarshalBhangale/bet-game
 https://github.com/Harshkhosla/Web3_wallet
 https://github.com/Hasmik97/token-stream-creation
 https://github.com/Havorahq/payrol
@@ -468,7 +585,6 @@ https://github.com/Help-Grow/Proof-of-Volunteer-Protocol
 https://github.com/Hh440/Baller
 https://github.com/Hh440/Dapp
 https://github.com/HillaryEbert/sintqui
-https://github.com/Him7n/Meta-Edu-Aptos
 https://github.com/Hokagedevu/tea-hello-summer
 https://github.com/Honeycomb-Protocol/Mining_Badger
 https://github.com/Honeycomb-Protocol/hpl-starter-kit
@@ -516,7 +632,6 @@ https://github.com/JatSh1804/CustomGPT
 https://github.com/JeFlame/solana-token-sale
 https://github.com/Jelly0419/wallet-h5-react
 https://github.com/Jharmony/ar-tota-hack
-https://github.com/JiangYongKang/aptos-name-service-robot
 https://github.com/JimiPatel2023/solana-token-launchpad
 https://github.com/JingYuan0926/solanablink
 https://github.com/JoeHowarth/gr-workshop
@@ -528,7 +643,6 @@ https://github.com/JohnTheWhiteBelt/move-bootcamp-assignment
 https://github.com/JoinColony/colonyNetwork
 https://github.com/JoinColony/wormhole-relayer
 https://github.com/Jordroon/Scriptcollection
-https://github.com/Joseph-DelGiorgio/Aptos-Sky-Trade
 https://github.com/Josh0007-sunday/SolanaHusky
 https://github.com/Joshaw-k/overmindOne
 https://github.com/Jump-Lab/unlock-ui
@@ -553,7 +667,6 @@ https://github.com/Komal-99/augd_summariaize
 https://github.com/Kosmentos/bundlr-quest-2
 https://github.com/KoxyG/TokenDapp
 https://github.com/KoxyG/WeaveNft_Marketplace
-https://github.com/Krishnacore/aptos-py
 https://github.com/L0STE/Core-typescript-examples
 https://github.com/L0STE/mpl-Core-Example
 https://github.com/LEGO-SUDO/dapptesting
@@ -561,9 +674,6 @@ https://github.com/LEGO-SUDO/nextjs-dapp-testing
 https://github.com/Laikaiyong/Sol-EcoWaifu
 https://github.com/Laikaiyong/WormSOuL
 https://github.com/Lakhwinderr/Cross-Chain-Token-Transfer
-https://github.com/Lambda256/Aptos-Tutorials
-https://github.com/Lambda256/aptos-indexer-processors-forked
-https://github.com/Lambda256/nodit-demo-aptos-indexer-api
 https://github.com/LamsyA/Turbin3_Q3T_Sol_LamsyA
 https://github.com/Lansa-18/Nft-Market-place
 https://github.com/LaoRoney/wallet-test
@@ -586,7 +696,6 @@ https://github.com/LongND0105/websocket-trade
 https://github.com/LorimerJenkins/easy-arweave-kit-testing
 https://github.com/LorimerJenkins/othent-warp-test-contracts
 https://github.com/LuCrypto/hubCryptoReact-OUTDATED
-https://github.com/LucaWilliams4831/telegrambotpy
 https://github.com/Lucasoliveiralucas/Overmind
 https://github.com/LucyZMQ/test_gas
 https://github.com/Ludex-Labs/ludex-js-coinflip
@@ -596,7 +705,6 @@ https://github.com/Lumos-metaverse/Arweave-Uploader
 https://github.com/Luongxduc/keo-a-linh-share-mac
 https://github.com/M-Picco/wormhole-sample
 https://github.com/M-Rb3/nft-solana-minter
-https://github.com/M-ayank2005/Carryaptos
 https://github.com/MADGRISMAD/gsprout
 https://github.com/MAIBA-Studio/unblink-app
 https://github.com/MBenz12/sft
@@ -605,7 +713,6 @@ https://github.com/MSVyk/login-form
 https://github.com/Maar-io/yoki-sentio-dashboard
 https://github.com/Madgeniusblink/solana-meme-token
 https://github.com/Mahmoudhpp/hello-wormhole
-https://github.com/MakCUkr/aptos-staking-rewards
 https://github.com/Manice18/Q4_SOL_Manice
 https://github.com/Manipriya1626/Manipriya1626
 https://github.com/Marcjazz/ingl-nft
@@ -657,7 +764,6 @@ https://github.com/MjStar24/Music_App_Dev_Artist
 https://github.com/MobWeb3/trivia-monkey-client
 https://github.com/MohsinAliSoomro/sol-game-loot-box
 https://github.com/Mohsinsiddi/token-lock-solana-streamflow
-https://github.com/Momentum-Safe/CLI-MSafe
 https://github.com/Momentum-Safe/msafe-dapp-e2e
 https://github.com/Monsterwayne/KarlWayneAntoine-WBA_Q3_2024
 https://github.com/MoveToGuanDan/Guandan-Frontend
@@ -667,7 +773,6 @@ https://github.com/Mr-Moriyama/quest1
 https://github.com/MrJeleika/paradise-dao
 https://github.com/MrMilanJF/Wormhole
 https://github.com/MrOliveGreen/PancakeswapFarmBot
-https://github.com/Mudtjn/Aptofy
 https://github.com/MultipleChain/appkit-adapter
 https://github.com/MultipleChain/js
 https://github.com/MyDreamStarter/Dreamstarter_Sui
@@ -689,7 +794,6 @@ https://github.com/NeelContractor/get-all-tokens-by-owner-week4--assignment
 https://github.com/NeelContractor/week5-tokens
 https://github.com/NeonKazuha/EduVerse
 https://github.com/NerminkoOmanic/MasterZSolana
-https://github.com/NetSepio/gateway
 https://github.com/Nexus-Vaults/Nexus-Vaults-Core
 https://github.com/NguyenAnhTuan1912/walorand
 https://github.com/NguyenChungDeveloper/connect-metamask
@@ -702,7 +806,6 @@ https://github.com/NikhilWaghmode09/DevClash_Web3
 https://github.com/Nilay27/BioWallet
 https://github.com/Nileshgarg13/bajaj
 https://github.com/Nithyamickey/wormhole-scaffolding
-https://github.com/NonceGeek/aptos_nft_issuer
 https://github.com/Noobmaster169/blink-funding-dapp
 https://github.com/Noobmaster169/wallet-analytics
 https://github.com/Nopfed/godot-arcade
@@ -718,7 +821,6 @@ https://github.com/Ombray88/ombray
 https://github.com/Omegachads/PreshMail
 https://github.com/OmkarK97/TokenTransferSolang
 https://github.com/OmniBTC/OmniLendingStats
-https://github.com/OmniBTC/go-hippo-sdk
 https://github.com/OneBlockPlus/polkadot-hackathon-2024
 https://github.com/OneKeyHQ/app-monorepo
 https://github.com/OnenessLabs/ethbridge_contract
@@ -748,7 +850,6 @@ https://github.com/PaoloCarlevero/solana_bootcamp_exam
 https://github.com/ParamaZoho/nft-style
 https://github.com/Parmanand0712/expand-api
 https://github.com/ParthShethji/irys-arweave
-https://github.com/PatrickOjiambo/barter
 https://github.com/PaulFidika/OverMind
 https://github.com/PawanAK/DevX
 https://github.com/PeerZetZzZzZ/school-of-solana-dao-project
@@ -819,7 +920,6 @@ https://github.com/RolginRoman/streams-list-accounts-solana
 https://github.com/RomainNoir/Bundlr-Quest-2-OnlyBundlr-with-Lens
 https://github.com/Ronakkkkk/Anchor-NFT-Staking-Buildoor-
 https://github.com/Rudra-Sankha-Sinhamahapatra/dev-journey-pt2
-https://github.com/Rudy996/Minter-Martian-NFT
 https://github.com/Rushikeshnimkar/sui-dreamstarter
 https://github.com/Rushikeshnimkar/sui-erebrus
 https://github.com/Rushikeshnimkar/sui_tarot
@@ -850,9 +950,7 @@ https://github.com/Sawsqr68/aptos-core
 https://github.com/Se76/Q4_Sol_Se76
 https://github.com/SeHarlan/Zeum
 https://github.com/SealTV/sns-sdk
-https://github.com/SeamMoney/seam-backend
 https://github.com/SeanPalacay/alisgogo
-https://github.com/SebMenozzi/aptos
 https://github.com/SerhatCelikk/montenoreactjs
 https://github.com/Sevixdd/SolGenAI
 https://github.com/Shakshigoel123/Organ-Mask
@@ -870,7 +968,6 @@ https://github.com/ShujaGraphy7/spl-token-nft
 https://github.com/Shyenn-THS/BlockFeed
 https://github.com/SilentKnight87/wormhole-connect-tutorial
 https://github.com/SirDaniell/Overmind-Network
-https://github.com/SkarioT/aptos_faucet_bot
 https://github.com/SkelliesLab/test1
 https://github.com/SkyHustle/solana-playground
 https://github.com/SlavaOdinokov/rate-analyzer
@@ -934,7 +1031,6 @@ https://github.com/This-Is-Captain-Code/TheGrid-ETHSF
 https://github.com/This-Is-Captain-Code/TheGridWebapp
 https://github.com/This-Is-Captain-Code/the-Grid-Frontend
 https://github.com/ThomasDos/hackathon-encode-app
-https://github.com/ThreeAndTwo/aptclient
 https://github.com/TiGi-cloud/new
 https://github.com/TiGi-cloud/test
 https://github.com/Timadigwe/gofundme
@@ -943,7 +1039,6 @@ https://github.com/Timothy970/overmind1
 https://github.com/TinchoM11/erc4337_v2
 https://github.com/TitanDogs/nft_transmuter
 https://github.com/Tkach7/streamflow-demo
-https://github.com/Tlazypanda/aptos-habit-tracker
 https://github.com/TlmeToLive/sns-sdk
 https://github.com/To-learn-stuff/soldev-lab
 https://github.com/TombLabs/tomb-oss
@@ -1074,17 +1169,14 @@ https://github.com/acgodson/proxy
 https://github.com/acgodson/proxy_ai
 https://github.com/adarsh-mamgain/solana-dashboard
 https://github.com/adelin232/Solana-Developer-Program
-https://github.com/adellevo/TxnStash-Backend
 https://github.com/adilimroz/sample-client
 https://github.com/adlonymous/wannabuidl
 https://github.com/aduttya/data-encryption
-https://github.com/aeither/aptos-next-template
 https://github.com/aeminium-labs/padelcash
 https://github.com/aftrmarket/aftr-js
 https://github.com/aftrmarket/othent-test
 https://github.com/aftrmarket/sw-tests
 https://github.com/aftrmarket/warp-contract-test
-https://github.com/agdex-io/perpetual-contract
 https://github.com/agencyenterprise/hack-vortex-zkpaper
 https://github.com/agnij-dutta/Exodus
 https://github.com/agolho/wallet-demo
@@ -1111,21 +1203,17 @@ https://github.com/akshatcoder-hash/xUSDC
 https://github.com/akulguptax/Sol-opoloy
 https://github.com/alanhwu/minty
 https://github.com/albertBarsegyan/streamflow-task
-https://github.com/alejopinto77/aux-exchange
 https://github.com/alex-trubchanin-dev/solana-education
 https://github.com/alexweb3game/CryptoCoinmaser
 https://github.com/aleynaalangill/tsAPI
 https://github.com/aleynaalangill/tsapiserverless
-https://github.com/alfredalfie123/move_multisender
 https://github.com/algorand-hackers/chain-hopper
 https://github.com/alinger/aptos-core
 https://github.com/alinkon0207/solana-swap-test
 https://github.com/alls-to/alls-to
 https://github.com/alosadahg/sbc-workspace-new
-https://github.com/alpertungax1/aux-exchange
 https://github.com/altaga/White-Hole
 https://github.com/amazingCoding/test_app_server
-https://github.com/ameypte/ipo-web3
 https://github.com/amnis-finance/stapt_pyth_oracle
 https://github.com/amr080/xteleporter
 https://github.com/amun/token-list
@@ -1150,7 +1238,6 @@ https://github.com/anisharaz/solhelper
 https://github.com/anisurrahman072/RaydiumTradingScript
 https://github.com/anisurrahman072/nodeJS_babel_boilerplate
 https://github.com/anjaliisharmaa/decentralised-voting-platform
-https://github.com/ankur12-1610/futures0xC
 https://github.com/ankushKun/GitAR
 https://github.com/ankushKun/ar-contractor
 https://github.com/ankushKun/dumdumdeploy
@@ -1167,7 +1254,6 @@ https://github.com/anshCoderZbar/phantom-wallet
 https://github.com/anshss/StreamFans
 https://github.com/ant-design/ant-design-web3
 https://github.com/antematter/frontend-developer-test
-https://github.com/anubhavitis/aptos-module-hub
 https://github.com/anuj-pal27/aptos_shopDapp
 https://github.com/anurg/wytch-nft-app
 https://github.com/anyone-protocol/ator-relay-dashboard
@@ -1179,7 +1265,6 @@ https://github.com/aoikurokawa/clorets
 https://github.com/appslk/solana-minting-dapp
 https://github.com/aptos-labs/keyless-zk-proofs
 https://github.com/aptosis/aptos-toolkit
-https://github.com/aptscan-ai/aptos-verify
 https://github.com/ar-io/ant-pilot
 https://github.com/ar-io/arns-react
 https://github.com/ar-io/network-portal
@@ -1191,8 +1276,6 @@ https://github.com/ardriveapp/ardrive-web
 https://github.com/argumentcomputer/zk-light-clients
 https://github.com/arhansuba/Cipher-Zero
 https://github.com/arhansuba/Communiquest
-https://github.com/arhansuba/eigenlayer-don
-https://github.com/ariesgun/aptos-tokenize-props
 https://github.com/ariye23/ar
 https://github.com/arjanjohan/solana-summer-fellowship
 https://github.com/arjanjohan/tetris
@@ -1213,7 +1296,6 @@ https://github.com/arunjithsurendran22/genex-backend
 https://github.com/arvindkhoisnam/sol-wallet
 https://github.com/arvindkhoisnam/web3proj
 https://github.com/aryan-vigyat2001/TicTac-Chain
-https://github.com/asfman/coin-flip
 https://github.com/ashmeetsmonga/solaboard
 https://github.com/ashmeetsmonga/solmint
 https://github.com/asimnecip/gree
@@ -1229,7 +1311,6 @@ https://github.com/auralshin/wormhole_ts
 https://github.com/aurorynaru/new_solana_lp
 https://github.com/auss22/token-list
 https://github.com/austinedavid/wallet
-https://github.com/aux-exchange/aux-exchange
 https://github.com/ava-labs/public-avalanche-sdks
 https://github.com/awaisstar/TROPLOL
 https://github.com/axelarnetwork/interchain-governance-orchestrator
@@ -1278,13 +1359,11 @@ https://github.com/bhanupsingh77/p2pchess
 https://github.com/bhappy-buidl/openpet
 https://github.com/bibi45c/aptos-core
 https://github.com/biccsdev/3land_sdk
-https://github.com/bigbubblebtc/aptos-cores
 https://github.com/billionrx/sol-trade-bot
 https://github.com/bitcoin0923/wormhole_messaging_relayer
 https://github.com/bitcoin0923/wormhole_portal_bridge
 https://github.com/bitcoin0923/wormhole_relayer
 https://github.com/bitcoin0923/wormhole_token_bridge_ui
-https://github.com/bitgetwallet/dapp-integration-demos
 https://github.com/bitindi/governance
 https://github.com/biyiemmy/assessment
 https://github.com/blackvixen/solana
@@ -1389,7 +1468,6 @@ https://github.com/conan088/nwallet
 https://github.com/copytradecat/mono
 https://github.com/coral-xyz/backpack
 https://github.com/coral-xyz/xnft
-https://github.com/corebuilders/Aptoverse
 https://github.com/correctforward818/wrappedplatform-nft-muiltichain
 https://github.com/cosmasemerah/pyth_usage_dashboard
 https://github.com/cosmostation/aptos-kotlin/
@@ -1424,7 +1502,6 @@ https://github.com/d4rk4444/starknet-test
 https://github.com/dabit3/archive-forever
 https://github.com/dabit3/nextjs-route-handlers-permanent-file-storage
 https://github.com/daccred/attestation-sandbox-move
-https://github.com/dalveyxyz/aptos-aio-01.11
 https://github.com/danbayk/solana-copytrade
 https://github.com/danielCalbonero12345/key-generator
 https://github.com/danielleebot/solana-demo
@@ -1435,7 +1512,6 @@ https://github.com/danielpavel/solana-developers-program
 https://github.com/dannpl/fellowship
 https://github.com/danvaneijck/sol-sniper
 https://github.com/daoplays/LetsCookInterface
-https://github.com/darkcountrygame/AptosDemoWebsite
 https://github.com/darklakefi/darklake-monorepo
 https://github.com/darvinrio/msw-rsweth-curve
 https://github.com/daveminer/lit-social-acct-recovery
@@ -1480,7 +1556,6 @@ https://github.com/devarogundade/orbital
 https://github.com/devival/ETHWarsaw
 https://github.com/devops-tarality/test
 https://github.com/devrose04/sniper_bot
-https://github.com/devsisingh/code-collision
 https://github.com/devsisingh/tarot-chainlink
 https://github.com/dexolacom/solana_hackaton_frontend
 https://github.com/dfkadyr/wormhole
@@ -1518,17 +1593,7 @@ https://github.com/dragonwarrior9873/tax-token-2022-bot
 https://github.com/dragonwarrior9873/tg_buy_sell_bot
 https://github.com/drawrowfly/aptos-core
 https://github.com/dreamhigh2018/aptos-core
-https://github.com/drftgyhujiu7hbgy/demo-project-test-fungible-asset-launchpad
-https://github.com/drftgyhuuy6/AptosQuantum-aptos-telegram-click-game
-https://github.com/drftgyhuy6hgy/aptos-project-test-hello-aptos-boilerplate
-https://github.com/drftgyhuy7njhbg/AptosQuantum-aptos-boilerplate
-https://github.com/drftgyhuygt/project-test-hello-aptos-boilerplate
-https://github.com/drftyghuij8/aptos-nft-marketplace
-https://github.com/drftyghuij8/demo-project-test-v1-aptos-full-stack-template
-https://github.com/drftyghus/demo-project-nft-launchpad
-https://github.com/drftyguhi/demo-project-test-aptos-token-mint
 https://github.com/drift-labs/drift-vaults
-https://github.com/dropaja/aptos-core
 https://github.com/drumfeet/decentraevent
 https://github.com/drumfeet/wdb-drumfeet-demo
 https://github.com/drunken005/solana-cli
@@ -1562,12 +1627,10 @@ https://github.com/enlomy/crypto-pad-web3
 https://github.com/enlomy/openbook-spam-track-discord-bot
 https://github.com/enlomy/pnft-staking
 https://github.com/enlomy/raydium-market-platform
-https://github.com/epitomeroo501/TRUSTWALLET-CORE
 https://github.com/epplex-xyz/token2022-tools
 https://github.com/ericfjl/RWA-Wallet
 https://github.com/ericksgv/SolTick
 https://github.com/ericksgv/SolTick-Renaissance-Global-Online-Hackathon
-https://github.com/erikmacinnis/AptosTodoApp
 https://github.com/erikmacinnis/todo-app-backend
 https://github.com/ernitingarg/irys-sdk-api-typescript
 https://github.com/esementelli/overmind-Ethan-Sementelli
@@ -1589,10 +1652,8 @@ https://github.com/evgeniko/cctp-test
 https://github.com/evgeniko/example-connect
 https://github.com/evgeniko/ntt-ownership-transfer
 https://github.com/evinku/overmind
-https://github.com/evo-wallet/aptos-wallet-adapter
 https://github.com/ewixwith/onlybundlr
 https://github.com/extrowart/shitcoinsv2
-https://github.com/eyepyon/daocar
 https://github.com/eyovvalupe/Solana_nft_staking
 https://github.com/eztramble123/SupraStudent
 https://github.com/fCorleone/LOKI-for-Aptos
@@ -1600,7 +1661,6 @@ https://github.com/faas3/faas3-next-runtime
 https://github.com/fahadsahib786/solana-nft-creator
 https://github.com/fajaragus/fajar
 https://github.com/fame-lady-society/fame-contracts
-https://github.com/fardream/go-aptos
 https://github.com/faridfac/fake-user-wallet
 https://github.com/faridfac/randomUsers
 https://github.com/faried76/overmind
@@ -1608,7 +1668,6 @@ https://github.com/ferrumnet/MultiSwap
 https://github.com/fewcha-wallet/integration-examples
 https://github.com/fewcha-wallet/nft
 https://github.com/fiatleak/aptos-core
-https://github.com/fidry/web3_education
 https://github.com/fighting-dreamer/pendle_mainnet_ageth
 https://github.com/filippopassalacqua/solana-exam
 https://github.com/fiqrian/over-network-pt-2-clo88d1uy0008mu08706ofqxj
@@ -1627,7 +1686,6 @@ https://github.com/flyingpenguin57/learn-solana-front-end
 https://github.com/followrules/unlee
 https://github.com/foxoffire33/RDLP-Token
 https://github.com/francescoghianda/Bootcamp-Solana
-https://github.com/frankmurrey/aptos_helper
 https://github.com/fredhuha/generate-keypair
 https://github.com/freeCodeCamp/solana-curriculum
 https://github.com/freeCodeCampgit/solana-curriculum
@@ -1674,14 +1732,12 @@ https://github.com/godking29/solana-bundling
 https://github.com/gommette/monorepo
 https://github.com/gopulse-labs/gopulse
 https://github.com/gopulse-labs/hhmint
-https://github.com/gorilla-moverz-dao/gorilla-moverz-website
 https://github.com/gracias/riskmodel
 https://github.com/greedy-miner/greedy-miner-solana
 https://github.com/gregogun/darwin-apps
 https://github.com/gregogun/darwin-explorer
 https://github.com/gregogun/evoapps-cli
 https://github.com/gregogun/sharespace
-https://github.com/greyireland/aptos-go-sdk
 https://github.com/grsahil20/onlyBundlr
 https://github.com/grvpratik/hackathon-server
 https://github.com/grvpratik/socialhunt
@@ -1694,7 +1750,6 @@ https://github.com/guudc/BuyBot
 https://github.com/haard18/Docker_DUMDUM
 https://github.com/hackurity01/face-wallet-gambling-event
 https://github.com/hamsa-20/blockchain-bootcamp
-https://github.com/hamster-shared/aline-engine
 https://github.com/hamster-shared/vue-hamster-wallet
 https://github.com/happyfun378/vue
 https://github.com/harbor-xyz/axelar-harbor
@@ -1722,7 +1777,6 @@ https://github.com/hieucuopbien123/MoveWorldFE
 https://github.com/hieuhani/poketto
 https://github.com/highlightcards/app
 https://github.com/hightop0924/solana-nft-minter
-https://github.com/hippospace/aux-exchange
 https://github.com/hoangnt-tgl/marketplace-api
 https://github.com/hollow-leaf/tobi
 https://github.com/holyblock/solana-curriculum
@@ -1760,7 +1814,6 @@ https://github.com/ihrahat0/solanadex
 https://github.com/ikunal-04/arweave-challenge
 https://github.com/ilovespectra/solo-explorer
 https://github.com/ilyesOussama/create-lens-dapp
-https://github.com/imbxm/aptos-liquidswap-swap
 https://github.com/immutable/zkevm-bridge-contracts
 https://github.com/impactMarket/backend
 https://github.com/imperialis/overM
@@ -1795,7 +1848,6 @@ https://github.com/jamiebones/consensys-phase3-submission
 https://github.com/jarvisRG/node-test
 https://github.com/jasoncwilley/gasless-uploader-IRYS
 https://github.com/jasoncwilley/nextjs-arweave
-https://github.com/jasonhedman/aptosino-client
 https://github.com/jawkjiang/solana
 https://github.com/jawkjiang/tronHackathon
 https://github.com/jbgoldman1104/Sol-SubStream
@@ -1814,7 +1866,6 @@ https://github.com/jefersonsv/solana-poc
 https://github.com/jeffchen006/Trace2Inv-Invariant-Study-FSE24
 https://github.com/jeffierw/walrus-survey-frontend
 https://github.com/jeraldgan/cross-chain-wormhole-sdk-usage
-https://github.com/jiazhen-lin/LesGoh
 https://github.com/jibchain-net/jib-wallet
 https://github.com/jicodes/solana-fellowship-2024
 https://github.com/jinlonglonglong/nodejs_project
@@ -1939,8 +1990,6 @@ https://github.com/lazyfuhrer/arcana-next
 https://github.com/lcy998/aptos-core
 https://github.com/le0nAg/masterz
 https://github.com/lee963654/OverNetworkPT2
-https://github.com/leeqiang250/aptos-sdk-java
-https://github.com/leeqiang250/billion
 https://github.com/legend1202/SolanaBot
 https://github.com/leon-do/web3hook
 https://github.com/leonardovincenzi1998/MasterZxSolanaBootcampExam
@@ -1957,7 +2006,6 @@ https://github.com/lingxiyang/aptos-core
 https://github.com/lingxiyang/move-study
 https://github.com/livedeveloper823/TgramBot-Solana
 https://github.com/liyunfei22/andglass-frontend
-https://github.com/lochoang174/wemical-fe
 https://github.com/looktab-inc/Solana-Tinji-Admin
 https://github.com/lopeselio/pyth-sui-dashboard
 https://github.com/lophuong/aptos-core
@@ -1970,7 +2018,6 @@ https://github.com/lpbonomi/irys-repro
 https://github.com/lr1ke/Lotl
 https://github.com/lr1ke/lotl8
 https://github.com/lrettig/spudcoin-sol
-https://github.com/ltp456/go-aptos-sdk
 https://github.com/lu3eSkywalker/Solana-Token-Launchpad-Website
 https://github.com/lu3eSkywalker/Token-Launch-Website
 https://github.com/lucknot3/lucknot3-overmind
@@ -1985,20 +2032,17 @@ https://github.com/lukecd/irys-threshold
 https://github.com/lukecd/letschat
 https://github.com/lukecd/lit-test
 https://github.com/lukecd/onlybundlr
-https://github.com/lutwidse/dexbot-aptos
 https://github.com/luxfi/js
 https://github.com/lyrl/aptos-core
 https://github.com/ma-za-kpe/agriguard-rwa
 https://github.com/maat-protocol/maat-v1-crosschain
 https://github.com/mabrehan/nft_stages
-https://github.com/machaohappyii/aptos_go
 https://github.com/machinefi/google-fit-demo
 https://github.com/madvil2/hack-arweave
 https://github.com/mafangfang996/aptos-core
 https://github.com/magicblock-labs/SOAR
 https://github.com/mahdieh-amiri1/RWAir
 https://github.com/mahirjain01/Wordle
-https://github.com/maiff/aptos_contract_intereact_raco
 https://github.com/mailxsolana/mailx-fe
 https://github.com/malviyaHimanshu/arweave-hackathon
 https://github.com/mannyformanny/sui_cockfight
@@ -2014,15 +2058,12 @@ https://github.com/marciob/OpenWorld
 https://github.com/mareLojanica/streamflow-blockhain-test
 https://github.com/markeddolphin/bkpt-overview
 https://github.com/marotipatre/UniPay
-https://github.com/martian-dao/aptos-wallet-adapter
 https://github.com/martin-opensky/kwil-extension-db-export
 https://github.com/martin-opensky/kwil-extension-db-sync
 https://github.com/martonlederer/permapaste
 https://github.com/marwantech91/taskpro
 https://github.com/marydouETH/lst-swap
 https://github.com/mashharuki/FlowRepo
-https://github.com/mason0510/aptos-java-sdk
-https://github.com/mason0510/go-aptos-sdk
 https://github.com/matejkriz/trezor-suite
 https://github.com/matiman/Q3T_Sol_Matty
 https://github.com/matrworld/dedoc
@@ -2045,7 +2086,6 @@ https://github.com/mbcse/EthOxford
 https://github.com/mbcse/FireLink_Bridge
 https://github.com/mbeka02/nine-ui
 https://github.com/mbokinala/hackillinois-game
-https://github.com/mcxross/kaptos
 https://github.com/md-sameerparmar/deploy-smart_contract-using-nodeJs
 https://github.com/md-sameerparmar/interact-with-myCoin
 https://github.com/md-sameerparmar/mint_nft
@@ -2064,7 +2104,6 @@ https://github.com/memxor/LearnGum_Solana
 https://github.com/mercy-dapps/solana-nft-metaplex
 https://github.com/mercymogotio/OvermindTest1
 https://github.com/merdoyovski/hollowdb-next-auth
-https://github.com/merkle-builders/FundMate
 https://github.com/mertbehic/over
 https://github.com/mertolbekirov/SolanaNewTokenChecker
 https://github.com/meta-light/meta-light
@@ -2092,7 +2131,6 @@ https://github.com/minh352623/TON-Network
 https://github.com/minh352623/UI-Stake-Pool
 https://github.com/minhbear/Gum-CandyPay-CrownFunding
 https://github.com/minhbear/solana-hack-07-betting-Esport-with-hxro-sonarwatch-backpack
-https://github.com/mirage-protocol/sdk
 https://github.com/mirage-protocol/sdk-examples
 https://github.com/miralsuthar/fullstack-arweave
 https://github.com/mislavivanda/BoldMint
@@ -2100,7 +2138,6 @@ https://github.com/mislavivanda/First_Solana_Project
 https://github.com/mizuwallet/boltbunny-sdk
 https://github.com/mjkid221/linear-lbp
 https://github.com/mjzuppe/urchin-web3-cms
-https://github.com/mkdr4/aptos-sniper
 https://github.com/mm-110/dataminder
 https://github.com/mmelvin0x/valhalla
 https://github.com/mmosh-pit/mmosh-app
@@ -2108,7 +2145,6 @@ https://github.com/mmosh-pit/mmosh-forge
 https://github.com/mmuminovic/solana-streamflow
 https://github.com/mod-protocol/mod
 https://github.com/mohitejaikumar/First-Dapp
-https://github.com/mokshyaprotocol/aptos-nft-random-mint
 https://github.com/mokshyaprotocol/sui-candymachine
 https://github.com/momonts/badge
 https://github.com/monnozero/plats-app-sui
@@ -2118,7 +2154,6 @@ https://github.com/montedev0516/Bundlelabs_Solana_Pad
 https://github.com/montedev0516/StrikeBOT
 https://github.com/moonshotcommons/hack-quest-web
 https://github.com/moree44/-Airdrop
-https://github.com/motoko9/aptos-go
 https://github.com/motxx/selective-disclosure-lit
 https://github.com/moulin-louis/SolBay
 https://github.com/moulin-louis/wallet-graph
@@ -2130,7 +2165,6 @@ https://github.com/movementlabsxyz/aptos-core
 https://github.com/mr-kunal-07/MICRO-Donaton
 https://github.com/mrcell79/Solana-Exam
 https://github.com/mrgnlabs/mrgn-ts
-https://github.com/mrlectus/aptos-rocks
 https://github.com/mrq1911/mrelayer
 https://github.com/mrq1911/wormholer
 https://github.com/mrtewogbade/generate-keypair
@@ -2178,14 +2212,11 @@ https://github.com/neoul/programming-note
 https://github.com/neronexius/switchboard_oracle
 https://github.com/neutron-org/neutron-worm-relay
 https://github.com/neutron2025/solana-token-creator
-https://github.com/nguyenson2512/aptos-transaction-stream
 https://github.com/nhatlapross/Wefit
 https://github.com/nhd98z/frontend-vite-tempalte
 https://github.com/nhd98z/tailwind-exercise
 https://github.com/nhlabs/wallet-monorepo
 https://github.com/nicoestrada/solsocket
-https://github.com/nidhi-singh02/link-up
-https://github.com/nightly-labs/aptos-wallet-adapter-nightly
 https://github.com/niket-yende/solana-airdrop
 https://github.com/nikola43/SPLTokenDeployer
 https://github.com/nikola43/solanasniper
@@ -2239,7 +2270,6 @@ https://github.com/onspeedhp/Hackthon-04-Cross-chain-P2P-Messaging
 https://github.com/openguild-labs/polkadot-vietnam-hackathon-2024
 https://github.com/openmove-co/openmove-home
 https://github.com/openmymai/CreateSolanaNFTs
-https://github.com/openos-labs/aptoscan
 https://github.com/oraichain/injective-ts
 https://github.com/ordbridge/OrdBridge-Solana-Contract
 https://github.com/osmosis-labs/osmosis-frontend
@@ -2251,7 +2281,6 @@ https://github.com/oyingrace/nft-giftee
 https://github.com/ozankaskaya/panclone
 https://github.com/p4ulcristian/3d-parenoia-only-demo
 https://github.com/p4ulcristian/parenoia
-https://github.com/pakaplace/aptos-node-sweeper-chron
 https://github.com/pancakeswapai/token-list
 https://github.com/panioannis/SoLearn
 https://github.com/pankajgodbole/discussion-forum
@@ -2296,7 +2325,6 @@ https://github.com/phamdat721101/wefit-be
 https://github.com/phantran/block-trader
 https://github.com/phuctbh0808/voucher-nft-program
 https://github.com/pianity/repro-warp-postgres-kv-bug
-https://github.com/pipks/Aptolio
 https://github.com/piraterealm/pirate-contracts
 https://github.com/pjqx/aptos-core
 https://github.com/plexswap/Plexswap-Metalists
@@ -2307,14 +2335,12 @@ https://github.com/pokt-network/pocket-contracts
 https://github.com/poloa3998/wormhole-eth-sol-token
 https://github.com/polynetwork/poly-bridge-frontend
 https://github.com/polyquest-solana/polyquest-solana-program
-https://github.com/pontem-network/bytebabbel
 https://github.com/pontem-network/pontem
 https://github.com/poroburu/pumpdotfunosmo
 https://github.com/ppppHHHuuuu/BE-chain-tracking
 https://github.com/ppppHHHuuuu/Chain-Tracing
 https://github.com/pprogrammingg/irys_basic
 https://github.com/pranav-deshmukh/web3-dapp
-https://github.com/pranayyb/peerwheels
 https://github.com/pras75299/Solanatokenmanager
 https://github.com/praskoson/blastctrl-tools
 https://github.com/prasmalla/uskz-deviant
@@ -2345,7 +2371,6 @@ https://github.com/pyth-network/pyth-crosschain
 https://github.com/pyth-network/pyth-examples
 https://github.com/pzhun/coin_demo_js
 https://github.com/qidar-011/CryptoChecker1
-https://github.com/qtyufwxh/AptosMirage-nft-launchpad-project
 https://github.com/quan612/ai-quest
 https://github.com/quan612/zed-mission
 https://github.com/quartz-labs/quartz-app
@@ -2377,7 +2402,6 @@ https://github.com/rchak007/AES-portfolio
 https://github.com/rckprtr/canvas-token-minter
 https://github.com/rckprtr/canvas-token-minter-express
 https://github.com/rckprtr/curve-launchpad
-https://github.com/readyio/aptos-public
 https://github.com/realcarpark/StrikeBOT
 https://github.com/redstone-finance/redstone-oracles-monorepo
 https://github.com/redstone-network/sandglass-frontend
@@ -2435,7 +2459,6 @@ https://github.com/ryom0624/arweave-example
 https://github.com/rythmern02/Cards-Against-Humanity
 https://github.com/s-malik03/eth-prediction-ocean-protocol
 https://github.com/s-singh18/bundlr-sdk
-https://github.com/s1dor/aptos-quest-2-all-txn
 https://github.com/saadqayyum-cyber/cop-with-text
 https://github.com/sabinss/turbo-repo
 https://github.com/sachintechie/test-bt
@@ -2454,13 +2477,11 @@ https://github.com/saksham-tomer/solxpass
 https://github.com/sambhav874/WallGen-Crypto-Management-Platform
 https://github.com/samkenxstream/SAMkenXEcosystemXCCEngineOneKey
 https://github.com/sanketnighot/walletbuddy
-https://github.com/sanyu1225/aptos-wallet-adapter
 https://github.com/sarcophagus-org/archaeologist-uptime-monitor
 https://github.com/sarcophagus-org/eaas
 https://github.com/sarcophagus-org/sarcophagus-v2-app
 https://github.com/sarcophagus-org/sarcophagus-v2-sdk
 https://github.com/sarvex/wormhole
-https://github.com/satisfywithmylife/aptos_wallet_mnemonic
 https://github.com/satishccy/splitrix-frontend
 https://github.com/satyasai69/BSCtestDEX
 https://github.com/satyasai69/KBC-DEX
@@ -2478,10 +2499,8 @@ https://github.com/sebastianscatularo/wormhole-toolset
 https://github.com/secretkeytoken/Authen
 https://github.com/secretkeytoken/crud-project
 https://github.com/sedcakmak/Kiss-A-Mole-Solana
-https://github.com/seiji0411/aptos-grpc-stream-golang
 https://github.com/semi-infiknight/NFT_MarketPlace_Crowdfunding_Chat
 https://github.com/sentioxyz/msafe
-https://github.com/serCJm/aptos
 https://github.com/sergeyHudzenko/Q4-Sol_serhii_hudzenko
 https://github.com/sergeychernyakov/sol_bundle_bot
 https://github.com/shadatr/candy-machine-nfts-collection
@@ -2625,11 +2644,9 @@ https://github.com/tahatakgungor/overmind-tasks
 https://github.com/taimurey/soda-unchained
 https://github.com/tamunaa/MACS
 https://github.com/tangem/blockchain-sdk-swift
-https://github.com/tangem/tangem-app-ios
 https://github.com/tanmay9tailed/NFT-Creater
 https://github.com/tanmay9tailed/solana-token-creator
 https://github.com/tarunjais28/solana-token2022
-https://github.com/tarunsharma19/betos-fe
 https://github.com/tatalock/aptos-fa-token-script
 https://github.com/tct68/baseswap_clone
 https://github.com/team-clank/flaskapi
@@ -2641,9 +2658,7 @@ https://github.com/tensor-foundation/toolkit
 https://github.com/tensor-hq/marketplace-nextjs-template
 https://github.com/tensor-hq/tensor-tests-common
 https://github.com/terdim28/bundlr
-https://github.com/texora/Treasurehunt-frontend
 https://github.com/texora/TurboSwap-Frontend
-https://github.com/teyweikiet/rock-paper-scissors-aptos
 https://github.com/tfelix/w3shop
 https://github.com/thangleloi2003/Stargaze-zone
 https://github.com/thangleloi2003/cal-app
@@ -2694,9 +2709,6 @@ https://github.com/trankhacvy/talent-olympics
 https://github.com/trankhacvy/the-moment
 https://github.com/treejer/hey-forestfeed
 https://github.com/trezor/trezor-suite
-https://github.com/true-ebeggar/aptos-quest-2-all-txn
-https://github.com/true-ebeggar/aptos-quests-3
-https://github.com/true-ebeggar/liquidswap_make_volume
 https://github.com/trumanfun/crosssync.network
 https://github.com/trungbaotran1701/Hackathon-Consumer-4
 https://github.com/trungbaotran1701/Hackathon-Wormhole
@@ -2728,7 +2740,6 @@ https://github.com/ugesports/uge-bonkathon-smart-contract
 https://github.com/ukawakashi/wagmi-rainbow-kit-react
 https://github.com/umangp31/safeshift
 https://github.com/umarilly/Artistic-NFT-Hub
-https://github.com/unibitone/aptos-go-sdk
 https://github.com/unicrypto11/tg-solana-tradingbot
 https://github.com/unionlabs/union
 https://github.com/unqclub/wormhole-relayer
@@ -2753,7 +2764,6 @@ https://github.com/ventlas4/pixzone
 https://github.com/venus6854/fuzzy-meme
 https://github.com/venusgalstar/LaungNFTMint
 https://github.com/venusgalstar/SolanaNFTMintContract
-https://github.com/verichains/revela
 https://github.com/vibhorjoshi/Career-compose-master
 https://github.com/vibhumeh/White-List-token
 https://github.com/victor-perkins226/bictory_test_merkle_tree
@@ -2811,7 +2821,6 @@ https://github.com/weaveVM/blobvm-sequencer
 https://github.com/weavedb/rdk
 https://github.com/weavedb/weavedb
 https://github.com/web3antg/aptos-core
-https://github.com/web3engineering/LayerZero-python-aptos
 https://github.com/web3helpers/wallets-hooks
 https://github.com/webdevuc/samad-beyond-owls
 https://github.com/weeaa/solana-fellowship
@@ -2838,9 +2847,7 @@ https://github.com/wormhole-foundation/wormhole-circle-integration
 https://github.com/wormholelabs-xyz/example-queries-solana-pda
 https://github.com/wormholelabs-xyz/example-queries-solana-stake-pool
 https://github.com/wormholelabs-xyz/example-wormhole-sdk-ts
-https://github.com/wpf008/aptos4j
 https://github.com/wtfsayo/pocket-contracts
-https://github.com/wubuku/aptos-java-sdk
 https://github.com/wwlab/aptos-core
 https://github.com/wyf-ACCEPT/meson-contracts-sui
 https://github.com/x-hzc/shiba-wings
@@ -2856,7 +2863,6 @@ https://github.com/xeony888/bridge-2
 https://github.com/xeony888/nft_staking2
 https://github.com/xeunnie/Internship_Fork_Code
 https://github.com/xgambleio/aptos-onchain-result
-https://github.com/xiang-xx/go-aptos-example
 https://github.com/xiaobaiskill/solana
 https://github.com/xiaodi007/maris
 https://github.com/xiaodi007/maris-lite
@@ -2879,7 +2885,6 @@ https://github.com/ytakahashi2020/wormhole_tutorial
 https://github.com/yufanlu0522/overmind
 https://github.com/yug3nDez/HouseToken
 https://github.com/yuhuajing/EtherJs
-https://github.com/yuhuajing/scanAptosEvent
 https://github.com/zKonnect/zkonnect-common
 https://github.com/zencoLabs/zenco-interface
 https://github.com/zengxinhai/mobius-fe
@@ -2900,7 +2905,6 @@ https://github.com/zkkzk/nuwa-web-demo
 https://github.com/zkkzk/nuwa-web-voice-test
 https://github.com/zkmove/agger
 https://github.com/zkoracin/solana-sniper-bot
-https://github.com/zktx-io/aptos-extension
 https://github.com/zktx-io/wormhole-kit-monorepo
 https://github.com/zmovane/NinjaNFT
 https://github.com/zouguangxian/kits

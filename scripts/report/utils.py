@@ -2,19 +2,41 @@ from collections import defaultdict
 import re
 import logging
 from typing import Dict, List, Tuple, Set
-from report.constants import REPO_PATTERN
+from report.constants import REPO_PATTERN, CATEGORIES
 
-def categorize_repos(repos: List[Dict[str, str]], categories: Dict[str, List[re.Pattern]]) -> Dict[str, List[str]]:
-    """Categorize repositories based on predefined patterns."""
-    categorized = defaultdict(list)
+def categorize_repos(repos: List[str], categories: Dict) -> Tuple[Dict, Dict, Dict]:
+    """Categorize repositories based on patterns."""
+    # Initialize all dictionaries with proper structure first
+    categorized_repos = {cat: [] for cat in categories.keys()}
+    pattern_matches = {cat: {pattern: [] for strength, patterns in categories[cat]['patterns'] 
+                           for pattern in patterns} for cat in categories.keys()}
+    pattern_counts = {cat: {pattern: 0 for strength, patterns in categories[cat]['patterns']
+                          for pattern in patterns} for cat in categories.keys()}
+    
     for repo in repos:
-        for category, patterns in categories.items():
-            if any(pattern.search(repo['url']) for pattern in patterns):
-                categorized[category].append(repo['url'])
-                break  # Stop after first match to avoid double-counting
-        else:
-            categorized["Uncategorized"].append(repo['url'])
-    return categorized
+        repo_url = repo['url']
+        
+        for category, cat_data in categories.items():
+            # Skip if repo matches any exclusion patterns
+            excluded = False
+            for exclude_pattern in cat_data.get('exclude_patterns', []):
+                if re.search(exclude_pattern, repo_url, re.IGNORECASE):
+                    excluded = True
+                    break
+            
+            if excluded:
+                continue
+                
+            # Check each pattern strength level
+            for strength, patterns in cat_data['patterns']:
+                for pattern in patterns:
+                    if re.search(pattern, repo_url, re.IGNORECASE):
+                        categorized_repos[category].append(repo_url)
+                        pattern_matches[category][pattern].append(repo_url)
+                        pattern_counts[category][pattern] += 1
+                        break  # Move to next category once we find a match
+    
+    return categorized_repos, pattern_matches, pattern_counts
 
 def extract_repo_info(content: str) -> Tuple[int, List[Dict[str, str]], Set[str], int, Set[str], Set[str]]:
     """Extract repository information from the given content."""

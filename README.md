@@ -25,7 +25,7 @@ Core analysis and management scripts:
 | [`report.py`](/scripts/report.py) | Creates detailed ecosystem analysis reports like [this](/public/report-example.webp) |
 | [`organize.py`](/scripts/organize.py) | Standardizes new TOML entries |
 | [`rm-sui-solana.py`](/scripts/rm-sui-solana.py) | Removes Sui and Solana specific entries from a .txt file |
-| [`check-repos`](/scripts/check-repos) | Checks if repos in a .txt file are in a .toml |
+| [`check`](/scripts/check) | Checks if repos in a .txt file are in a .toml |
 | [`merge`](/scripts/merge) | Merges new .toml file with the associated Electric Capital .toml file |
 | [`dedupe`](/scripts/dedupe) | Cleans up duplicate entries from a .txt file |
 | [`aptos-sui.py`](/scrape/aptos-sui.py) | Categorizes scraped Move repos |
