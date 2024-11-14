@@ -1,14 +1,13 @@
 """Module for generating reports from TOML files containing repository information."""
 
-from datetime import datetime
-from typing import List, Dict, Tuple
 import os
 import logging
-from report.constants import COMPILED_CATEGORIES, CATEGORIES
-from .utils import categorize_repos, extract_repo_info
+from datetime import datetime
+from typing import List, Dict, Tuple
 from collections import defaultdict
-import re
-from .verbose_generator import generate_verbose_section
+from constants import COMPILED_CATEGORIES, CATEGORIES
+from utils import categorize_repos, extract_repo_info
+from verbose_generator import generate_verbose_section
 
 def process_ecosystem(content: str) -> Tuple[int, List[str], set, Dict, Dict, int, Dict]:
     """Process a single ecosystem's TOML content and return analysis data."""
@@ -19,94 +18,101 @@ def process_ecosystem(content: str) -> Tuple[int, List[str], set, Dict, Dict, in
     
     category_stats = {}
     total_categorized = 0
+    
+    # Group categories by primary category (assuming format "PRIMARY/SUB")
+    primary_categories = defaultdict(list)
+    for category in COMPILED_CATEGORIES:
+        if '/' in category:
+            primary, _ = category.split('/', 1)
+            primary_categories[primary].append(category)
+        else:
+            primary_categories[category].append(category)
 
     # Calculate statistics for each category
     for category in COMPILED_CATEGORIES:
         category_repos = categorized_repos.get(category, [])
         count = len(category_repos)
         percentage = (count / total_repos * 100) if total_repos > 0 else 0
+        
+        # Calculate primary category totals
+        primary = category.split('/')[0] if '/' in category else category
+        
         category_stats[category] = {
             'count': count,
             'percentage': f"{percentage:.2f}%",
             'pattern_matches': pattern_matches.get(category, {}),
-            'pattern_counts': pattern_counts.get(category, {})
+            'pattern_counts': pattern_counts.get(category, {}),
+            'primary_category': primary
         }
         total_categorized += count
 
-    return total_repos, repos, categories, pattern_matches, category_stats, total_categorized, pattern_matches
+    # Add cumulative stats for primary categories
+    for primary, subcategories in primary_categories.items():
+        cumulative_count = sum(category_stats[sub]['count'] for sub in subcategories)
+        cumulative_percentage = (cumulative_count / total_repos * 100) if total_repos > 0 else 0
+        category_stats[f"{primary}_cumulative"] = {
+            'count': cumulative_count,
+            'percentage': f"{cumulative_percentage:.2f}%"
+        }
+
+    return total_repos, repos, categories, pattern_matches, category_stats, total_categorized, pattern_counts
 
 def generate_master_report(toml_files: List[str], output_file: str, verbose: bool = False) -> None:
-    """Generate a master report from multiple TOML files."""
     ecosystem_data = []
-    total_repos = 0
-
-    with open(output_file, 'w', encoding='utf-8') as f:
-        # Report Header with consolidated information
-        f.write("# Ecosystem Analysis Report\n\n")
+    
+    # Process all ecosystems first
+    for input_file in toml_files:
+        ecosystem_name = os.path.basename(input_file).replace('.toml', '')
+        with open(input_file, 'r', encoding='utf-8') as infile:
+            content = infile.read()
+            
+        total_repos, repos, _, pattern_matches, category_stats, total_categorized, _ = process_ecosystem(content)
         
-        # Executive Summary
-        f.write("| Metric | Value |\n")
-        f.write("|--------|-------|\n")
-        f.write(f"| Report Generated | {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} |\n")
-        f.write(f"| Ecosystems Analyzed | {len(toml_files)} |\n")
-        f.write(f"| Files Processed | {len(toml_files)} |\n")
-        f.write(f"| Analysis Type | {'Verbose' if verbose else 'Standard'} |\n\n")
-
-        # Source Files section with categories
-        f.write("## Source Files\n\n")
+        ecosystem_data.append({
+            'name': ecosystem_name,
+            'total_repos': total_repos,
+            'categories': category_stats,
+            'pattern_matches': pattern_matches
+        })
+    
+    with open(output_file, 'w', encoding='utf-8') as outfile:
+        # Summary table
+        outfile.write("# Ecosystem Analysis Report\n\n")
         
-        # Create header with all categories plus Uncategorized
-        categories = list(COMPILED_CATEGORIES.keys())
-        header = ["Ecosystem", "Repository Count"]
-        header.extend(categories)
-        header.append("Uncategorized")
+        # Create vertical summary table
+        ecosystems = [data['name'] for data in ecosystem_data]
+        outfile.write("| Category | " + " | ".join(ecosystems) + " |\n")
+        outfile.write("|----------" + "|---------" * len(ecosystems) + "|\n")
         
-        f.write("| " + " | ".join(header) + " |\n")
-        f.write("|" + "|".join(["---" for _ in header]) + "|\n")
-
-        # Process each ecosystem
-        for input_file in toml_files:
-            ecosystem_name = os.path.splitext(os.path.basename(input_file))[0]
-            with open(input_file, 'r', encoding='utf-8') as file:
-                content = file.read()
-            
-            # Process ecosystem data
-            total_repos_eco, repos, _, _, category_stats, _, _ = process_ecosystem(content)
-            total_repos += total_repos_eco
-            
-            # Create row with ecosystem data and category percentages
-            row = [ecosystem_name, f"{total_repos_eco:,}"]
-            
-            # Calculate total categorized percentage
-            total_categorized_percent = sum(
-                float(stats.get('percentage', '0.00%').rstrip('%'))
-                for stats in category_stats.values()
-            )
-            
-            # Add category percentages
-            for category in categories:
-                percentage = category_stats.get(category, {}).get('percentage', '0.00%')
-                row.append(percentage)
-            
-            # Add Uncategorized percentage
-            uncategorized_percent = max(0, 100 - total_categorized_percent)
-            row.append(f"{uncategorized_percent:.2f}%")
-            
-            # Add to table
-            f.write(f"| {' | '.join(row)} |\n")
-            
-            ecosystem_data.append({
-                'name': ecosystem_name,
-                'total_repos': total_repos_eco,
-                'categories': category_stats
-            })
+        # Add Repository Count row
+        repo_counts = [f"{data['total_repos']:,}" for data in ecosystem_data]
+        outfile.write(f"| Repository Count | {' | '.join(repo_counts)} |\n")
         
-        f.write(f"\n**Total Repositories: {total_repos:,}**\n\n")
-
+        # Add rows for each category with percentages
+        for category in COMPILED_CATEGORIES:
+            row = [category]
+            
+            # Calculate total repos in this category across all ecosystems
+            category_counts = []
+            for eco_data in ecosystem_data:
+                stats = eco_data['categories'].get(category, {})
+                count = stats.get('count', 0)
+                category_counts.append(count)
+            total_category_repos = sum(category_counts)
+            
+            # Calculate percentages for each ecosystem
+            for count, eco_data in zip(category_counts, ecosystem_data):
+                stats = eco_data['categories'].get(category, {})
+                within_chain_pct = stats.get('percentage', '0.00%')
+                share_of_category = f"{(count / total_category_repos * 100):.2f}%" if total_category_repos > 0 else "0.00%"
+                row.append(f"{within_chain_pct} ({share_of_category})")
+                
+            outfile.write(f"| {' | '.join(row)} |\n")
+        
         if verbose:
-            f.write("\n## Detailed Pattern Analysis\n\n")
-            for category in COMPILED_CATEGORIES:
-                generate_verbose_section(f, category, ecosystem_data, CATEGORIES[category])
+            outfile.write("\n## Detailed Pattern Analysis\n\n")
+            for primary in set(cat.split('/')[0] for cat in COMPILED_CATEGORIES):
+                generate_verbose_section(outfile, primary, ecosystem_data)
 
 def main() -> None:
     """Generate a report comparing specific TOML files.

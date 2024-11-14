@@ -27,7 +27,9 @@ CATEGORIES = {
                 r"\bleveraged[-_]yield\b", r"\bflash[-_]mint\b",
                 r"\bliquidity[-_]mining\b", r"\bliquidity[-_]provision\b",
                 r"\bstaking[-_]rewards\b", r"\brebase[-_]token\b",
-                r"\belastic[-_]supply\b", r"\bvoting[-_]escrow\b"
+                r"\belastic[-_]supply\b", r"\bvoting[-_]escrow\b",
+                r"\btoken[-_]bridge(?:[-_]func)?\b",
+                r"\bliquid(?:ity|ation)\b"
             ]),
             ('MEDIUM', [
                 r"\bswap[s]?\b", r"\bswapping\b", r"\bstaking\b", r"\bstake[s]?\b",
