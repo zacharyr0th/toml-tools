@@ -17,6 +17,8 @@ def categorize_repos(repos: List[str], categories: Dict) -> Tuple[Dict, Dict, Di
     pattern_counts = defaultdict(lambda: defaultdict(int))
     
     for repo in repos:
+        repo_has_match = False
+        
         for category, cat_data in categories.items():
             score = 0
             repo_patterns = set()
@@ -38,6 +40,13 @@ def categorize_repos(repos: List[str], categories: Dict) -> Tuple[Dict, Dict, Di
             if score >= cat_data.get('threshold', 1.0):
                 categorized_repos[category].append(repo)
                 pattern_matches[repo][category] = list(repo_patterns)
+                repo_has_match = True
+        
+        # If repo didn't match any category, mark it as uncategorized
+        if not repo_has_match:
+            categorized_repos["Uncategorized"].append(repo)
+            pattern_matches[repo]["Uncategorized"] = True
+            pattern_counts["Uncategorized"]["uncategorized"] += 1
     
     return categorized_repos, pattern_matches, pattern_counts
 

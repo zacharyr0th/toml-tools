@@ -226,6 +226,35 @@ def get_human_readable_pattern(pattern: str) -> str:
 
 def generate_verbose_section(f: TextIO, primary_category: str, all_ecosystem_data: List[Dict]) -> None:
     """Generate a verbose section for a specific category."""
+    # Handle uncategorized section differently
+    if primary_category == "Uncategorized":
+        f.write(f"\n### Uncategorized Repositories\n\n")
+        f.write("| Chain | Account | Repository |\n")
+        f.write("|-------|---------|------------|\n")
+        
+        # Collect repositories with no pattern matches
+        uncategorized = []
+        for eco_data in all_ecosystem_data:
+            eco_name = eco_data['name']
+            pattern_matches = eco_data.get('pattern_matches', {})
+            
+            for repo_url, category_patterns in pattern_matches.items():
+                if "Uncategorized" in category_patterns:  # This is the correct check
+                    uncategorized.append({
+                        'chain': eco_name,
+                        'repo': repo_url
+                    })
+        
+        # Sort and write uncategorized matches
+        uncategorized.sort(key=lambda x: (x['chain'], x['repo']))
+        for match in uncategorized:
+            repo_parts = match['repo'].split('/')
+            account_name = repo_parts[-2]
+            repo_name = repo_parts[-1]
+            f.write(f"| {match['chain']} | [{account_name}](https://github.com/{account_name}) | [{repo_name}]({match['repo']}) |\n")
+        
+        return
+
     if primary_category not in CATEGORIES:
         return
         
@@ -269,13 +298,15 @@ def generate_verbose_section(f: TextIO, primary_category: str, all_ecosystem_dat
             readable_name = get_human_readable_pattern(pattern)
             f.write(f"<details>\n")
             f.write(f"<summary>{readable_name} ({strength}) - {len(matches)} matches</summary>\n\n")
-            f.write("| Chain | Repository |\n")
-            f.write("|-------|------------|\n")
+            f.write("| Chain | Account | Repository |\n")
+            f.write("|-------|---------|------------|\n")
             
             # Sort and write matches
             matches.sort(key=lambda x: (x['chain'], x['repo']))
             for match in matches:
-                repo_name = match['repo'].split('/')[-1]
-                f.write(f"| {match['chain']} | [{repo_name}]({match['repo']}) |\n")
+                repo_parts = match['repo'].split('/')
+                account_name = repo_parts[-2]
+                repo_name = repo_parts[-1]
+                f.write(f"| {match['chain']} | [{account_name}](https://github.com/{account_name}) | [{repo_name}]({match['repo']}) |\n")
             
             f.write("\n</details>\n\n")

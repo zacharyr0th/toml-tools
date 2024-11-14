@@ -59,6 +59,10 @@ def process_ecosystem(content: str) -> Tuple[int, List[str], set, Dict, Dict, in
 
 def generate_master_report(toml_files: List[str], output_file: str, verbose: bool = False) -> None:
     ecosystem_data = []
+    total_all_repos = 0
+    unique_accounts = set()
+    individual_accounts = set()
+    org_accounts = set()
     
     # Process all ecosystems first
     for input_file in toml_files:
@@ -67,6 +71,17 @@ def generate_master_report(toml_files: List[str], output_file: str, verbose: boo
             content = infile.read()
             
         total_repos, repos, _, pattern_matches, category_stats, total_categorized, _ = process_ecosystem(content)
+        total_all_repos += total_repos
+        
+        # Extract GitHub usernames/organizations from repo URLs
+        for repo in repos:
+            account = repo.split('/')[-2]  # Gets the account name from github.com/account/repo
+            unique_accounts.add(account)
+            # Simple heuristic: accounts with uppercase letters are likely organizations
+            if any(c.isupper() for c in account):
+                org_accounts.add(account)
+            else:
+                individual_accounts.add(account)
         
         ecosystem_data.append({
             'name': ecosystem_name,
@@ -76,43 +91,67 @@ def generate_master_report(toml_files: List[str], output_file: str, verbose: boo
         })
     
     with open(output_file, 'w', encoding='utf-8') as outfile:
-        # Summary table
         outfile.write("# Ecosystem Analysis Report\n\n")
         
-        # Create vertical summary table
-        ecosystems = [data['name'] for data in ecosystem_data]
-        outfile.write("| Category | " + " | ".join(ecosystems) + " |\n")
-        outfile.write("|----------" + "|---------" * len(ecosystems) + "|\n")
+        # Add overall statistics
+        outfile.write("## Overall Statistics\n")
+        outfile.write("| Metric | Count |\n")
+        outfile.write("|--------|-------|\n")
+        outfile.write(f"| Total repositories | {total_all_repos:,} |\n")
+        outfile.write(f"| Unique GitHub accounts | {len(unique_accounts):,} |\n")
+        outfile.write(f"| Estimated individual accounts | {len(individual_accounts):,} |\n")
+        outfile.write(f"| Estimated organization/team accounts | {len(org_accounts):,} |\n\n")
         
-        # Add Repository Count row
-        repo_counts = [f"{data['total_repos']:,}" for data in ecosystem_data]
-        outfile.write(f"| Repository Count | {' | '.join(repo_counts)} |\n")
+        # Create ecosystem comparison table
+        outfile.write("## Ecosystem Comparison Categories\n\n")
+        outfile.write("| Category | Description |\n")
+        outfile.write("|----------|-------------|\n")
+        outfile.write("| DeFi & Financial | Decentralized finance protocols, financial instruments, and related tools |\n")
+        outfile.write("| NFTs & Digital Assets | NFT marketplaces, tools, and digital collectibles |\n")
+        outfile.write("| Infrastructure & Tools | Developer tools, SDKs, and blockchain infrastructure |\n")
+        outfile.write("| Identity & Authentication | Identity management, authentication, and verification systems |\n")
+        outfile.write("| Data & Analytics | Data indexing, analytics tools, and visualization platforms |\n")
+        outfile.write("| Gaming & Entertainment | Blockchain games, metaverse projects, and entertainment platforms |\n")
+        outfile.write("| Social | Social networks, communication platforms, and community tools |\n")
+        outfile.write("| Security & Privacy | Security tools, auditing platforms, and privacy solutions |\n")
+        outfile.write("| Uncategorized | Repositories that don't match any defined category patterns |\n\n")
         
-        # Add rows for each category with percentages
-        for category in COMPILED_CATEGORIES:
-            row = [category]
+        # Add Uncategorized Repositories section after main comparisons
+        total_uncategorized = sum(len(data.get('categorized_repos', {}).get('Uncategorized', [])) 
+                                 for data in ecosystem_data)
+        
+        outfile.write("\n## Uncategorized Repositories\n\n")
+        outfile.write(f"Total uncategorized repositories across all ecosystems: **{total_uncategorized}**\n\n")
+        
+        outfile.write("<details>\n")
+        outfile.write("<summary>Click to expand uncategorized repository analysis</summary>\n\n")
+        
+        # Add analysis text
+        outfile.write("The following ecosystems contain repositories that don't match our defined category patterns. ")
+        outfile.write("These might represent emerging trends, unique use cases, or repositories that need manual categorization.\n\n")
+        
+        # Create table of uncategorized repos by ecosystem
+        outfile.write("| Ecosystem | Uncategorized Repositories | Percentage of Total |\n")
+        outfile.write("|-----------|---------------------------|--------------------|\n")
+        
+        for eco_data in ecosystem_data:
+            eco_name = eco_data['name']
+            total_repos = eco_data['total_repos']
+            uncategorized = len(eco_data.get('categorized_repos', {}).get('Uncategorized', []))
+            percentage = (uncategorized / total_repos * 100) if total_repos > 0 else 0
             
-            # Calculate total repos in this category across all ecosystems
-            category_counts = []
-            for eco_data in ecosystem_data:
-                stats = eco_data['categories'].get(category, {})
-                count = stats.get('count', 0)
-                category_counts.append(count)
-            total_category_repos = sum(category_counts)
-            
-            # Calculate percentages for each ecosystem
-            for count, eco_data in zip(category_counts, ecosystem_data):
-                stats = eco_data['categories'].get(category, {})
-                within_chain_pct = stats.get('percentage', '0.00%')
-                share_of_category = f"{(count / total_category_repos * 100):.2f}%" if total_category_repos > 0 else "0.00%"
-                row.append(f"{within_chain_pct} ({share_of_category})")
-                
-            outfile.write(f"| {' | '.join(row)} |\n")
+            outfile.write(f"| {eco_name} | {uncategorized} | {percentage:.1f}% |\n")
         
+        outfile.write("\n</details>\n\n")
+        
+        # Continue with verbose section if enabled
         if verbose:
             outfile.write("\n## Detailed Pattern Analysis\n\n")
+            # Process all regular categories
             for primary in set(cat.split('/')[0] for cat in COMPILED_CATEGORIES):
                 generate_verbose_section(outfile, primary, ecosystem_data)
+            # Add Uncategorized section at the end
+            generate_verbose_section(outfile, "Uncategorized", ecosystem_data)
 
 def main() -> None:
     """Generate a report comparing specific TOML files.
