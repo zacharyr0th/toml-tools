@@ -10,45 +10,42 @@ def extract_repo_info(content: str) -> Tuple[int, List[str], Set[str], Dict, Dic
     categories = set()
     return total_repos, repos, categories, {}, {}, {}
 
-def categorize_repos(repos: List[str], categories: Dict) -> Tuple[Dict, Dict, Dict]:
-    """Categorize repositories based on defined patterns."""
-    categorized_repos = defaultdict(list)
-    pattern_matches = defaultdict(dict)
-    pattern_counts = defaultdict(lambda: defaultdict(int))
+def categorize_repos(repos: List[str], categories: Dict[str, List[str]]) -> Tuple[Dict[str, List[str]], Dict[str, Dict[str, List[str]]]]:
+    """
+    Categorize repositories based on pattern matching.
     
-    for repo in repos:
-        repo_has_match = False
-        
-        for category, cat_data in categories.items():
-            score = 0
-            repo_patterns = set()
-            
-            for strength, patterns in cat_data['patterns']:
-                weight = PATTERN_WEIGHTS[strength]
-                for pattern in patterns:
-                    if re.search(pattern, repo, re.IGNORECASE):
-                        score += weight
-                        repo_patterns.add(pattern)
-                        pattern_counts[category][pattern] += 1
-            
-            if 'negative_patterns' in cat_data:
-                for pattern in cat_data['negative_patterns']:
-                    if re.search(pattern, repo, re.IGNORECASE):
-                        score = 0
-                        break
-            
-            if score >= cat_data.get('threshold', 1.0):
-                categorized_repos[category].append(repo)
-                pattern_matches[repo][category] = list(repo_patterns)
-                repo_has_match = True
-        
-        # If repo didn't match any category, mark it as uncategorized
-        if not repo_has_match:
-            categorized_repos["Uncategorized"].append(repo)
-            pattern_matches[repo]["Uncategorized"] = True
-            pattern_counts["Uncategorized"]["uncategorized"] += 1
+    Returns:
+        Tuple containing:
+        - Dictionary mapping categories to unique repos
+        - Dictionary of pattern matches for verbose output
+    """
+    # Changed from defaultdict(set) to defaultdict(list) since we're dealing with dicts
+    categorized = defaultdict(list)
+    pattern_matches = defaultdict(lambda: defaultdict(list))
     
-    return categorized_repos, pattern_matches, pattern_counts
+    # Track which repos have been categorized using their URLs
+    categorized_repos = set()
+    
+    # First pass: categorize repos based on patterns
+    for category, patterns in categories.items():
+        for pattern in patterns:
+            for repo in repos:
+                # Extract the URL from the repo dict if it's a dictionary
+                repo_str = repo['url'] if isinstance(repo, dict) else repo
+                if re.search(pattern, repo_str):
+                    # Only append if the URL isn't already in this category
+                    repo_url = repo['url'] if isinstance(repo, dict) else repo
+                    if repo_url not in [r['url'] if isinstance(r, dict) else r for r in categorized[category]]:
+                        categorized[category].append(repo)
+                        categorized_repos.add(repo_url)
+                        pattern_matches[category][pattern].append(repo)
+    
+    # Add remaining uncategorized repos
+    uncategorized = [repo for repo in repos if (repo['url'] if isinstance(repo, dict) else repo) not in categorized_repos]
+    if uncategorized:
+        categorized["Uncategorized"] = uncategorized
+    
+    return dict(categorized), pattern_matches
 
 def organize_toml_content(content: str) -> str:
     """Organize TOML content by sorting sections and their contents."""
