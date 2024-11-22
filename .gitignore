@@ -104,9 +104,4 @@ Icon
 .AppleDesktop
 Network Trash Folder
 Temporary Items
-.apdiskoutput/solana-defi-llama-data/protocol-details-combined-2024-11-14.csv
-output/solana-defi-llama-data/solana/protocol-details-2024-11-14.csv
-output/aptos-ethereum-solana-sui-defi-llama-data/**/*.png
-output/aptos-ethereum-solana-sui-defi-llama-data/**/git_attributes
-output/comparison-*.md
-output/archive/
+output/
