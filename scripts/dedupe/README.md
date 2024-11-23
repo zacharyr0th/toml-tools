@@ -1,6 +1,6 @@
 # GitHub Repository URL Deduplicator
 
-A tool to remove duplicate GitHub repository URLs from a list and generate analysis reports.
+Takes in and deduplicates .txt files with lists of URLs corresponding to Github repos. 
 
 ## Quick Start
 ```bash

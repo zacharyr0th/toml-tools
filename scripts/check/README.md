@@ -1,6 +1,6 @@
 # GitHub Repository Checker for Ecosystem TOML Files
 
-A tool to verify GitHub repository inclusion in ecosystem TOML files.
+Checks if the URLs in new-repos.txt are in a specific .toml file in the /input directory. 
 
 ## Quick Start
 ```bash
