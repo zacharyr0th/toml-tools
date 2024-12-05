@@ -1,0 +1,117 @@
+CLI Output Log for mystenlabs/sui
+Generated on: 2024-11-09 10:38:34
+
+Step 1: Finding all packages in mystenlabs/sui...
+
+Found 17 packages
+
+Step 2: Searching for repositories dependent on each package...
+
+Searching dependents for sui
+Starting to scrape dependents for mystenlabs/sui
+Found 26 repos (Time elapsed: 0s)
+Done! Scraped 26 repositories in 2 seconds
+Found 26 repositories for sui
+
+Searching dependents for @dantheman8300/test1
+Starting to scrape dependents for mystenlabs/sui
+Found 0 repos (Time elapsed: 0s)
+Done! Scraped 0 repositories in 2 seconds
+Found 0 repositories for @dantheman8300/test1
+
+Searching dependents for @designstringstudio/bcs
+Starting to scrape dependents for mystenlabs/sui
+Found 0 repos (Time elapsed: 0s)
+Done! Scraped 0 repositories in 2 seconds
+Found 0 repositories for @designstringstudio/bcs
+
+Searching dependents for @mysten/bcs
+Starting to scrape dependents for mystenlabs/sui
+Found 30 repos (Time elapsed: 0s)
+Done! Scraped 30 repositories in 1 seconds
+Found 30 repositories for @mysten/bcs
+
+Searching dependents for @mysten/create-dapp
+Starting to scrape dependents for mystenlabs/sui
+Found 0 repos (Time elapsed: 0s)
+Done! Scraped 0 repositories in 2 seconds
+Found 0 repositories for @mysten/create-dapp
+
+Searching dependents for @mysten/dapp-kit
+Starting to scrape dependents for mystenlabs/sui
+Found 30 repos (Time elapsed: 0s)
+Done! Scraped 30 repositories in 1 seconds
+Found 30 repositories for @mysten/dapp-kit
+
+Searching dependents for @mysten/enoki
+Starting to scrape dependents for mystenlabs/sui
+Found 30 repos (Time elapsed: 0s)
+Done! Scraped 30 repositories in 2 seconds
+Found 30 repositories for @mysten/enoki
+
+Searching dependents for @mysten/graphql-transport
+Starting to scrape dependents for mystenlabs/sui
+Found 3 repos (Time elapsed: 0s)
+Done! Scraped 3 repositories in 2 seconds
+Found 3 repositories for @mysten/graphql-transport
+
+Searching dependents for @mysten/kms
+Starting to scrape dependents for mystenlabs/sui
+Found 0 repos (Time elapsed: 0s)
+Done! Scraped 0 repositories in 2 seconds
+Found 0 repositories for @mysten/kms
+
+Searching dependents for @mysten/ledgerjs-hw-app-sui
+Starting to scrape dependents for mystenlabs/sui
+Found 28 repos (Time elapsed: 0s)
+Done! Scraped 28 repositories in 2 seconds
+Found 28 repositories for @mysten/ledgerjs-hw-app-sui
+
+Searching dependents for @mysten/move-bytecode-template
+Starting to scrape dependents for mystenlabs/sui
+Found 5 repos (Time elapsed: 0s)
+Done! Scraped 5 repositories in 2 seconds
+Found 5 repositories for @mysten/move-bytecode-template
+
+Searching dependents for @mysten/zklogin
+Starting to scrape dependents for mystenlabs/sui
+Found 30 repos (Time elapsed: 0s)
+Done! Scraped 30 repositories in 2 seconds
+Found 30 repositories for @mysten/zklogin
+
+Searching dependents for @mysten/zksend
+Starting to scrape dependents for mystenlabs/sui
+Found 30 repos (Time elapsed: 0s)
+Done! Scraped 30 repositories in 2 seconds
+Found 30 repositories for @mysten/zksend
+
+Searching dependents for @xton/enoki
+Starting to scrape dependents for mystenlabs/sui
+Found 0 repos (Time elapsed: 0s)
+Done! Scraped 0 repositories in 1 seconds
+Found 0 repositories for @xton/enoki
+
+Searching dependents for github.com/mystenlabs/sui
+Starting to scrape dependents for mystenlabs/sui
+Found 0 repos (Time elapsed: 0s)
+Done! Scraped 0 repositories in 1 seconds
+Found 0 repositories for github.com/mystenlabs/sui
+
+Searching dependents for mystenlabs/sui/.github/workflows/tag.yml
+Starting to scrape dependents for mystenlabs/sui
+Found 17 repos (Time elapsed: 0s)
+Done! Scraped 17 repositories in 2 seconds
+Found 17 repositories for mystenlabs/sui/.github/workflows/tag.yml
+
+Searching dependents for test-bcs
+Starting to scrape dependents for mystenlabs/sui
+Found 0 repos (Time elapsed: 0s)
+Done! Scraped 0 repositories in 1 seconds
+Found 0 repositories for test-bcs
+
+
+✓ Results saved to output/sui/
+
+Final Statistics:
+Total unique repositories found: 158
+Total packages processed: 17
