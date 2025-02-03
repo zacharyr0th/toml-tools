@@ -11,72 +11,84 @@ CATEGORIES = {
     "DeFi & Financial": {
         'patterns': [
             ('STRONG', [
-                r"\b(?:de)?fi\b", r"\bdefi[-_]", r"_(?:de)?fi\b",
+                # Core DeFi terms
+                r"\b(?:de)?fi\b", r"defi[-_]", r"_(?:de)?fi\b",
                 r"\bvault[s]?\b", r"\byield[s]?\b", r"\byielding\b",
                 r"\bamm\b", r"\bperpetual[s]?\b", r"\bperp[s]?\b",
+                r"\bswap\b", r"\bswaps\b", r"\bswapper\b", r"\bswapping\b",
+                r"\bstaking\b", r"\bstake[s]?\b", r"\bstaked\b",
+                r"\bliquid(?:ity|ation)\b", r"\blp[s]?\b", r"\bpool[s]?\b",
+                r"\bfarm(?:ing)?\b", r"\bharvest(?:er|ing)?\b",
+                r"\blend(?:ing)?\b", r"\bloan[s]?\b", r"\bborrow(?:ing)?\b",
+                r"\bcollateral\b", r"\bmargin\b", r"\bleverage\b",
+                
+                # Protocol names
                 r"\baave\b", r"\bcompound\b", r"\bfrax\b", r"\bcurve\b",
-                r"\buniswap\b", r"\bsushiswap\b", r"\blending[-_]protocol\b",
-                r"\bliquid[-_]staking\b", r"\bstaking[-_]protocol\b",
-                r"\bfinance\b", r"\bfinancial\b", r"\bmonetary\b",
-                r"\bcurve[-_]pool\b", r"\bcurve[-_]gauge\b",
-                r"\baave[-_]v[2-3]\b", r"\bcompound[-_]v[2-3]\b",
+                r"\buniswap\b", r"\bsushiswap\b", r"\bpancakeswap\b",
                 r"\bliquity\b", r"\balchemix\b", r"\bsynthetix\b",
                 r"\bribbon\b", r"\bconvex\b", r"\bbalancer\b",
-                r"\bvetoken[s]?\b", r"\bvault[-_]strategy\b",
-                r"\byield[-_]optimizer\b", r"\byield[-_]booster\b",
-                r"\bleveraged[-_]yield\b", r"\bflash[-_]mint\b",
+                
+                # Protocol types
+                r"\blending[-_]protocol\b", r"\bliquid[-_]staking\b",
+                r"\bstaking[-_]protocol\b", r"\bfinance\b", r"\bfinancial\b",
+                r"\bmonetary\b", r"\bvetoken[s]?\b", r"\bbridge\b",
+                
+                # Specific features
+                r"\bflash[-_]loan\b", r"\bflash[-_]mint\b",
                 r"\bliquidity[-_]mining\b", r"\bliquidity[-_]provision\b",
                 r"\bstaking[-_]rewards\b", r"\brebase[-_]token\b",
                 r"\belastic[-_]supply\b", r"\bvoting[-_]escrow\b",
-                r"\btoken[-_]bridge(?:[-_]func)?\b",
-                r"\bliquid(?:ity|ation)\b"
+                r"\btoken[-_]bridge\b", r"\btoken[-_]swap\b",
+                r"\btoken[-_]sale\b", r"\btoken[-_]launch\b",
+                r"\btoken[-_]vesting\b", r"\btoken[-_]lock\b",
+                
+                # Move/Aptos specific
+                r"\bcoin\b", r"\bcoins\b", r"\btoken\b", r"\btokens\b",
+                r"\bliquid[-_]staking\b", r"\bstaking[-_]pool\b",
+                r"\byield[-_]farming\b", r"\byield[-_]optimizer\b",
+                r"\bswap[-_]pool\b", r"\bamm[-_]pool\b",
+                r"\blending[-_]pool\b", r"\bstable[-_]coin\b",
+                r"\bstable[-_]swap\b", r"\bliquidity[-_]pool\b"
             ]),
             ('MEDIUM', [
-                r"\bswap[s]?\b", r"\bswapping\b", r"\bstaking\b", r"\bstake[s]?\b",
-                r"\bliquidity\b", r"\blp[s]?\b", r"\bpool[s]?\b",
-                r"\bfarm(?:ing)?\b", r"\byield[-_]farm\b", r"\bharvest(?:er|ing)?\b",
-                r"\blend(?:ing)?\b", r"\bloan[s]?\b", r"\bborrow(?:ing)?\b",
-                r"\bcollateral\b", r"\bmargin\b", r"\bleverage\b",
+                # Financial terms
+                r"\btrade[rs]?\b", r"\btrading\b", r"\bexchange[s]?\b",
+                r"\bmarket[s]?\b", r"\bprice[s]?\b", r"\bfee[s]?\b",
+                r"\bwallet[s]?\b", r"\basset[s]?\b", r"\bportfolio\b",
+                r"\binvestment[s]?\b", r"\btreasury\b", r"\bvault[s]?\b",
+                
+                # Protocol features
                 r"\binterest[-_]rate\b", r"\binterest[-_]bearing\b",
-                r"\btoken[-_]swap\b", r"\btoken[-_]bridge\b",
-                r"\bliquid(?:ity|ation)\b", r"\bmarket[-_]maker\b",
-                r"\bimpermanent[-_]loss\b", r"\bslippage\b",
-                r"\bgas[-_]optimization\b", r"\bmulti[-_]sig\b",
-                r"\btime[-_]lock\b", r"\bprice[-_]impact\b",
-                r"\bliquidity[-_]bootstrapping\b", r"\bfee[-_]sharing\b",
-                r"\byield[-_]bearing\b", r"\byield[-_]generating\b",
-                r"\bcollateral[-_]ratio\b", r"\bdebt[-_]ratio\b",
-                r"\brisk[-_]management\b", r"\bportfolio[-_]management\b",
-                r"\btreasury[-_]management\b", r"\basset[-_]management\b",
-                r"\bvault[-_]management\b", r"\bpool[-_]management\b",
-                r"\bstaking[-_]management\b", r"\byield[-_]management\b"
+                r"\bmarket[-_]maker\b", r"\bimpermanent[-_]loss\b",
+                r"\bslippage\b", r"\bgas[-_]optimization\b",
+                r"\bmulti[-_]sig\b", r"\btime[-_]lock\b",
+                r"\bprice[-_]impact\b", r"\bfee[-_]sharing\b",
+                
+                # Move/Aptos specific
+                r"\bmodule\b", r"\bresource\b", r"\bcapability\b",
+                r"\bsigner\b", r"\baccount\b", r"\baddress\b",
+                r"\btransaction\b", r"\bscript\b", r"\bentry\b",
+                r"\bstruct\b", r"\bevent\b", r"\berror\b"
             ]),
             ('WEAK', [
-                r"\btrad(?:e|ing)\b", r"\btransfer[s]?\b",
-                r"\bbridge[s]?\b", r"\bexchange[s]?\b",
-                r"\bwallet[s]?\b", r"\basset[s]?\b",
-                r"\bportfolio\b", r"\binvestment[s]?\b",
-                r"\bfinancial[-_]\w+\b", r"\bmonetary[-_]\w+\b",
-                r"\bmarket[-_]\w+\b", r"\btrading[-_]\w+\b",
-                r"\bexchange[-_]\w+\b", r"\bprice[-_]\w+\b",
-                r"\bvalue[-_]\w+\b", r"\basset[-_]\w+\b",
-                r"\bportfolio[-_]\w+\b", r"\binvestment[-_]\w+\b",
-                r"\btreasury[-_]\w+\b", r"\bvault[-_]\w+\b",
-                r"\bpool[-_]\w+\b", r"\bstaking[-_]\w+\b",
-                r"\byield[-_]\w+\b", r"\bliquidity[-_]\w+\b",
-                r"\bswap[-_]\w+\b", r"\bbridge[-_]\w+\b",
-                r"\btrade[-_]\w+\b", r"\bexchange[-_]\w+\b"
+                # Generic blockchain terms
+                r"\bblockchain\b", r"\bcrypto\b", r"\bweb3\b",
+                r"\bdecentralized\b", r"\bdistributed\b",
+                r"\bconsensus\b", r"\bvalidator[s]?\b",
+                r"\bsmart[-_]contract[s]?\b", r"\bcontract[s]?\b",
+                
+                # Move/Aptos ecosystem
+                r"\bmove[-_]lang\b", r"\baptos\b", r"\bsui\b",
+                r"\bmove[-_]module\b", r"\bmove[-_]contract\b",
+                r"\baptos[-_]framework\b", r"\baptos[-_]token\b",
+                r"\baptos[-_]coin\b", r"\baptos[-_]std\b"
             ])
         ],
         'negative_patterns': [
-            r"\bimage[-_]swap\b", r"\bcolor[-_]swap\b", r"\bpixel[-_]swap\b",
-            r"\bfile[-_]transfer\b", r"\bdata[-_]transfer\b",
-            r"\bgame[-_]asset[s]?\b", r"\btest[-_]wallet\b",
-            r"\btest[-_]finance\b", r"\bdemo[-_]defi\b",
-            r"\bsample[-_]vault\b", r"\bexample[-_]pool\b",
-            r"\bmock[-_]token\b", r"\bfake[-_]token\b",
-            r"\btest[-_]trading\b", r"\bdemo[-_]exchange\b",
-            r"\bsample[-_]wallet\b", r"\bexample[-_]bridge\b"
+            r"\btest[-_]token[s]?\b", r"\bdummy[-_]token[s]?\b",
+            r"\bsample[-_]token[s]?\b", r"\btoken[-_]test[s]?\b",
+            r"\bexample[-_]", r"\bdemo[-_]", r"\btest[-_]",
+            r"\bmock[-_]", r"\bfake[-_]"
         ],
         'exclude_categories': ['Gaming & Entertainment'],
         'threshold': 2.0
@@ -384,53 +396,50 @@ CATEGORIES = {
     "Infrastructure & Tools": {
         'patterns': [
             ('STRONG', [
+                # Core infrastructure
                 r"\bnode[s]?\b", r"\bvalidator[s]?\b", r"\binfrastructure\b",
-                r"\bprotocol[s]?\b", r"\bframework[s]?\b", 
-                r"\bsdk[s]?\b", r"[-_]sdk\b", r"\bsdk[-_]",
-                r"\bapi[s]?\b", r"[-_]api\b", r"\bapi[-_]",
-                r"\bcli\b", r"[-_]cli\b", r"\bcli[-_]",
-                r"\btoolkit[s]?\b", r"\btool[-_]suite\b",
-                r"\bsmart[-_]contract[s]?\b", r"\bcontract[-_]framework\b",
-                r"\bblockchain[-_](?:node|validator|infrastructure)\b",
-                r"\binfra[-_]as[-_]code\b", r"\bdevops\b", r"\bci[-_]cd\b",
-                r"\bpipeline[s]?\b", r"\bdeployment[s]?\b", r"\bcontainer[s]?\b",
-                r"\bdocker\b", r"\bkubernetes\b", r"\bk8s\b",
-                r"\bterraform\b", r"\bansible\b", r"\bchef\b",
-                r"\bpuppet\b", r"\bjenkins\b", r"\bgithub[-_]action[s]?\b",
-                r"\bcloud[-_]native\b", r"\bmicroservice[s]?\b",
-                r"\bserverless\b", r"\blambda[s]?\b", r"\bfunction[s]?\b",
-                r"\bservice[-_]mesh\b", r"\bload[-_]balancer[s]?\b",
-                r"\breverse[-_]proxy\b", r"\bgateway[s]?\b",
+                r"\bframework[s]?\b", r"\bprotocol[s]?\b", r"\bnetwork[s]?\b",
+                r"\bsdk[s]?\b", r"\bapi[s]?\b", r"\bcli\b", r"\btoolkit[s]?\b",
+                
+                # Development tools
+                r"\bcompiler\b", r"\bdeployer\b", r"\bdebugger\b",
+                r"\bmonitor\b", r"\banalyzer\b", r"\bexplorer\b",
+                r"\blibrary\b", r"\bpackage\b", r"\bmodule\b",
+                
+                # Move/Aptos specific
+                r"\bmove[-_]lang\b", r"\bmove[-_]compiler\b",
+                r"\bmove[-_]framework\b", r"\bmove[-_]stdlib\b",
+                r"\baptos[-_]framework\b", r"\baptos[-_]sdk\b",
+                r"\baptos[-_]cli\b", r"\baptos[-_]core\b",
+                r"\baptos[-_]node\b", r"\baptos[-_]validator\b"
             ]),
             ('MEDIUM', [
-                r"\bcompiler[s]?\b", r"\bdeployer[s]?\b", r"\bdebugger[s]?\b",
-                r"\bmonitor(?:ing)?\b", r"\btest(?:ing)?\b", 
-                r"\baudit(?:ing|or)?\b", r"\banalyzer[s]?\b",
-                r"\blibrary\b", r"\bpackage[s]?\b", r"\bmodule[s]?\b",
+                # Development features
                 r"\bintegration[s]?\b", r"\binterface[s]?\b",
                 r"\bwrapper[s]?\b", r"\bbridge[s]?\b",
                 r"\bclient[s]?\b", r"\bserver[s]?\b",
-                r"\blog(?:ging|ger)?\b", r"\bmetric[s]?\b", r"\btrace[s]?\b",
-                r"\balert[s]?\b", r"\bnotification[s]?\b", r"\bevent[s]?\b",
-                r"\bcache\b", r"\bqueue\b", r"\bpub[-_]sub\b",
-                r"\bmessage[-_]broker\b", r"\bstream[s]?\b", r"\bbatch\b",
-                r"\bscheduler\b", r"\bcron\b", r"\bjob[s]?\b",
-                r"\bworker[s]?\b", r"\btask[s]?\b", r"\bprocess[es]?\b",
-                r"\bthread[s]?\b", r"\bpool[s]?\b", r"\bcluster[s]?\b",
-                r"\bshard[s]?\b", r"\breplica[s]?\b", r"\bbackup[s]?\b",
-            ]),
-            ('WEAK', [
+                r"\blog(?:ging|ger)?\b", r"\bmetric[s]?\b",
+                
+                # Tools and utilities
                 r"\btool[s]?\b", r"\butil(?:s|ity|ities)?\b",
                 r"\bhelper[s]?\b", r"\bscript[s]?\b",
-                r"\bconfig\b", r"\bsetup\b",
-                r"\binfra[-_]", r"\btool[-_]", r"\butil[-_]",
-                r"\bscript[-_]", r"\bconfig[-_]", r"\bsetup[-_]",
-                r"\bbuild[-_]", r"\bdeploy[-_]", r"\brelease[-_]",
-                r"\bversion[-_]", r"\bpackage[-_]", r"\bmodule[-_]",
-                r"\bservice[-_]", r"\bserver[-_]", r"\bclient[-_]",
-                r"\bapi[-_]", r"\bsdk[-_]", r"\bcli[-_]",
-                r"\bframework[-_]", r"\blibrary[-_]", r"\bwrapper[-_]",
-                r"\bhelper[-_]", r"\bmanager[-_]", r"\bhandler[-_]",
+                r"\bconfig\b", r"\bsetup\b", r"\bbuild\b",
+                
+                # Move/Aptos specific
+                r"\bmove[-_]tool\b", r"\bmove[-_]prover\b",
+                r"\bmove[-_]analyzer\b", r"\bmove[-_]cli\b",
+                r"\baptos[-_]tool\b", r"\baptos[-_]config\b"
+            ]),
+            ('WEAK', [
+                # Generic terms
+                r"\bdev\b", r"\bdevelopment\b", r"\bcode\b",
+                r"\bimplementation\b", r"\brepository\b",
+                r"\bproject\b", r"\bsolution\b", r"\bplatform\b",
+                
+                # Technical terms
+                r"\bfunction[s]?\b", r"\bmethod[s]?\b",
+                r"\bclass[es]?\b", r"\bstruct[s]?\b",
+                r"\binterface[s]?\b", r"\bmodule[s]?\b"
             ])
         ],
         'negative_patterns': [
@@ -490,57 +499,53 @@ CATEGORIES = {
         'threshold': 1.0
     },
 
-    "Data & Analytics": {
+    "Smart Contracts & Core": {
         'patterns': [
             ('STRONG', [
-                r"\bdata\b", r"\banalytics\b", r"\bmetrics\b", r"\bindex(?:er|ing)?\b",
-                r"\bgraph\b", r"\bquery\b", r"\bsubgraph\b", r"\boracle\b",
-                r"\bdata[-_]analytics\b", r"\bdata[-_]science\b",
-                r"\bbig[-_]data\b", r"\bmachine[-_]learning\b",
-                r"\bai\b", r"\bml\b", r"\bdeep[-_]learning\b",
-                r"\bdata[-_]mining\b", r"\bdata[-_]warehouse\b",
-                r"\bdata[-_]lake\b", r"\bdata[-_]pipeline\b",
-                r"\bdata[-_]engineering\b", r"\bdata[-_]processing\b",
-                r"\bdata[-_]visualization\b", r"\bdata[-_]reporting\b",
-                r"\bdata[-_]collection\b", r"\bdata[-_]aggregation\b",
-                r"\bdata[-_]transformation\b", r"\bdata[-_]modeling\b",
-                r"\bdata[-_]quality\b", r"\bdata[-_]governance\b",
-                r"\bdata[-_]catalog\b", r"\bdata[-_]dictionary\b",
-                r"\bdata[-_]lineage\b", r"\bdata[-_]profiling\b",
+                # Core contract terms
+                r"\bsmart[-_]contract[s]?\b", r"\bcontract[s]?\b",
+                r"\bmodule[s]?\b", r"\bfunction[s]?\b",
+                r"\binterface[s]?\b", r"\blibrary\b",
+                
+                # Move specific
+                r"\bmove[-_]module\b", r"\bmove[-_]contract\b",
+                r"\bmove[-_]resource\b", r"\bmove[-_]capability\b",
+                r"\bmove[-_]signer\b", r"\bmove[-_]account\b",
+                
+                # Aptos specific
+                r"\baptos[-_]framework\b", r"\baptos[-_]std\b",
+                r"\baptos[-_]token\b", r"\baptos[-_]coin\b",
+                r"\baptos[-_]account\b", r"\baptos[-_]resource\b"
             ]),
             ('MEDIUM', [
-                r"\bdashboard\b", r"\bvisualization\b", r"\breport(?:ing)?\b",
-                r"\btracking\b", r"\bmonitor(?:ing)?\b", r"\balert(?:ing)?\b",
-                r"\bretl\b", r"\betl\b", r"\belt\b",
-                r"\bstatistics\b", r"\bforecasting\b", r"\bprediction\b",
-                r"\bregression\b", r"\bclassification\b", r"\bclustering\b",
-                r"\banomaly[-_]detection\b", r"\bpattern[-_]recognition\b",
-                r"\btime[-_]series\b", r"\btrend[-_]analysis\b",
-                r"\bmetric[-_]tracking\b", r"\bkpi[-_]monitoring\b",
-                r"\bperformance[-_]analytics\b", r"\busage[-_]analytics\b",
-                r"\bweb[-_]analytics\b", r"\buser[-_]analytics\b",
-                r"\bchain[-_]analytics\b", r"\btransaction[-_]analytics\b",
-                r"\bmarket[-_]analytics\b", r"\btrading[-_]analytics\b",
-                r"\brisk[-_]analytics\b", r"\bfraud[-_]analytics\b",
+                # Contract features
+                r"\bentry[-_]function\b", r"\bpublic[-_]function\b",
+                r"\bview[-_]function\b", r"\bscript[-_]function\b",
+                r"\bresource[-_]account\b", r"\bresource[-_]group\b",
+                r"\bsigner[-_]capability\b", r"\bstore[-_]capability\b",
+                
+                # Technical terms
+                r"\bstruct[s]?\b", r"\bevent[s]?\b", r"\berror[s]?\b",
+                r"\btype[s]?\b", r"\bgeneric[s]?\b", r"\bstorage\b",
+                r"\bmemory\b", r"\bstate\b", r"\bcallback[s]?\b"
             ]),
             ('WEAK', [
-                r"\bdata[-_]", r"\banalytics[-_]",
-                r"\bmetric[-_]", r"\breport[-_]",
-                r"\bmonitor[-_]", r"\btrack[-_]", r"\blog[-_]",
-                r"\binsight[-_]", r"\bvisualize[-_]", r"\bdisplay[-_]",
-                r"\bchart[-_]", r"\bgraph[-_]", r"\bplot[-_]",
-                r"\bquery[-_]", r"\bsearch[-_]", r"\bfilter[-_]",
-                r"\bsort[-_]", r"\bgroup[-_]", r"\baggregate[-_]",
-                r"\bprocess[-_]", r"\btransform[-_]", r"\bclean[-_]",
-                r"\bvalidate[-_]", r"\bverify[-_]", r"\bcheck[-_]",
-                r"\banalyze[-_]", r"\bpredict[-_]", r"\bforecast[-_]",
+                # Generic terms
+                r"\bimplementation\b", r"\bdeployment\b",
+                r"\bupgrade\b", r"\bmigration\b", r"\bversion\b",
+                r"\brelease\b", r"\bupdate\b", r"\bpatch\b",
+                
+                # Technical concepts
+                r"\bpattern[s]?\b", r"\bstandard[s]?\b",
+                r"\bprotocol[s]?\b", r"\binterface[s]?\b",
+                r"\bwrapper[s]?\b", r"\bproxy\b"
             ])
         ],
-        'exclude_categories': [],
         'threshold': 1.0
     }
 }
 
+# Compile patterns for efficiency
 def compile_patterns(patterns, negative_patterns=None):
     """Compile both positive and negative regex patterns with case-insensitive flag."""
     compiled = {

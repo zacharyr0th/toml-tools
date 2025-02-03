@@ -1,7 +1,7 @@
 from collections import defaultdict
 import re
 from typing import List, Dict, Tuple, Set
-from constants import PATTERN_WEIGHTS, CATEGORIES, REPO_PATTERN
+from .constants import PATTERN_WEIGHTS, CATEGORIES, REPO_PATTERN
 import logging
 
 def extract_repo_info(content: str) -> Tuple[int, List[str], Set[str], Dict, Dict, Dict]:
@@ -19,9 +19,12 @@ def categorize_repos(repos: List[str], categories: Dict[str, Dict]) -> Tuple[Dic
     categorized = defaultdict(list)
     pattern_matches = defaultdict(lambda: defaultdict(list))
     
+    # Increase batch size to 1000
+    batch_size = 1000
+    
     for i, repo in enumerate(repos):
-        if i % 100 == 0:  # Log progress every 100 repos
-            logging.info(f"Processing repo {i}/{len(repos)}")
+        if i % batch_size == 0:  # Log progress every 1000 repos
+            logging.info(f"Processing repo {i}/{len(repos)} ({(i/len(repos)*100):.1f}%)")
             
         repo_matched = False
         

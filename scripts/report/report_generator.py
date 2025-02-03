@@ -5,9 +5,9 @@ import logging
 from datetime import datetime
 from typing import List, Dict, Tuple
 from collections import defaultdict
-from constants import COMPILED_CATEGORIES, CATEGORIES
-from utils import categorize_repos, extract_repo_info
-from verbose_generator import generate_verbose_section
+from .constants import COMPILED_CATEGORIES, CATEGORIES
+from .utils import categorize_repos, extract_repo_info
+from .verbose_generator import generate_verbose_section
 
 def process_ecosystem(content: str) -> Tuple[int, List[str], set, Dict, Dict, int, Dict]:
     """Process a single ecosystem's TOML content and return analysis data."""
@@ -29,11 +29,18 @@ def process_ecosystem(content: str) -> Tuple[int, List[str], set, Dict, Dict, in
     for category, repos_list in categorized_repos.items():
         logging.info(f"Category {category}: {len(repos_list)} repositories")
     
+    # Create ecosystem data dictionary that includes pattern matches
+    ecosystem_data = {
+        'name': 'aptos',  # Add ecosystem name
+        'total_repos': total_repos,
+        'categorized_repos': categorized_repos,
+        'pattern_matches': pattern_matches  # This is important for verbose output
+    }
+    
     # Calculate statistics for each category
     category_stats = {}
     total_categorized = 0
     
-    # Calculate statistics for each category
     for category in CATEGORIES.keys():
         if category == "Uncategorized":
             continue
@@ -62,12 +69,11 @@ def process_ecosystem(content: str) -> Tuple[int, List[str], set, Dict, Dict, in
     logging.info(f"Total categorized: {total_categorized}")
     logging.info(f"Total uncategorized: {len(uncategorized_repos)}")
     
-    return total_repos, repos, categories, pattern_matches, category_stats, total_categorized, {}
+    return total_repos, repos, categories, pattern_matches, category_stats, total_categorized, ecosystem_data
 
 def generate_master_report(toml_files: List[str], output_file: str, verbose: bool = False) -> None:
     """Generate the master report."""
     ecosystem_data = []
-    total_all_repos = 0
     
     # Process all ecosystems first
     for input_file in toml_files:
@@ -76,46 +82,48 @@ def generate_master_report(toml_files: List[str], output_file: str, verbose: boo
         with open(input_file, 'r', encoding='utf-8') as infile:
             content = infile.read()
             
-        total_repos, repos, _, pattern_matches, category_stats, total_categorized, _ = process_ecosystem(content)
+        total_repos, repos, _, pattern_matches, category_stats, total_categorized, eco_data = process_ecosystem(content)
+        eco_data['name'] = ecosystem_name  # Set correct ecosystem name
+        ecosystem_data.append(eco_data)
+    
+    # Write report after processing all ecosystems
+    with open(output_file, 'w', encoding='utf-8') as outfile:
+        outfile.write("# Ecosystem Analysis Report\n\n")
         
-        # Add category counts to report
-        with open(output_file, 'w', encoding='utf-8') as outfile:
-            outfile.write("# Ecosystem Analysis Report\n\n")
-            
-            # Write overall statistics
-            outfile.write("## Overall Statistics\n")
-            outfile.write("| Metric | Count |\n")
-            outfile.write("|--------|-------|\n")
-            outfile.write(f"| Total repositories | {total_repos:,} |\n")
-            
-            # Write category statistics
-            outfile.write("\n## Category Statistics\n")
-            outfile.write("| Category | Repository Count | Percentage |\n")
-            outfile.write("|----------|------------------|------------|\n")
-            
-            # Sort categories by count (excluding Uncategorized)
-            sorted_categories = sorted(
-                [(k, v['count'], v['percentage']) for k, v in category_stats.items() if k != "Uncategorized"],
-                key=lambda x: x[1],
-                reverse=True
-            )
-            
-            # Write sorted categories
-            for category, count, percentage in sorted_categories:
-                outfile.write(f"| {category} | {count:,} | {percentage} |\n")
-            
-            # Write uncategorized at the end
-            if "Uncategorized" in category_stats:
-                uncat = category_stats["Uncategorized"]
-                outfile.write(f"| Uncategorized | {uncat['count']:,} | {uncat['percentage']} |\n")
-            
-            # If verbose, add detailed pattern analysis
-            if verbose:
-                outfile.write("\n## Detailed Pattern Analysis\n\n")
-                for category in CATEGORIES.keys():
-                    if category == "Uncategorized":
-                        continue
-                    generate_verbose_section(category, ecosystem_data, outfile)
+        # Write overall statistics
+        outfile.write("## Overall Statistics\n")
+        outfile.write("| Metric | Count |\n")
+        outfile.write("|--------|-------|\n")
+        outfile.write(f"| Total repositories | {total_repos:,} |\n")
+        
+        # Write category statistics
+        outfile.write("\n## Category Statistics\n")
+        outfile.write("| Category | Repository Count | Percentage |\n")
+        outfile.write("|----------|------------------|------------|\n")
+        
+        # Sort categories by count (excluding Uncategorized)
+        sorted_categories = sorted(
+            [(k, v['count'], v['percentage']) for k, v in category_stats.items() if k != "Uncategorized"],
+            key=lambda x: x[1],
+            reverse=True
+        )
+        
+        # Write sorted categories
+        for category, count, percentage in sorted_categories:
+            outfile.write(f"| {category} | {count:,} | {percentage} |\n")
+        
+        # Write uncategorized at the end
+        if "Uncategorized" in category_stats:
+            uncat = category_stats["Uncategorized"]
+            outfile.write(f"| Uncategorized | {uncat['count']:,} | {uncat['percentage']} |\n")
+        
+        # If verbose, add detailed pattern analysis
+        if verbose:
+            outfile.write("\n## Detailed Pattern Analysis\n\n")
+            for category in CATEGORIES.keys():
+                if category == "Uncategorized":
+                    continue
+                generate_verbose_section(category, ecosystem_data, outfile)
 
 def main() -> None:
     """Generate a report comparing specific TOML files.

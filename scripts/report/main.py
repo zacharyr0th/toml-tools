@@ -2,7 +2,7 @@ import argparse
 import logging
 import os
 from datetime import datetime
-from report_generator import generate_master_report
+from .report_generator import generate_master_report
 
 def main():
     parser = argparse.ArgumentParser(description='Generate repository analysis report.')

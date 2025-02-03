@@ -48,19 +48,49 @@ Collection of the top 20 .toml files used in Electric Capital's ecosystem calcul
 
 ## Installation
 
-Required Python packages vary by module. Common dependencies include:
+1. Create and activate a virtual environment:
+```bash
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# On macOS/Linux:
+source venv/bin/activate
+# On Windows:
+.\venv\Scripts\activate
+```
+
+2. Install required Python packages:
 ```bash
 pip install requests beautifulsoup4 pandas matplotlib seaborn numpy
+# Or install from requirements.txt if available:
+pip install -r requirements.txt
+```
+
+3. Set up environment variables:
+```bash
+# Create .env file
+touch .env
+
+# Add GitHub token to .env (optional but recommended)
+echo "GITHUB_TOKEN=your_token_here" >> .env
+
+# Load environment variables
+source .env
 ```
 
 ### Example Commands
 
 ```bash
-# Generate ecosystem report
+# Generate ecosystem report (from project root)
 python -m scripts.report.main ethereum --verbose
 
+# Alternative method:
+cd scripts/report
+python main.py ethereum --verbose
+
 # Check repositories against TOML
-python3 scripts/check/check_repos.py solana
+python scripts/check/check_repos.py solana
 
 # Analyze GitHub dependencies
 python3 scrape/dependents/dependents.py owner/repo --list-packages

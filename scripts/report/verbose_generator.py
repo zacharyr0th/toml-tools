@@ -2,7 +2,8 @@
 
 from collections import defaultdict
 from typing import List, Dict, TextIO, Tuple
-from constants import CATEGORIES, PATTERN_WEIGHTS
+from .constants import CATEGORIES, PATTERN_WEIGHTS
+import logging
 
 def get_human_readable_pattern(pattern: str) -> str:
     """Convert regex pattern to human readable format."""
@@ -310,3 +311,59 @@ def generate_verbose_section(f: TextIO, primary_category: str, all_ecosystem_dat
                 f.write(f"| {match['chain']} | [{account_name}](https://github.com/{account_name}) | [{repo_name}]({match['repo']}) |\n")
             
             f.write("\n</details>\n\n")
+
+def generate_verbose_section(category: str, ecosystem_data: List[Dict], outfile: TextIO) -> None:
+    """Generate detailed pattern analysis section for a category."""
+    outfile.write(f"\n### {category}\n\n")
+    
+    # Skip if no data
+    if not ecosystem_data:
+        outfile.write("No pattern matches found for this category.\n\n")
+        return
+        
+    try:
+        # Aggregate pattern matches and collect repos for each pattern
+        pattern_counts = {}
+        pattern_repos = defaultdict(list)
+        
+        for eco_data in ecosystem_data:
+            categorized_repos = eco_data.get('categorized_repos', {})
+            if category in categorized_repos:
+                pattern_matches = eco_data.get('pattern_matches', {}).get(category, {})
+                for pattern, matched_repos in pattern_matches.items():
+                    pattern_counts[pattern] = pattern_counts.get(pattern, 0) + len(matched_repos)
+                    pattern_repos[pattern].extend(matched_repos)
+        
+        if not pattern_counts:
+            outfile.write("No repositories matched patterns in this category.\n\n")
+            return
+            
+        # Sort patterns by count
+        sorted_patterns = sorted(pattern_counts.items(), key=lambda x: x[1], reverse=True)
+        
+        # Write collapsible sections combining stats and repos
+        for pattern, count in sorted_patterns:
+            repos = pattern_repos[pattern]
+            readable_pattern = get_human_readable_pattern(pattern)
+            
+            outfile.write(f"<details>\n")
+            outfile.write(f"<summary>`{pattern}` - {readable_pattern} ({count:,} repositories)</summary>\n\n")
+            
+            # Write repository table
+            outfile.write("| Repository | Owner |\n")
+            outfile.write("|------------|-------|\n")
+            
+            # Sort repos by owner/name
+            sorted_repos = sorted(repos, key=lambda x: x.lower())
+            for repo in sorted_repos:
+                # Extract owner and repo name from URL
+                parts = repo.split('/')
+                owner = parts[-2]
+                repo_name = parts[-1]
+                outfile.write(f"| [{repo_name}]({repo}) | [{owner}](https://github.com/{owner}) |\n")
+            
+            outfile.write("\n</details>\n\n")
+        
+    except Exception as e:
+        logging.error(f"Error generating verbose section for {category}: {str(e)}")
+        outfile.write(f"Error generating pattern analysis: {str(e)}\n\n")

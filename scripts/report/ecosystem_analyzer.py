@@ -2,7 +2,7 @@ import re
 import logging
 from typing import Dict
 from collections import defaultdict
-from constants import CATEGORIES, PATTERN_WEIGHTS
+from .constants import CATEGORIES, PATTERN_WEIGHTS
 
 def analyze_ecosystem_patterns(ecosystem_data: Dict) -> Dict[str, Dict]:
     pattern_counts = defaultdict(int)
