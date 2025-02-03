@@ -1,78 +1,85 @@
 """Module for generating reports from TOML files containing repository information."""
 
 import os
+import re
 import logging
 from datetime import datetime
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Optional
 from collections import defaultdict
-from .constants import COMPILED_CATEGORIES, CATEGORIES
-from .utils import categorize_repos, extract_repo_info
-from .verbose_generator import generate_verbose_section
+import argparse
 
-def process_ecosystem(content: str) -> Tuple[int, List[str], set, Dict, Dict, int, Dict]:
-    """Process a single ecosystem's TOML content and return analysis data."""
-    # Add debug logging
-    logging.info("Starting ecosystem processing")
+from .categories import CategoryRegistry
+from .utils import (
+    extract_repo_info,
+    categorize_repos,
+    calculate_category_stats,
+    REPO_PATTERN,
+    convert_categories_to_dict
+)
+
+# Initialize category registry
+registry = CategoryRegistry()
+CATEGORIES = convert_categories_to_dict(registry)
+
+def filter_repos_by_keyword(repos: List[str], keyword: str) -> List[str]:
+    """Filter repositories by keyword."""
+    if not keyword:
+        return repos
+    keyword = keyword.lower()
+    return [repo for repo in repos if keyword in repo.lower()]
+
+def process_ecosystem(
+    content: str,
+    keyword: Optional[str] = None,
+    category_filter: Optional[str] = None
+) -> Tuple[int, List[str], Dict, Dict, Dict, int, Dict]:
+    """Process a single ecosystem's TOML content with filtering."""
+    repos, github_accounts, missing_repos, org_accounts, individual_accounts = extract_repo_info(content)
     
-    # Get basic repo info
-    total_repos, repos, categories, _, _, _ = extract_repo_info(content)
-    logging.info(f"Found {total_repos} repositories to process")
+    # Apply keyword filter if specified
+    if keyword:
+        repos = filter_repos_by_keyword(repos, keyword)
+        if not repos:
+            return 0, [], {}, {}, {}, 0, {}
     
-    # Debug: Print first few repos
-    if repos:
-        logging.info(f"Sample repos: {repos[:3]}")
+    total_repos = len(repos)
     
-    # Categorize repositories and get pattern matches
-    categorized_repos, pattern_matches = categorize_repos(repos, CATEGORIES)
+    # Categorize repositories
+    categorized_repos = categorize_repos(repos)
     
-    # Debug: Print categorization results
-    for category, repos_list in categorized_repos.items():
-        logging.info(f"Category {category}: {len(repos_list)} repositories")
+    # Apply category filter if specified
+    if category_filter:
+        filtered_repos = categorized_repos.get(category_filter, [])
+        categorized_repos = {category_filter: filtered_repos} if filtered_repos else {}
     
-    # Create ecosystem data dictionary that includes pattern matches
-    ecosystem_data = {
-        'name': 'aptos',  # Add ecosystem name
+    total_categorized = sum(len(repos) for category, repos in categorized_repos.items() if category != "Uncategorized")
+    
+    # Calculate category statistics
+    category_stats = calculate_category_stats(categorized_repos, total_repos)
+    
+    # Prepare ecosystem data
+    eco_data = {
         'total_repos': total_repos,
+        'repos': repos,
+        'github_accounts': github_accounts,
+        'missing_repos': missing_repos,
+        'org_accounts': org_accounts,
+        'individual_accounts': individual_accounts,
         'categorized_repos': categorized_repos,
-        'pattern_matches': pattern_matches  # This is important for verbose output
+        'category_stats': category_stats,
+        'total_categorized': total_categorized
     }
     
-    # Calculate statistics for each category
-    category_stats = {}
-    total_categorized = 0
-    
-    for category in CATEGORIES.keys():
-        if category == "Uncategorized":
-            continue
-            
-        category_repos = categorized_repos.get(category, [])
-        count = len(category_repos)
-        percentage = (count / total_repos * 100) if total_repos > 0 else 0
-        
-        category_stats[category] = {
-            'count': count,
-            'percentage': f"{percentage:.2f}%",
-            'pattern_matches': pattern_matches.get(category, {}),
-            'categorized_repos': category_repos
-        }
-        total_categorized += count
-    
-    # Add uncategorized stats
-    uncategorized_repos = categorized_repos.get("Uncategorized", [])
-    category_stats["Uncategorized"] = {
-        'count': len(uncategorized_repos),
-        'percentage': f"{(len(uncategorized_repos) / total_repos * 100):.2f}%",
-        'pattern_matches': pattern_matches.get("Uncategorized", {}),
-        'categorized_repos': uncategorized_repos
-    }
-    
-    logging.info(f"Total categorized: {total_categorized}")
-    logging.info(f"Total uncategorized: {len(uncategorized_repos)}")
-    
-    return total_repos, repos, categories, pattern_matches, category_stats, total_categorized, ecosystem_data
+    return total_repos, repos, categorized_repos, category_stats, total_categorized, eco_data
 
-def generate_master_report(toml_files: List[str], output_file: str, verbose: bool = False) -> None:
-    """Generate the master report."""
+def generate_master_report(
+    toml_files: List[str],
+    output_file: str,
+    verbose: bool = False,
+    keyword: Optional[str] = None,
+    category_filter: Optional[str] = None
+) -> None:
+    """Generate the master report with search and filter options."""
     ecosystem_data = []
     
     # Process all ecosystems first
@@ -82,56 +89,171 @@ def generate_master_report(toml_files: List[str], output_file: str, verbose: boo
         with open(input_file, 'r', encoding='utf-8') as infile:
             content = infile.read()
             
-        total_repos, repos, _, pattern_matches, category_stats, total_categorized, eco_data = process_ecosystem(content)
-        eco_data['name'] = ecosystem_name  # Set correct ecosystem name
-        ecosystem_data.append(eco_data)
+        total_repos, repos, categorized_repos, category_stats, total_categorized, eco_data = process_ecosystem(
+            content,
+            keyword=keyword,
+            category_filter=category_filter
+        )
+        
+        if total_repos > 0:  # Only include ecosystems with matching repos
+            eco_data['name'] = ecosystem_name
+            ecosystem_data.append(eco_data)
     
     # Write report after processing all ecosystems
     with open(output_file, 'w', encoding='utf-8') as outfile:
-        outfile.write("# Ecosystem Analysis Report\n\n")
+        # Add JavaScript for sorting
+        outfile.write("""
+<script>
+function sortTable(tableId, n) {
+    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    table = document.getElementById(tableId);
+    switching = true;
+    dir = "asc";
+    
+    while (switching) {
+        switching = false;
+        rows = table.rows;
+        
+        for (i = 1; i < (rows.length - 1); i++) {
+            shouldSwitch = false;
+            x = rows[i].getElementsByTagName("TD")[n];
+            y = rows[i + 1].getElementsByTagName("TD")[n];
+            
+            if (dir == "asc") {
+                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            } else if (dir == "desc") {
+                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+        }
+        
+        if (shouldSwitch) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            switchcount++;
+        } else {
+            if (switchcount == 0 && dir == "asc") {
+                dir = "desc";
+                switching = true;
+            }
+        }
+    }
+}
+</script>
+<style>
+th { cursor: pointer; }
+th:hover { background-color: #f5f5f5; }
+</style>
+""")
+
+        outfile.write("# Repository Analysis Report\n\n")
+        
+        # Write search parameters if any
+        if keyword or category_filter:
+            outfile.write("## Search Parameters\n")
+            outfile.write("| Parameter | Value |\n")
+            outfile.write("|-----------|-------|\n")
+            if keyword:
+                outfile.write(f"| Keyword | `{keyword}` |\n")
+            if category_filter:
+                outfile.write(f"| Category Filter | {category_filter} |\n")
+            outfile.write("\n")
         
         # Write overall statistics
+        total_all_repos = sum(eco['total_repos'] for eco in ecosystem_data)
         outfile.write("## Overall Statistics\n")
         outfile.write("| Metric | Count |\n")
         outfile.write("|--------|-------|\n")
-        outfile.write(f"| Total repositories | {total_repos:,} |\n")
+        outfile.write(f"| Total repositories | {total_all_repos:,} |\n")
+        outfile.write(f"| Ecosystems analyzed | {len(ecosystem_data)} |\n")
         
         # Write category statistics
-        outfile.write("\n## Category Statistics\n")
-        outfile.write("| Category | Repository Count | Percentage |\n")
-        outfile.write("|----------|------------------|------------|\n")
+        if ecosystem_data:
+            outfile.write("\n## Category Statistics\n")
+            outfile.write('<table id="categoryStats">\n')
+            outfile.write('<tr>')
+            outfile.write('<th onclick="sortTable(\'categoryStats\', 0)">Category ▼</th>')
+            outfile.write('<th onclick="sortTable(\'categoryStats\', 1)">Repository Count ▼</th>')
+            outfile.write('<th onclick="sortTable(\'categoryStats\', 2)">Percentage ▼</th>')
+            outfile.write('</tr>\n')
+            
+            # Aggregate category stats across all ecosystems
+            total_by_category = defaultdict(int)
+            for eco in ecosystem_data:
+                for category, stats in eco['category_stats'].items():
+                    total_by_category[category] += stats['count']
+            
+            # Sort categories by count (excluding Uncategorized)
+            sorted_categories = sorted(
+                [(k, v) for k, v in total_by_category.items() if k != "Uncategorized"],
+                key=lambda x: x[1],
+                reverse=True
+            )
+            
+            # Write sorted categories
+            for category, count in sorted_categories:
+                percentage = (count / total_all_repos * 100) if total_all_repos > 0 else 0
+                outfile.write(f"<tr><td>{category}</td><td>{count:,}</td><td>{percentage:.2f}%</td></tr>\n")
+            
+            # Write uncategorized at the end
+            if "Uncategorized" in total_by_category:
+                count = total_by_category["Uncategorized"]
+                percentage = (count / total_all_repos * 100) if total_all_repos > 0 else 0
+                outfile.write(f"<tr><td>Uncategorized</td><td>{count:,}</td><td>{percentage:.2f}%</td></tr>\n")
+            
+            outfile.write("</table>\n\n")
         
-        # Sort categories by count (excluding Uncategorized)
-        sorted_categories = sorted(
-            [(k, v['count'], v['percentage']) for k, v in category_stats.items() if k != "Uncategorized"],
-            key=lambda x: x[1],
-            reverse=True
-        )
-        
-        # Write sorted categories
-        for category, count, percentage in sorted_categories:
-            outfile.write(f"| {category} | {count:,} | {percentage} |\n")
-        
-        # Write uncategorized at the end
-        if "Uncategorized" in category_stats:
-            uncat = category_stats["Uncategorized"]
-            outfile.write(f"| Uncategorized | {uncat['count']:,} | {uncat['percentage']} |\n")
-        
-        # If verbose, add detailed pattern analysis
-        if verbose:
-            outfile.write("\n## Detailed Pattern Analysis\n\n")
-            for category in CATEGORIES.keys():
-                if category == "Uncategorized":
-                    continue
-                generate_verbose_section(category, ecosystem_data, outfile)
+        # Write ecosystem breakdown
+        outfile.write("\n## Ecosystem Breakdown\n")
+        for eco in ecosystem_data:
+            # Write categorized repositories with collapsible sections
+            for category, repos in sorted(eco['categorized_repos'].items()):
+                if repos:  # Only show categories with repositories
+                    table_id = f"table_{category.lower().replace(' ', '_')}"
+                    outfile.write(f"<details>\n<summary>{category} ({len(repos)} repos)</summary>\n\n")
+                    
+                    # Create table header with sortable columns
+                    outfile.write(f'<table id="{table_id}">\n')
+                    outfile.write('<tr>')
+                    outfile.write(f'<th onclick="sortTable(\'{table_id}\', 0)"># ▼</th>')
+                    outfile.write(f'<th onclick="sortTable(\'{table_id}\', 1)">Repository ▼</th>')
+                    outfile.write(f'<th onclick="sortTable(\'{table_id}\', 2)">Owner ▼</th>')
+                    outfile.write(f'<th onclick="sortTable(\'{table_id}\', 3)">Type ▼</th>')
+                    outfile.write('</tr>\n')
+                    
+                    # Sort repositories by owner/name for better readability
+                    sorted_repos = sorted(repos, key=lambda x: x.lower())
+                    
+                    # Write repository entries
+                    for idx, repo in enumerate(sorted_repos, 1):
+                        parts = repo.split('/')
+                        owner = parts[-2]
+                        repo_name = parts[-1]
+                        account_type = "Organization" if owner in eco['org_accounts'] else "Individual"
+                        
+                        outfile.write(
+                            f"<tr><td>{idx}</td><td><a href='{repo}'>{repo_name}</a></td>"
+                            f"<td><a href='https://github.com/{owner}'>{owner}</a></td>"
+                            f"<td>{account_type}</td></tr>\n"
+                        )
+                    
+                    outfile.write("</table>\n\n")
+                    outfile.write("</details>\n\n")
 
 def main() -> None:
-    """Generate a report comparing specific TOML files.
+    """Generate a report comparing specific TOML files."""
+    parser = argparse.ArgumentParser(description='Generate repository analysis report.')
+    parser.add_argument('ecosystems', nargs='*', help='Names of ecosystem TOML files to analyze.')
+    parser.add_argument('--verbose', action='store_true', help='Generate detailed pattern analysis')
+    parser.add_argument('--keyword', help='Filter repositories by keyword')
+    parser.add_argument('--category-filter', help='Filter repositories by category')
+    args = parser.parse_args()
     
-    Usage: python -m report.report_generator [ecosystem1] [ecosystem2] ... [ecosystem6]
-    Example: python -m report.report_generator ethereum solana polkadot
-    """
-    import sys
     current_date = datetime.now().strftime("%m-%d-%y")
     
     # Get the project root directory (three levels up from this script)
@@ -149,7 +271,7 @@ def main() -> None:
         return
 
     # Get ecosystems from command line arguments
-    ecosystems = sys.argv[1:7] if len(sys.argv) > 1 else []
+    ecosystems = args.ecosystems if args.ecosystems else []
     
     try:
         if ecosystems:
@@ -175,13 +297,13 @@ def main() -> None:
     # Create a more descriptive filename when specific ecosystems are compared
     if ecosystems:
         eco_names = "-".join(ecosystems)
-        output_filename = f"comparison-{eco_names}{'-verbose' if verbose else ''}-{current_date}.md"
+        output_filename = f"comparison-{eco_names}{'-verbose' if args.verbose else ''}-{current_date}.md"
     else:
-        output_filename = f"report{'-verbose' if verbose else ''}-{current_date}.md"
+        output_filename = f"report{'-verbose' if args.verbose else ''}-{current_date}.md"
     
     output_path = os.path.join(output_dir, output_filename)
     
-    generate_master_report(toml_files, output_path, verbose=verbose)
+    generate_master_report(toml_files, output_path, verbose=args.verbose, keyword=args.keyword, category_filter=args.category_filter)
     logging.info("Generated report -> %s", output_filename)
     logging.info("Report has been saved in the 'output' folder.")
 

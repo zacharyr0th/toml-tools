@@ -1,68 +1,78 @@
-from collections import defaultdict
+"""Utility functions for report generation."""
 import re
-from typing import List, Dict, Tuple, Set
-from .constants import PATTERN_WEIGHTS, CATEGORIES, REPO_PATTERN
 import logging
+from typing import Dict, List, Tuple, Set
+from collections import defaultdict
 
-def extract_repo_info(content: str) -> Tuple[int, List[str], Set[str], Dict, Dict, Dict]:
+from .categories import CategoryRegistry
+
+# Initialize category registry
+registry = CategoryRegistry()
+
+# Regular expression for GitHub repository URLs
+REPO_PATTERN = re.compile(r'url\s*=\s*"(https://github\.com/[^"]+)"')
+
+def extract_repo_info(content: str) -> Tuple[List[str], Set[str], List[str], Set[str], Set[str]]:
     """Extract repository information from TOML content."""
-    matches = REPO_PATTERN.findall(content)
-    total_repos = len(matches)
-    repos = [match[0] for match in matches]  # Get the full URL
-    categories = set()
-    return total_repos, repos, categories, {}, {}, {}
-
-def categorize_repos(repos: List[str], categories: Dict[str, Dict]) -> Tuple[Dict[str, List[str]], Dict[str, Dict[str, List[str]]]]:
-    """Categorize repositories based on pattern matching."""
-    logging.info(f"Starting categorization of {len(repos)} repositories")
+    repos = []
+    github_accounts = set()
+    missing_repos = []
+    org_accounts = set()
+    individual_accounts = set()
     
-    categorized = defaultdict(list)
-    pattern_matches = defaultdict(lambda: defaultdict(list))
-    
-    # Increase batch size to 1000
-    batch_size = 1000
-    
-    for i, repo in enumerate(repos):
-        if i % batch_size == 0:  # Log progress every 1000 repos
-            logging.info(f"Processing repo {i}/{len(repos)} ({(i/len(repos)*100):.1f}%)")
-            
-        repo_matched = False
-        
-        # Check each category
-        for category, cat_data in categories.items():
-            if category == "Uncategorized":
-                continue
+    for line in content.split('\n'):
+        if 'url = ' in line:
+            match = REPO_PATTERN.search(line)
+            if match:
+                repo_url = match.group(1)
+                repos.append(repo_url)
                 
-            score = 0
-            matched_patterns = []
-            
-            # Check patterns by strength
-            for strength, patterns in cat_data['patterns']:
-                weight = PATTERN_WEIGHTS[strength]
-                for pattern in patterns:
-                    if re.search(pattern, repo, re.IGNORECASE):
-                        score += weight
-                        matched_patterns.append(pattern)
-                        logging.debug(f"Matched pattern '{pattern}' in repo '{repo}' for category '{category}'")
-            
-            # If score meets threshold, add to category
-            if score >= cat_data.get('threshold', 1.0):
-                categorized[category].append(repo)
-                for pattern in matched_patterns:
-                    pattern_matches[category][pattern].append(repo)
-                repo_matched = True
-                logging.debug(f"Categorized '{repo}' as '{category}' with score {score}")
+                # Extract GitHub account
+                parts = repo_url.split('/')
+                if len(parts) >= 2:
+                    account = parts[-2]
+                    github_accounts.add(account)
+                    
+                    # Classify account type
+                    if any(char.isupper() for char in account):
+                        org_accounts.add(account)
+                    else:
+                        individual_accounts.add(account)
         
-        # If no category matched, mark as uncategorized
-        if not repo_matched:
-            categorized["Uncategorized"].append(repo)
-            pattern_matches["Uncategorized"]["unmatched"].append(repo)
+        elif 'missing = true' in line:
+            # Get the last URL we processed
+            if repos:
+                missing_repos.append(repos[-1])
     
-    # Log final categorization results
-    for category, repos_list in categorized.items():
-        logging.info(f"Category '{category}': {len(repos_list)} repositories")
+    return repos, github_accounts, missing_repos, org_accounts, individual_accounts
+
+def categorize_repos(repos: List[str]) -> Dict[str, List[str]]:
+    """Categorize repositories using the category registry."""
+    categorized = defaultdict(list)
     
-    return dict(categorized), dict(pattern_matches)
+    for repo in repos:
+        categories = registry.categorize_text(repo)
+        if not categories:
+            categories = ["Uncategorized"]
+        
+        for category in categories:
+            categorized[category].append(repo)
+    
+    return dict(categorized)
+
+def calculate_category_stats(categorized_repos: Dict[str, List[str]], total_repos: int) -> Dict[str, Dict[str, str]]:
+    """Calculate statistics for each category."""
+    stats = {}
+    
+    for category, repos in categorized_repos.items():
+        count = len(repos)
+        percentage = (count / total_repos * 100) if total_repos > 0 else 0
+        stats[category] = {
+            'count': count,
+            'percentage': f"{percentage:.2f}%"
+        }
+    
+    return stats
 
 def organize_toml_content(content: str) -> str:
     """Organize TOML content by sorting sections and their contents."""

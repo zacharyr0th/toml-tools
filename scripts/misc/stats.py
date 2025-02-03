@@ -7,9 +7,12 @@ from datetime import datetime
 import logging
 from collections import defaultdict
 from typing import Dict, Set, List, Tuple
-from report.constants import COMPILED_CATEGORIES
+from report.categories import CategoryRegistry
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Initialize category registry
+registry = CategoryRegistry()
 
 def extract_repo_info(content: str) -> Tuple[List[Dict[str, str]], Set[str], int, Set[str], Set[str]]:
     repos = []
@@ -41,18 +44,16 @@ def extract_repo_info(content: str) -> Tuple[List[Dict[str, str]], Set[str], int
     
     return repos, github_accounts, missing_repos, org_accounts, individual_accounts
 
-def categorize_repos(repos: List[Dict[str, str]], categories: Dict[str, List[re.Pattern]]) -> Dict[str, List[str]]:
+def categorize_repos(repos: List[Dict[str, str]]) -> Dict[str, List[str]]:
     """Categorize repositories based on predefined patterns."""
     sub_ecosystem_repos = defaultdict(list)
     for repo in repos:
         repo_url = repo['url']
-        for eco, patterns in categories.items():
-            if any(pattern.search(repo_url) for pattern in patterns):
-                sub_ecosystem_repos[eco].append(repo_url)
-                break
-        else:
-            sub_ecosystem_repos["Unrelated"].append(repo_url)
-    return sub_ecosystem_repos
+        matches = registry.categorize_text(repo_url)
+        for category_name in matches:
+            sub_ecosystem_repos[category_name].append(repo_url)
+    
+    return dict(sub_ecosystem_repos)
 
 def extract_contributors(content: str) -> Tuple[Set[str], Set[str]]:
     team_github_accounts = set(re.findall(r'team_github\s*=\s*"(.*?)"', content))
@@ -89,7 +90,7 @@ def generate_report(
         "## 2. Ecosystem Analysis"
     ]
 
-    sub_ecosystem_repos = categorize_repos(repos, categories)
+    sub_ecosystem_repos = categorize_repos(repos)
     total_repos = len(repos)
     report.extend([
         "| Category | Count | Percentage |",

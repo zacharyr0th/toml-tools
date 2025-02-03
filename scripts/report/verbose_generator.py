@@ -2,8 +2,12 @@
 
 from collections import defaultdict
 from typing import List, Dict, TextIO, Tuple
-from .constants import CATEGORIES, PATTERN_WEIGHTS
 import logging
+
+from .categories import CategoryRegistry
+
+# Initialize category registry
+registry = CategoryRegistry()
 
 def get_human_readable_pattern(pattern: str) -> str:
     """Convert regex pattern to human readable format."""
@@ -312,58 +316,85 @@ def generate_verbose_section(f: TextIO, primary_category: str, all_ecosystem_dat
             
             f.write("\n</details>\n\n")
 
-def generate_verbose_section(category: str, ecosystem_data: List[Dict], outfile: TextIO) -> None:
-    """Generate detailed pattern analysis section for a category."""
-    outfile.write(f"\n### {category}\n\n")
-    
-    # Skip if no data
-    if not ecosystem_data:
-        outfile.write("No pattern matches found for this category.\n\n")
+def generate_verbose_section(category_name: str, ecosystem_data: List[Dict], outfile: TextIO) -> None:
+    """Generate a verbose analysis section for a specific category."""
+    category = registry.get_category(category_name)
+    if not category:
+        logging.warning(f"Category {category_name} not found in registry")
         return
+    
+    outfile.write(f"### {category_name}\n\n")
+    
+    # Get all pattern matches across ecosystems
+    all_pattern_matches = defaultdict(list)
+    for eco in ecosystem_data:
+        eco_name = eco['name']
+        pattern_matches = eco.get('pattern_matches', {}).get(category_name, {})
+        for pattern, repos in pattern_matches.items():
+            all_pattern_matches[pattern].extend([(eco_name, repo) for repo in repos])
+    
+    # Sort patterns by frequency
+    sorted_patterns = sorted(
+        [(pattern, matches) for pattern, matches in all_pattern_matches.items()],
+        key=lambda x: len(x[1]),
+        reverse=True
+    )
+    
+    # Write pattern analysis
+    if sorted_patterns:
+        outfile.write("#### Pattern Analysis\n\n")
+        outfile.write("| Pattern | Matches | Sample Repositories |\n")
+        outfile.write("|---------|---------|--------------------|\n")
         
-    try:
-        # Aggregate pattern matches and collect repos for each pattern
-        pattern_counts = {}
-        pattern_repos = defaultdict(list)
+        for pattern, matches in sorted_patterns:
+            # Get pattern strength
+            strength = "Unknown"
+            for s, patterns in category.patterns:
+                if pattern in patterns:
+                    strength = s
+                    break
+            
+            # Get unique repositories (up to 3)
+            unique_repos = []
+            seen_repos = set()
+            for eco_name, repo in matches:
+                repo_key = f"{eco_name}:{repo}"
+                if repo_key not in seen_repos and len(unique_repos) < 3:
+                    unique_repos.append((eco_name, repo))
+                    seen_repos.add(repo_key)
+            
+            # Format sample repositories
+            sample_repos = "<br>".join([
+                f"[{eco}] {format_repo_link(repo)}"
+                for eco, repo in unique_repos
+            ])
+            
+            outfile.write(f"| `{pattern}` ({strength}) | {len(matches)} | {sample_repos} |\n")
         
-        for eco_data in ecosystem_data:
-            categorized_repos = eco_data.get('categorized_repos', {})
-            if category in categorized_repos:
-                pattern_matches = eco_data.get('pattern_matches', {}).get(category, {})
-                for pattern, matched_repos in pattern_matches.items():
-                    pattern_counts[pattern] = pattern_counts.get(pattern, 0) + len(matched_repos)
-                    pattern_repos[pattern].extend(matched_repos)
+        outfile.write("\n")
+    
+    # Write ecosystem comparison
+    outfile.write("#### Ecosystem Comparison\n\n")
+    outfile.write("| Ecosystem | Repository Count | Percentage of Total |\n")
+    outfile.write("|-----------|------------------|-------------------|\n")
+    
+    for eco in ecosystem_data:
+        eco_name = eco['name']
+        total_repos = eco['total_repos']
+        category_repos = eco['categorized_repos'].get(category_name, [])
+        count = len(category_repos)
+        percentage = (count / total_repos * 100) if total_repos > 0 else 0
         
-        if not pattern_counts:
-            outfile.write("No repositories matched patterns in this category.\n\n")
-            return
-            
-        # Sort patterns by count
-        sorted_patterns = sorted(pattern_counts.items(), key=lambda x: x[1], reverse=True)
-        
-        # Write collapsible sections combining stats and repos
-        for pattern, count in sorted_patterns:
-            repos = pattern_repos[pattern]
-            readable_pattern = get_human_readable_pattern(pattern)
-            
-            outfile.write(f"<details>\n")
-            outfile.write(f"<summary>`{pattern}` - {readable_pattern} ({count:,} repositories)</summary>\n\n")
-            
-            # Write repository table
-            outfile.write("| Repository | Owner |\n")
-            outfile.write("|------------|-------|\n")
-            
-            # Sort repos by owner/name
-            sorted_repos = sorted(repos, key=lambda x: x.lower())
-            for repo in sorted_repos:
-                # Extract owner and repo name from URL
-                parts = repo.split('/')
-                owner = parts[-2]
-                repo_name = parts[-1]
-                outfile.write(f"| [{repo_name}]({repo}) | [{owner}](https://github.com/{owner}) |\n")
-            
-            outfile.write("\n</details>\n\n")
-        
-    except Exception as e:
-        logging.error(f"Error generating verbose section for {category}: {str(e)}")
-        outfile.write(f"Error generating pattern analysis: {str(e)}\n\n")
+        outfile.write(f"| {eco_name} | {count:,} | {percentage:.2f}% |\n")
+    
+    outfile.write("\n")
+
+def format_repo_link(repo_url: str) -> str:
+    """Format a repository URL as a markdown link."""
+    # Extract owner and repo name from URL
+    parts = repo_url.split('/')
+    if len(parts) >= 5:  # https://github.com/owner/repo
+        owner = parts[-2]
+        repo = parts[-1]
+        return f"[{owner}/{repo}]({repo_url})"
+    return repo_url

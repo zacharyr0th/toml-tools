@@ -3,11 +3,16 @@ import logging
 import os
 from datetime import datetime
 from .report_generator import generate_master_report
+from .ecosystem_analyzer import analyze_ecosystem_patterns
+from .categories import CategoryRegistry
 
 def main():
-    parser = argparse.ArgumentParser(description='Generate repository analysis report.')
+    parser = argparse.ArgumentParser(description='Generate repository analysis report with keyword search.')
     parser.add_argument('ecosystems', nargs='*', help='Names of ecosystem TOML files to analyze. If none provided, all TOML files will be processed.')
     parser.add_argument('--verbose', action='store_true', help='Generate detailed pattern analysis')
+    parser.add_argument('--keyword', '-k', type=str, help='Keyword to search for in repository names and URLs')
+    parser.add_argument('--category', '-c', type=str, help='Filter by specific category (e.g., DeFi, NFT, Gaming)')
+    parser.add_argument('--output', '-o', type=str, help='Custom output filename')
     args = parser.parse_args()
 
     current_date = datetime.now().strftime("%m-%d-%y")
@@ -44,15 +49,36 @@ def main():
         return
 
     # Create output filename
-    if args.ecosystems:
-        eco_names = "-".join(args.ecosystems)
-        output_filename = f"comparison-{eco_names}{'-verbose' if args.verbose else ''}-{current_date}.md"
+    if args.output:
+        output_filename = args.output if args.output.endswith('.md') else f"{args.output}.md"
     else:
-        output_filename = f"report-all{'-verbose' if args.verbose else ''}-{current_date}.md"
+        components = []
+        if args.ecosystems:
+            components.append(f"comparison-{'-'.join(args.ecosystems)}")
+        else:
+            components.append("report-all")
+        
+        if args.keyword:
+            components.append(f"keyword-{args.keyword}")
+        if args.category:
+            components.append(f"category-{args.category}")
+        if args.verbose:
+            components.append("verbose")
+        
+        components.append(current_date)
+        output_filename = f"{'-'.join(components)}.md"
     
     output_path = os.path.join(output_dir, output_filename)
     
-    generate_master_report(toml_files, output_path, verbose=args.verbose)
+    # Generate report with search parameters
+    generate_master_report(
+        toml_files, 
+        output_path, 
+        verbose=args.verbose,
+        keyword=args.keyword,
+        category_filter=args.category
+    )
+    
     logging.info("Generated report -> %s", output_filename)
     logging.info("Report has been saved in the 'output' folder.")
 
